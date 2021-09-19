@@ -5,9 +5,10 @@
 **Phone: +375-44-568-36-95**
 **E-mail: <sasha_suslov07@mail.ru>**
 
-#### About myself:
+#### About me:
 In last 5 years I had worked in role of sales manager of scientific equipment and supplies (chemistry-biology area). 
-Now I want to change professional area to IT and I'm studying frontend development with RS School coureses. At free time I like to spend time with my wife and friends, also I goes to the climbing gym, and play guitar. I like nature and hiking. I like learn any new things and meet with new people. Open-minded and friendship.
+Now I want to change professional area to IT and I'm studying frontend development with RS School coureses.  I like learn any new things and meet with new people. Open-minded and friendship.
+
 #### Education: 
 **Belarussian State Univesity, Biological faculty, Science-research activity - 2015**
 #### Experience: 
