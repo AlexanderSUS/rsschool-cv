@@ -1,2 +1,1 @@
-# rsschool-cv
-RS School CV
+https://alexandersus.github.io/rsschool-cv/cv
