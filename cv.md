@@ -26,4 +26,4 @@ function billboard(name, price = 30){
 }
 ```
 #### Languages:
-**Russian Native, English A1 (at my previous job I had practiced in speaking English with our parners)**
+**Russian Native, English A1** (at my previous job I had practiced in speaking English with our partners)
