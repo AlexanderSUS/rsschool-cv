@@ -7,7 +7,7 @@
 
 #### About me:
 In last 5 years I had worked in role of sales manager of scientific equipment and supplies (chemistry-biology area). 
-Now I want to change professional area to IT and I'm studying frontend development with RS School coureses.  I like learn any new things and meet with new people. Open-minded and friendship.
+Now I want to change professional area to IT. Now I'm studying frontend development with RS School courses. Before start with RS School I have studyed programming with C language.
 
 #### Education: 
 **Belarussian State Univesity, Biological faculty, Science-research activity - 2015**
