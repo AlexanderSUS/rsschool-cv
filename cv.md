@@ -9,7 +9,7 @@
 In last 5 years I had worked in role of sales manager of scientific equipment and supplies (chemistry-biology area). 
 Now I want to change professional area to IT and I'm studying frontend development with RS School coureses. At free time I like to spend time with my wife and friends, also I goes to the climbing gym, and play guitar. I like nature and hiking. I like learn any new things and meet with new people. Open-minded and friendship.
 #### Education: 
-**Belarussian State Univesity, Biological faculty, Science-research activity**
+**Belarussian State Univesity, Biological faculty, Science-research activity - 2015**
 #### Experience: 
 Have no experience in frontend, but I have 7 years experience of work in another area, that experince includes work in team, constant comunications, solving tasks and problems.
 #### Skills: 
