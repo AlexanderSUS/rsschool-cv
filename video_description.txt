@@ -1,0 +1,18 @@
+Hello everyone!
+
+My name is Alexander, and I want to be a frontend developer. 
+I don't have any experience in frontend, but  thanks to my previous
+job I allready have an experience of teamwork,
+comunications with customers and partners, I belive it really helps me
+in my future career.  As I didn't had any programming skills I statrted my path
+ with studying of cumputer scince and C language. 
+It's took a lot of time to be deep in it. Also I learn English. According Epam test my level is 
+A1, but I can almost freely read  a documentation  and can speak in a fashion. 
+During that time I learned to use the Linux terminal, I mastered of blind typing and Vim editor.
+Now I'm studying HTML, CCS and JavaScript with RS Shool courses.
+According thoose programm this coursces gives a good traning for future work.
+And I hope to get a good skills.
+A CV that you look now is the  one of the task. If you like it and 
+and you looking for juniour frontend developer do not hesitate to contact me.
+Who khows maybe I can be a good member of your team! 
+Bye!

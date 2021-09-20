@@ -10,6 +10,7 @@ body {
 .wrapper {
   width: 80%;
   margin: 0 auto;
+  min-width: 320px;
 }
 .flex-container {
   display: flex;
@@ -151,7 +152,7 @@ video {
   }
   h3 {
     font-size: 1.8em;
-  };
+  }
 }
 @media  (max-width: 1024px) {
   .flex-container {
@@ -175,18 +176,11 @@ video {
     font-size: 1.5em;
   }
 }
-/*@media  (max-width: 900px) {
-
-}*/
-/*@media  (max-width: 768px) {
-
-}*/
 @media  (max-width: 600px) {
   .wrapper {
     width: 100%;
     margin: auto;
   }
-  
   .navigation,
   header {
     height: 50px;
@@ -220,7 +214,7 @@ video {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    transition: 0.1s;
+    transition: 1s;
   }
   .navigation a {
     padding: 0;
@@ -228,9 +222,6 @@ video {
     display: block;
     transition: 0.3s;
   }
-/*  .navigation a:hover {
-    color: yellow;
-  }*/
   .navigation .closebtn {
     position: absolute;
     top: 0;
@@ -256,6 +247,3 @@ video {
     font-size: 0.5em;
   }
 }
-/*@media  (max-width: 320px) {
-
-}*/
