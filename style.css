@@ -113,6 +113,7 @@ pre {
   width: 100%;
   margin: 0px;
   padding: 10px;
+  text-align: left;
   background-color: #222;
   color: rgb(50,190,50);
   font-family: 'Courier New', Courier, monospace;
@@ -122,8 +123,7 @@ pre {
     flex-direction: column-reverse;
     justify-content: flex-end; 
   }
-  aside img { max-width: 100%; }
-video { max-width: 100%; }
+aside img { max-width: 100%; }
 .contact li { font-weight: 700; }
 /*menu-button style*/
 .side-cross,
@@ -131,20 +131,30 @@ video { max-width: 100%; }
 .openbtn {
   display: none;
 }
-@media (max-width: 1440px) {
+iframe {
+  width: 640px;
+  height: 480px;
+  z-index: 1;
+}
+.text-description {
+  z-index: -1;
+  position: absolute;
+  top: 50px;
+}
+@media only screen and (max-width: 1440px) {
   iframe {
     height: 324px;
     width: 576px;
   }
 }
-@media  (max-width: 1200px) {
+@media only screen and (max-width: 1200px) {
   .wrapper {
     width: 100%;
     margin: 0;
   }
   h3 { font-size: 1.8em; }
 }
-@media  (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
   .flex-container {
     flex-direction: column;
   }
@@ -160,13 +170,13 @@ video { max-width: 100%; }
   }
   h3 { font-size: 1.5em; }
 }
-@media  (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
   iframe {
     width: 480px;
     height: 270px;
   }
 }
-@media  (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   .wrapper {
     width: 100%;
     margin: auto;
@@ -230,10 +240,26 @@ video { max-width: 100%; }
   }
   .openbtn:hover { background-color: whitesmoke; }
   iframe {
+    height: 216px;
+    width: 384px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  pre { font-size: 0.5em; }
+  iframe {
     height: 180px;
     width: 320px;
   }
 }
-@media  (max-width: 480px) {
-  pre { font-size: 0.5em; }
+@media only screen and (max-width: 360px) {
+  iframe {
+    height: 180px;
+    width: 320px;
+  }
+}
+@media only screen and (max-width: 360px) {
+  iframe {
+    height: 144px;
+    width: 256px;
+  }
 }
