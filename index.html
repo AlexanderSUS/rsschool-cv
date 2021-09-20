@@ -8,6 +8,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"> 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
   <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&display=swap" rel="stylesheet">
+  <script>
+    function openNav() {
+      document.getElementById("navigation").style.width = "100%";
+    }
+    function closeNav() {
+      document.getElementById("navigation").style.width = "0";
+    }
+  </script>
   <title>CV Alexander Suslov</title>
   </head>
 <body>
@@ -16,21 +24,20 @@
       <header class="left">
           <h1>Alexander Suslov</h1>
       </header>
-      <nav class="right navigation">
-        <ul>
-          <li class="menu-list"><a href="#education">Education</a></li>
-          <li class="menu-list"><a href="#experience">Experience</a></li>
-          <li class="menu-list"><a href="#skills">Skills</a></li>
-          <li class="menu-list"><a href="#languages">Languages</a></li>
-          <li class="menu-list"><a href="#code">Code</a></li>
-          <li class="menu-list"><a href="#about">About</a></li>
-          <li class="menu-list"><a href="#contact">Contact</a></li>
-        </ul>
-        <button class="openbtn" onclick="openNav()"></button>
-        </nav>
+      <nav id="navigation" class="right navigation ">
+        <span class="span-cross"><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a></span>
+        <a href="#education" onclick="closeNav()">Education</a>
+        <a href="#experience" onclick="closeNav()">Experience</a>
+        <a href="#skills" onclick="closeNav()">Skills</a>
+        <a href="#languages" onclick="closeNav()">Languages</a></li>
+        <a href="#code" onclick="closeNav()">Code</a>
+        <a href="#about" onclick="closeNav()">About</a>
+        <a href="#contact" onclick="closeNav()">Contact</a>
+      </nav>
+      <button class="openbtn" onclick="openNav()">&#9776;</button>
    </div> 
    <div class="flex-container">
-      <aside class="left">
+      <aside class="left side">
         <img src="photo.jpg" alt="my photo">
         <h3>Junior Frontend Developer</h3>
       </aside>

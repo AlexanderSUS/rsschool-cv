@@ -40,18 +40,15 @@ ul {
   padding-left: 0px;
   margin: auto;
 }
-nav ul {
+nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-nav ul li {
-  display: inline-block;
-}
 nav a,
 nav a:visited {
-  padding: 22px 0px;
-  display: block;
+  padding: 18px 0px;
+  display: inline-block;
   font-size: 1.2em;
   font-weight: 900;
   background-color: whitesmoke;
@@ -112,9 +109,9 @@ h2 {
   margin-bottom: 0.2em;
 }
 h3 {
-  font-size: 5em;
+  font-size: 2em;
   font-family: monospace;
-  color: #444;
+  color: #555;
 }
 p {
   margin: 0px;
@@ -127,10 +124,13 @@ pre {
   color: rgb(50,190,50);
   font-family: 'Courier New', Courier, monospace;
 }
-aside img { 
+.side {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end; 
+  }
+  aside img { 
   max-width: 100%;
-  padding-top: 70px;
-  margin: auto;
 }
 video {
   max-width: 100%;
@@ -138,44 +138,20 @@ video {
 .contact li {
   font-weight: 700;
 }
-/*menu button style*/
-.section {
-  height: 50px;
+/*menu-button style*/
+.side-cross,
+.closebtn,
+.openbtn {
   display: none;
-  justify-content: center;
-  align-content: center;
-}
-.menu-btn {
-  width: 50px;
-  height: 50px;
-  position: relative;
-  background-color: whitesmoke;
-}
-.menu-btn span,
-.menu-btn span::before,
-.menu-btn span::after {
-  position: absolute ;
-  top: 40%;
-  width: 40px;
-  height: 5px;
-  margin-top: -1px;
-  margin-left: -10px;
-  background-color: #222;
-}
-.menu-btn span::before,
-.menu-btn span::after {
-  content: '';
-}
-.menu-btn span:before {
-  transform: translateY(-10px);
-}
-.menu-btn span:after {
-  transform: translateY(10px);
 }
 @media  (max-width: 1200px) {
   .wrapper {
     width: 100%;
+    margin: 0;
   }
+  h3 {
+    font-size: 1.8em;
+  };
 }
 @media  (max-width: 1024px) {
   .flex-container {
@@ -192,83 +168,94 @@ video {
     padding-top: 0;
   }
   h1 {
+    font-size: 2em;
     margin-bottom: 1em;
   }
   h3 {
-    font-size: 3em;
+    font-size: 1.5em;
   }
+}
+/*@media  (max-width: 900px) {
 
-}
-@media  (max-width: 900px) {
-  .flex-container {
-    flex-direction: column;
-  }
-  .left {
-    width: 100%;
-    background-color: #222;
-  }
-  .right {
-    width: 100%;
-  }
-}
+}*/
 /*@media  (max-width: 768px) {
-  .flex-container {
-    flex-direction: column;
-  }
-  .left {
-    width: 100%;
-    background-color: #222;
-  }
-  .right {
-    width: 100%;
-  }
+
 }*/
 @media  (max-width: 600px) {
-  .flex-container {
-    flex-direction: column;
-  }
-  .left {
+  .wrapper {
     width: 100%;
-    background-color: #222;
+    margin: auto;
   }
-  .right {
-    width: 100%;
-  }
+  
   .navigation,
   header {
     height: 50px;
   }
-  .section {
-    display: flex;
-  }
-  nav ul {
+  nav a,
+  nav a:visited {
     display: none;
+    background-color: initial;
+    color: whitesmoke;
+    border-bottom: 1px solid whitesmoke;
+    font-weight: normal;
   }
   h1 {
     margin-bottom: 0px; 
-    padding: 5px 0px;
+    padding: 0px;
   }
-}@media  (max-width: 480px) {
-  .flex-container {
+  /*menu-button style*/
+  .side-cross,
+  .closebtn,
+  .openbtn {
+    display: block;
+  }
+  .navigation {
+    width: 0%;
+    position: fixed;
+    z-index: 1;
+    height: auto;
+    top: 0;
+    left: 0;
+    background-color: hsla(0, 0%, 20%, 0.7);
+    overflow: hidden;
+    display: flex;
     flex-direction: column;
+    transition: 0.1s;
   }
-  .left {
-    width: 100%;
-    background-color: #222;
+  .navigation a {
+    padding: 0;
+    font-size: 2em;
+    display: block;
+    transition: 0.3s;
   }
-  .right {
-    width: 100%;
+/*  .navigation a:hover {
+    color: yellow;
+  }*/
+  .navigation .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    color: whitesmoke;
+  }
+  .openbtn {
+    font-size: 3em;
+    cursor: pointer;
+    background-color: whitesmoke;
+    color: #111;
+    padding: 5px 15px 5px 5px;
+    border: none;
+    text-align: right;
+  }
+  .openbtn:hover {
+    background-color: whitesmoke;
   }
 }
-@media  (max-width: 320px) {
-  .flex-container {
-    flex-direction: column;
-  }
-  .left {
-    width: 100%;
-    background-color: #222;
-  }
-  .right {
-    width: 100%;
+@media  (max-width: 480px) {
+  pre {
+    font-size: 0.5em;
   }
 }
+/*@media  (max-width: 320px) {
+
+}*/
