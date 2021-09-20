@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&display=swap" rel="stylesheet">
+  <title>CV Alexander Suslov</title>
+  </head>
+<body>
+  <div class="wrapper">
+    <div class="flex-container">
+      <header class="left">
+          <h1>Alexander Suslov</h1>
+      </header>
+      <nav class="right navigation">
+        <ul>
+          <li class="menu-list"><a href="#education">Education</a></li>
+          <li class="menu-list"><a href="#experience">Experience</a></li>
+          <li class="menu-list"><a href="#skills">Skills</a></li>
+          <li class="menu-list"><a href="#languages">Languages</a></li>
+          <li class="menu-list"><a href="#code">Code</a></li>
+          <li class="menu-list"><a href="#about">About</a></li>
+          <li class="menu-list"><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="openbtn" onclick="openNav()"></button>
+        </nav>
+   </div> 
+   <div class="flex-container">
+      <aside class="left">
+        <img src="photo.jpg" alt="my photo">
+        <h3>Junior Frontend Developer</h3>
+      </aside>
+      <main class="right">
+        <div class="sub-container">
+          <video controls>
+            <source src="video.txt">
+          </video>
+        </div>
+        <div class="sub-container">
+          <h2 id="education">Education</h2>
+          <p>Belarussian State Univesity, Biological faculty, Science-research activity, 2015</p>
+        </div>
+        <div class="sub-container">
+          <h2 id="experience">Experience</h2>
+          <p>Have no experience in frontend, but I have 7 years experience of work in another area, 
+            that experince includes work in team, constant comunications, solving tasks and problems.</p>
+          <div class="sub-container">
+          <h2 id="skills">Skills</h2>
+          <p>C, HTML, CSS, JavaScript</p>
+        </div>
+        <div class="sub-container">
+          <h2 id="code">Code example</h2>
+          <pre>
+            function billboard(name, price = 30){
+              let totalCost = 0;
+              for (let i = 0; i &lt; name.length; i++) {
+                totalCost += price;
+              }
+              return totalCost;
+            } </pre>
+        <div class="sub-container">
+          <h2 id="languages">Languages</h2>
+          <p>Russian Native, English A1 (at my previous job I had practiced in speaking English with our partners)</p>
+        </div>
+        <div class="sub-container">
+          <h2 id="about">About me</h2>
+          <p>
+            In last 5 years I had worked in role of sales manager of scientific equipment and supplies (chemistry-biology area). 
+            Now I want to change professional area to IT. Now I'm studying frontend development with RS School courses. 
+            Before start with RS School I have studyed programming with C language.
+          </p>
+        </div>
+        <div class="sub-container">
+          <h2 id="contact">Contact</h2>
+          <ul>
+            <li>Phone: +375-44-568-36-95</li>
+            <li>E-mail: <a href="sasha_suslov07@mail.ru">sasha_suslov07@mail.ru</a></li>
+          </ul>
+        </div>
+      </main>
+    </div>
+    <footer class="center">
+      <ul>
+        <li class="footer-list"><a href="https://github.com/AlexanderSUS" target="_blank"><img src="https://github.githubassets.com/images/modules/site/icons/footer/github-mark.svg" alt="https://github.com/AlexanderSUS" width="50" height="50"></a></li>
+        <li class="footer-list"><a href="https://rs.school/js/" target="_blank"><img src="https://rs.school/images/rs_school_js.svg" alt="https://rs.school/js/" width="50" height="50"></a></li>
+        <li class="footer-list">Alexander Suslov, 2021</li>
+      </ul>
+    </footer>
+  </div>
+</body>
+</html>

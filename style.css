@@ -1,0 +1,274 @@
+* { box-sizing: border-box; }
+html, 
+body {
+  margin: 0;
+  padding:0;
+  background-color: #444;
+  color: whitesmoke;
+  font-family: 'Poppins', sans-serif;
+}
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+.left {
+  width: 37%;
+  background-color: #111;
+}
+.right {
+  width: 63%;
+  background-color: whitesmoke;
+  color: #222;
+}
+.center {
+  width: 100%;
+  height: auto;
+  background-color: #222;
+}
+.subcontainer {
+  display: flex;
+  align-items: center;
+}
+.navigation {
+  height: 70px;
+}
+ul {
+  padding-left: 0px;
+  margin: auto;
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+nav ul li {
+  display: inline-block;
+}
+nav a,
+nav a:visited {
+  padding: 22px 0px;
+  display: block;
+  font-size: 1.2em;
+  font-weight: 900;
+  background-color: whitesmoke;
+  color: #222;
+}
+nav a:hover {
+  background-color: #444;
+  color: whitesmoke;
+}
+footer ul {
+  margin: 0px auto;
+  padding: 10px 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer ul li{
+  display: inline-flex;
+  font-style: italic;
+  font-size: 0.8em;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+ul li {
+  list-style: none;
+}
+header {
+  order: 1;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav {
+  order:2;
+}
+aside {
+  order: 3;
+  text-align: center;
+}
+main {
+  order: 4;
+  padding: 1.5em;
+  text-align: center;
+}
+footer {
+  height: auto;
+  order: 5;
+}
+h1 { 
+  margin: 0;
+  padding-top: 1em;
+  font-size: 2.3em;
+}
+h2 {
+  margin-bottom: 0.2em;
+}
+h3 {
+  font-size: 5em;
+  font-family: monospace;
+  color: #444;
+}
+p {
+  margin: 0px;
+}
+pre {
+  width: 100%;
+  margin: 0px;
+  padding: 10px;
+  background-color: #222;
+  color: rgb(50,190,50);
+  font-family: 'Courier New', Courier, monospace;
+}
+aside img { 
+  max-width: 100%;
+  padding-top: 70px;
+  margin: auto;
+}
+video {
+  max-width: 100%;
+}
+.contact li {
+  font-weight: 700;
+}
+/*menu button style*/
+.section {
+  height: 50px;
+  display: none;
+  justify-content: center;
+  align-content: center;
+}
+.menu-btn {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  background-color: whitesmoke;
+}
+.menu-btn span,
+.menu-btn span::before,
+.menu-btn span::after {
+  position: absolute ;
+  top: 40%;
+  width: 40px;
+  height: 5px;
+  margin-top: -1px;
+  margin-left: -10px;
+  background-color: #222;
+}
+.menu-btn span::before,
+.menu-btn span::after {
+  content: '';
+}
+.menu-btn span:before {
+  transform: translateY(-10px);
+}
+.menu-btn span:after {
+  transform: translateY(10px);
+}
+@media  (max-width: 1200px) {
+  .wrapper {
+    width: 100%;
+  }
+}
+@media  (max-width: 1024px) {
+  .flex-container {
+    flex-direction: column;
+  }
+  .left {
+    width: 100%;
+    background-color: #222;
+  }
+  .right {
+    width: 100%;
+  }
+  aside img {
+    padding-top: 0;
+  }
+  h1 {
+    margin-bottom: 1em;
+  }
+  h3 {
+    font-size: 3em;
+  }
+
+}
+@media  (max-width: 900px) {
+  .flex-container {
+    flex-direction: column;
+  }
+  .left {
+    width: 100%;
+    background-color: #222;
+  }
+  .right {
+    width: 100%;
+  }
+}
+/*@media  (max-width: 768px) {
+  .flex-container {
+    flex-direction: column;
+  }
+  .left {
+    width: 100%;
+    background-color: #222;
+  }
+  .right {
+    width: 100%;
+  }
+}*/
+@media  (max-width: 600px) {
+  .flex-container {
+    flex-direction: column;
+  }
+  .left {
+    width: 100%;
+    background-color: #222;
+  }
+  .right {
+    width: 100%;
+  }
+  .navigation,
+  header {
+    height: 50px;
+  }
+  .section {
+    display: flex;
+  }
+  nav ul {
+    display: none;
+  }
+  h1 {
+    margin-bottom: 0px; 
+    padding: 5px 0px;
+  }
+}@media  (max-width: 480px) {
+  .flex-container {
+    flex-direction: column;
+  }
+  .left {
+    width: 100%;
+    background-color: #222;
+  }
+  .right {
+    width: 100%;
+  }
+}
+@media  (max-width: 320px) {
+  .flex-container {
+    flex-direction: column;
+  }
+  .left {
+    width: 100%;
+    background-color: #222;
+  }
+  .right {
+    width: 100%;
+  }
+}
