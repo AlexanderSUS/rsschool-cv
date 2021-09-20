@@ -1,0 +1,239 @@
+* { box-sizing: border-box; }
+html, 
+body {
+  margin: 0;
+  padding:0;
+  background-color: #444;
+  color: whitesmoke;
+  font-family: 'Poppins', sans-serif;
+}
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+  min-width: 320px;
+}
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+.left {
+  width: 37%;
+  background-color: #111;
+}
+.right {
+  width: 63%;
+  background-color: whitesmoke;
+  color: #222;
+}
+.center {
+  width: 100%;
+  height: auto;
+  background-color: #222;
+}
+.subcontainer {
+  display: flex;
+  align-items: center;
+}
+.navigation {
+  height: 70px;
+}
+ul {
+  padding-left: 0px;
+  margin: auto;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+nav a,
+nav a:visited {
+  padding: 18px 0px;
+  display: inline-block;
+  font-size: 1.2em;
+  font-weight: 900;
+  background-color: whitesmoke;
+  color: #222;
+}
+nav a:hover {
+  background-color: #444;
+  color: whitesmoke;
+}
+footer ul {
+  margin: 0px auto;
+  padding: 10px 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer ul li{
+  display: inline-flex;
+  font-style: italic;
+  font-size: 0.8em;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+ul li { list-style: none; }
+header {
+  order: 1;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav { order:2; }
+aside {
+  order: 3;
+  text-align: center;
+}
+main {
+  order: 4;
+  padding: 1.5em;
+  text-align: center;
+}
+footer {
+  height: auto;
+  order: 5;
+}
+h1 { 
+  margin: 0;
+  padding-top: 1em;
+  font-size: 2.3em;
+}
+h2 { margin-bottom: 0.2em; }
+h3 {
+  font-size: 2em;
+  font-family: monospace;
+  color: #555;
+}
+p { margin: 0px; }
+pre {
+  width: 100%;
+  margin: 0px;
+  padding: 10px;
+  background-color: #222;
+  color: rgb(50,190,50);
+  font-family: 'Courier New', Courier, monospace;
+}
+.side {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end; 
+  }
+  aside img { max-width: 100%; }
+video { max-width: 100%; }
+.contact li { font-weight: 700; }
+/*menu-button style*/
+.side-cross,
+.closebtn,
+.openbtn {
+  display: none;
+}
+@media (max-width: 1440px) {
+  iframe {
+    height: 324px;
+    width: 576px;
+  }
+}
+@media  (max-width: 1200px) {
+  .wrapper {
+    width: 100%;
+    margin: 0;
+  }
+  h3 { font-size: 1.8em; }
+}
+@media  (max-width: 1024px) {
+  .flex-container {
+    flex-direction: column;
+  }
+  .left {
+    width: 100%;
+    background-color: #222;
+  }
+  .right { width: 100%; }
+  aside img { padding-top: 0; }
+  h1 {
+    font-size: 2em;
+    margin-bottom: 1em;
+  }
+  h3 { font-size: 1.5em; }
+}
+@media  (max-width: 1024px) {
+  iframe {
+    width: 480px;
+    height: 270px;
+  }
+}
+@media  (max-width: 600px) {
+  .wrapper {
+    width: 100%;
+    margin: auto;
+  }
+  .navigation,
+  header {
+    height: 50px;
+  }
+  nav a,
+  nav a:visited {
+    display: none;
+    background-color: initial;
+    color: whitesmoke;
+    border-bottom: 1px solid whitesmoke;
+    font-weight: normal;
+  }
+  h1 {
+    margin-bottom: 0px; 
+    padding: 0px;
+  }
+  /*menu-button style*/
+  .side-cross,
+  .closebtn,
+  .openbtn {
+    display: block;
+  }
+  .navigation {
+    width: 0%;
+    position: fixed;
+    z-index: 1;
+    height: auto;
+    top: 0;
+    left: 0;
+    background-color: hsla(0, 0%, 20%, 0.7);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: 1s;
+  }
+  .navigation a {
+    padding: 0;
+    font-size: 2em;
+    display: block;
+    transition: 0.3s;
+  }
+  .navigation .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    color: whitesmoke;
+  }
+  .openbtn {
+    font-size: 3em;
+    cursor: pointer;
+    background-color: whitesmoke;
+    color: #111;
+    padding: 5px 15px 5px 5px;
+    border: none;
+    text-align: right;
+  }
+  .openbtn:hover { background-color: whitesmoke; }
+  iframe {
+    height: 180px;
+    width: 320px;
+  }
+}
+@media  (max-width: 480px) {
+  pre { font-size: 0.5em; }
+}
