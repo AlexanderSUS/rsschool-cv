@@ -131,6 +131,12 @@ video { max-width: 100%; }
 .openbtn {
   display: none;
 }
+@media (max-width: 1440px) {
+  iframe {
+    height: 324px;
+    width: 576px;
+  }
+}
 @media  (max-width: 1200px) {
   .wrapper {
     width: 100%;
@@ -153,6 +159,12 @@ video { max-width: 100%; }
     margin-bottom: 1em;
   }
   h3 { font-size: 1.5em; }
+}
+@media  (max-width: 1024px) {
+  iframe {
+    width: 480px;
+    height: 270px;
+  }
 }
 @media  (max-width: 600px) {
   .wrapper {
@@ -217,6 +229,10 @@ video { max-width: 100%; }
     text-align: right;
   }
   .openbtn:hover { background-color: whitesmoke; }
+  iframe {
+    height: 180px;
+    width: 320px;
+  }
 }
 @media  (max-width: 480px) {
   pre { font-size: 0.5em; }
