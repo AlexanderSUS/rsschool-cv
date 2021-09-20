@@ -75,9 +75,7 @@ a {
   text-decoration: none;
   color: #222;
 }
-ul li {
-  list-style: none;
-}
+ul li { list-style: none; }
 header {
   order: 1;
   height: 70px;
@@ -85,9 +83,7 @@ header {
   align-items: center;
   justify-content: center;
 }
-nav {
-  order:2;
-}
+nav { order:2; }
 aside {
   order: 3;
   text-align: center;
@@ -106,17 +102,13 @@ h1 {
   padding-top: 1em;
   font-size: 2.3em;
 }
-h2 {
-  margin-bottom: 0.2em;
-}
+h2 { margin-bottom: 0.2em; }
 h3 {
   font-size: 2em;
   font-family: monospace;
   color: #555;
 }
-p {
-  margin: 0px;
-}
+p { margin: 0px; }
 pre {
   width: 100%;
   margin: 0px;
@@ -130,15 +122,9 @@ pre {
     flex-direction: column-reverse;
     justify-content: flex-end; 
   }
-  aside img { 
-  max-width: 100%;
-}
-video {
-  max-width: 100%;
-}
-.contact li {
-  font-weight: 700;
-}
+  aside img { max-width: 100%; }
+video { max-width: 100%; }
+.contact li { font-weight: 700; }
 /*menu-button style*/
 .side-cross,
 .closebtn,
@@ -150,9 +136,7 @@ video {
     width: 100%;
     margin: 0;
   }
-  h3 {
-    font-size: 1.8em;
-  }
+  h3 { font-size: 1.8em; }
 }
 @media  (max-width: 1024px) {
   .flex-container {
@@ -162,19 +146,13 @@ video {
     width: 100%;
     background-color: #222;
   }
-  .right {
-    width: 100%;
-  }
-  aside img {
-    padding-top: 0;
-  }
+  .right { width: 100%; }
+  aside img { padding-top: 0; }
   h1 {
     font-size: 2em;
     margin-bottom: 1em;
   }
-  h3 {
-    font-size: 1.5em;
-  }
+  h3 { font-size: 1.5em; }
 }
 @media  (max-width: 600px) {
   .wrapper {
@@ -238,12 +216,8 @@ video {
     border: none;
     text-align: right;
   }
-  .openbtn:hover {
-    background-color: whitesmoke;
-  }
+  .openbtn:hover { background-color: whitesmoke; }
 }
 @media  (max-width: 480px) {
-  pre {
-    font-size: 0.5em;
-  }
+  pre { font-size: 0.5em; }
 }
