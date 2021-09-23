@@ -1,4 +1,12 @@
 /*    COMMON STYLE    */
+:root {
+  --bg-dark: #151719;
+  --dark-red: #710707;
+  --font-gold: #9d8665;
+  --font1: 80px;
+  --font2: 32px;
+}
+
 html { scroll-behavior: smooth;}
 
 li {
@@ -169,6 +177,7 @@ a {
   /* other*/
 }
 
+/*    TITLE STYLE   */
 .section-title {
   font-family: Forum;
   font-style: normal;
@@ -184,6 +193,44 @@ a {
   color: #9d8665;
 }
 
+.underline-title {
+  position: relative;
+}
+.underline-title::after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #710707;
+}
+/*    END TITLE STYLE   */
+
+.section-welcome {
+  /*
+  background-image: ;
+  background-position: calc(100% - 20px) calc(100% - 10px);
+  */
+}
+
+/*    VISITING SECTION    */
+.visiting-cards {
+  display: flex;
+  flex-wrap: wrap;
+  /*gap: TODO add this property for gap*/
+}
+
+.cards {
+  display: block;
+}
+/*    END VISITING SECTION    */
+
+/*    EXPLORE SECTION     */
+.section-explore {
+  display: flex;
+}
 
 .template {
  /*positionning*/
