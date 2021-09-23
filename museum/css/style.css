@@ -1,178 +1,109 @@
 /*    COMMON STYLE    */
-  $bg-dark: #151719;
-  $dark-red: #710707;
-  $font-gold: #9d8665;
-  $font1: 80px;
-  $font2: 32px;
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
 
-html { scroll-behavior: smooth;}
+*, *::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  background-color: #030303;
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 1920px;
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+  background-color: #030303;
+}
 
 li {
-  list-style: none; 
+  list-style: none;
 }
+
 a {
   text-decoration: none;
 }
 
 /*    END COMMON STYLE    */
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: #fff;
+}
 
 /*    HEADER STYLE   */
-
 .header-container {
- /*positionning*/
   display: flex;
-  justify-content: flex;
+  justify-content: space-between;
   align-items: center;
   max-height: 150px;
-  /*box model*/
-
-  /*typgraphy*/
-
-  /*style*/
   background-color: #030303;
-  
-  /*animation
-
-  /* other*/
 }
 
 .header-logo-logo {
- /*positionning*/
-
-  /*box model*/
   height: 26px;
   width: 49px;
-
-  /*typgraphy*/
-
-  /*style*/
-  background-image: url("./assets/logo.svg");  
+  background-image: url("../assets/logo.svg");
   background-size: auto;
-
-  /*animation*/
-
-  /* other*/
 }
 
-.header-logo-text{
- /*positionning*/
-
-  /*box model*/
-  
-
-  /*typgraphy*/
+.header-logo-text {
   color: #fff;
-  font-family: Forum;
+  font-family: "Forum", cursive;
   font-style: normal;
   font-weight: normal;
   font-size: 28px;
   line-height: 31px;
   letter-spacing: 5px;
   text-transform: uppercase;
-
-  /*style*/
-  
-  /*animation
-
-  /* other*/
 }
 
 .header-nav-list {
   display: flex;
-  justify-content: flex;
+  justify-content: center;
   align-items: center;
-
   max-width: 720px;
 }
 
 .header-nav-link {
- /*positionning*/
-
-  /*box model*/
   display: block;
-
-  /*typgraphy*/
-  color: #fff;
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
-  font-weight: 200;
+  font-family: "Roboto", sans-serif;
   font-size: 22px;
+  font-weight: 200;
+  color: #fff;
+  font-style: normal;
   line-height: 26px;
   letter-spacing: 2px;
-
-  /*style*/
-  
-  /*animation
-
-  /* other*/
-
 }
 
 /*      END HEADER STYLE      */
-
-
-
 /*  MAIN SYLE    */
-
 .section {
- /*positionning*/
-
-  /*box model*/
   padding: 75px 0;
-  
-  /*typgraphy*/
-
-  /*style*/
-    /*remove: arter adding content into sections*/ 
-  border: 1px solid red;
-  
-  /*animation
-
-  /* other*/
-
 }
+
 .dark-section {
- /*positionning*/
-
-  /*box model*/
-  
-  /*typgraphy*/
-
-  /*style*/
-  background-color: #030303; 
-  /*animation
-
-  /* other*/
-
+  background-color: #030303;
 }
+
 .video {
- /*positionning*/
-
-  /*box model*/
   padding-top: 90px;
-  /*typgraphy*/
-
-  /*style*/
-  
-  /*animation
-
-  /* other*/
-
 }
+
 .container {
- /*positionning*/
-  
-  /*box model*/
   margin: 0 auto;
   width: 1440px;
-
-  /*typgraphy*/
-
-  /*style*/
-  
-  /*animation
-
-  /* other*/
 }
 
 /*    TITLE STYLE   */
@@ -194,6 +125,7 @@ a {
 .underline-title {
   position: relative;
 }
+
 .underline-title::after {
   content: "";
   position: absolute;
@@ -204,8 +136,8 @@ a {
   width: 100%;
   background-color: #710707;
 }
-/*    END TITLE STYLE   */
 
+/*    END TITLE STYLE   */
 .section-welcome {
   /*
   background-image: ;
@@ -223,24 +155,11 @@ a {
 .cards {
   display: block;
 }
-/*    END VISITING SECTION    */
 
+/*    END VISITING SECTION    */
 /*    EXPLORE SECTION     */
 .section-explore {
   display: flex;
 }
 
-.template {
- /*positionning*/
-
-  /*box model*/
-
-  /*typgraphy*/
-
-  /*style*/
-  
-  /*animation
-
-  /* other*/
-}
-
+/*# sourceMappingURL=style.css.map */
