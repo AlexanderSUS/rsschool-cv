@@ -1,0 +1,120 @@
+.section {
+ /*positionning*/
+
+  /*box model*/
+  padding: 75px 0;
+  
+  /*typgraphy*/
+
+  /*style*/
+    /*remove: arter adding content into sections*/ 
+  border: 1px solid red;
+  
+  /*animation
+
+  /* other*/
+
+}
+.dark-section {
+ /*positionning*/
+
+  /*box model*/
+  
+  /*typgraphy*/
+
+  /*style*/
+  background-color: #030303; 
+  /*animation
+
+  /* other*/
+
+}
+.video {
+ /*positionning*/
+
+  /*box model*/
+  padding-top: 90px;
+  /*typgraphy*/
+
+  /*style*/
+  
+  /*animation
+
+  /* other*/
+
+}
+.container {
+ /*positionning*/
+  
+  /*box model*/
+  margin: 0 auto;
+  width: 1440px;
+
+  /*typgraphy*/
+
+  /*style*/
+  
+  /*animation
+
+  /* other*/
+}
+
+.header-container {
+ /*positionning*/
+  display: flex;
+  justify-content: flex;
+  align-items: center;
+  /*box model*/
+
+  /*typgraphy*/
+
+  /*style*/
+  
+  /*animation
+
+  /* other*/
+}
+
+.header-logo {
+ /*positionning*/
+
+  /*box model*/
+
+  /*typgraphy*/
+
+  /*style*/
+  background-image: url("/assets/logo.svg");  
+  /*animation*/
+
+  /* other*/
+}
+
+.header-logo-text{
+ /*positionning*/
+
+  /*box model*/
+
+  /*typgraphy*/
+
+  /*style*/
+  
+  /*animation
+
+  /* other*/
+}
+
+
+.template {
+ /*positionning*/
+
+  /*box model*/
+
+  /*typgraphy*/
+
+  /*style*/
+  
+  /*animation
+
+  /* other*/
+}
+
