@@ -14,82 +14,84 @@
   <!-- TODO: add fonts and icon !!!-->
 </head>
 <body>
-  <div class="wrapper">
-    <header class="header header-container">
-      <div class="header-container-logo">
-        <div class="header-logo-logo"></div>
-        <h2 class="header-logo-text">Louvre</h2>
-      </div>
-      <nav class="header-nav">
-        <ul class="header-nav-list">
-          <li class="header-nav-item"><a href="#visiting" class="header-nav-link">Visiting</a></li>
-          <li class="header-nav-item"><a href="#explore" class="header-nav-link">Explore</a></li>
-          <li class="header-nav-item"><a href="#video" class="header-nav-link">Video</a></li>
-          <li class="header-nav-item"><a href="#gallery" class="header-nav-link">Gallery</a></li>
-          <li class="header-nav-item"><a href="#tickets" class="header-nav-link">Tickets</a></li>
-          <li class="header-nav-item"><a href="#contacts" class="header-nav-link">Contacts</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main class="main">
-      <section class="section welcome-section dark-section" id="welcome">
-        <div class="container">
-          <h1 class="section-title">Welcome to the Louvre</h1>
-          <p>From the castle to the museum</p>
-          <a href="#" class="main-btn">Discover the Louvre</a>
+  <div class="outer-wrapper"> 
+    <div class="wrapper">
+      <header class="header header-container">
+        <div class="header-container-logo">
+          <div class="header-logo-logo"></div>
+          <div class="logo-text-container"><h2 class="header-logo-text">Louvre</h2></div>
         </div>
-      </section>
-      <section class="section visiting-section underline-title" id="visiting">
-        <div class="container">
-          <h2 class="section-title gold-title">Virtual tour</h2>
-        </div>
-        <div class="visiting-cards">
-          <a href="" class="cards"><img src="" alt="" class="card-image"></a>
-          <h6></h6>
-          <p></p>
-        </div>
-      </section>
-      <section class="section explore-section dark-section underline-title" id="explore">
-        <div class="container">
-          <h2 class="section-title">Picture Explore</h2>
-          <p>Las Meninas is a 1656 painting by Diego Velázquez, the leading artist of the Spanish Golden Age.</p>
-          <!-- TODO: add style for span -->
-          <p>It was cleaned in 1984 to remove a <span>"yellow veil"</span> of dust that had gathered since the previous restoration in the 19th century.</p>
-          <p>The cleaning provoked furious protests, not because the picture had been damaged in any way, but because it looked different.</p>
+        <nav class="header-nav">
+          <ul class="header-nav-list">
+            <li class="header-nav-item"><a href="#visiting" class="header-nav-link">Visiting</a></li>
+            <li class="header-nav-item"><a href="#explore" class="header-nav-link">Explore</a></li>
+            <li class="header-nav-item"><a href="#video" class="header-nav-link">Video</a></li>
+            <li class="header-nav-item"><a href="#gallery" class="header-nav-link">Gallery</a></li>
+            <li class="header-nav-item"><a href="#tickets" class="header-nav-link">Tickets</a></li>
+            <li class="header-nav-item"><a href="#contacts" class="header-nav-link">Contacts</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main">
+        <section class="section welcome-section dark-section" id="welcome">
+          <div class="container">
+            <h1 class="section-title"> Welcome<br>to the Louvre</h1>
+            <p>From the castle to the museum</p>
+            <a href="#" class="main-btn">Discover the Louvre</a>
+          </div>
+        </section>
+        <section class="section visiting-section underline-title" id="visiting">
+          <div class="container">
+            <h2 class="section-title gold-title">Virtual tour</h2>
+          </div>
+          <div class="visiting-cards">
+            <a href="" class="cards"><img src="" alt="" class="card-image"></a>
+            <h6></h6>
+            <p></p>
+          </div>
+        </section>
+        <section class="section explore-section dark-section underline-title" id="explore">
+          <div class="container">
+            <h2 class="section-title">Picture Explore</h2>
+            <p>Las Meninas is a 1656 painting by Diego Velázquez, the leading artist of the Spanish Golden Age.</p>
+            <!-- TODO: add style for span -->
+            <p>It was cleaned in 1984 to remove a <span>"yellow veil"</span> of dust that had gathered since the previous restoration in the 19th century.</p>
+            <p>The cleaning provoked furious protests, not because the picture had been damaged in any way, but because it looked different.</p>
 
-        </div>
-      </section>
-      <section class="section video-section" id="video">
-        <div class="container">
-          <h2 class="section-title gold-title">Video journey</h2>
-        <!-- TODO: add video to folder -->
-            <video src="assets/video/video.mp4" poster="assets/video/poster.jpg" controls></video>
-            <!--TODO: apply style for progress bar???  -->
-          <input type="range">
-        </div>
-      </section>
-      <section class="section gallery-section dark-section " id="gallery">
-        <div class="container">
-          <h2 class="section-title">Explore</h2>
-        </div>
-      </section>
-      <section class="section tickets-section underline-title" id="tickets">
-        <div class="container">
-          <h2 class="section-title gold-title">Buy tickets</h2>
-          <input type="button" value="" class="radio-btn-tickets">
-          <input type="button" value="" class="radio-btn-tickets">
-          <input type="button" value="" class="radio-btn-tickets">
-          <input type="number" name="" id="" class="input-number-tickets">
-          <input type="number" name="" id="" class="input-number-tickets">
-        </div>
-      </section>
-      <div class="nowrap"></div>
-      <section class="section contacts-section underline-title" id="contacts">
-        <div class="container">
-          <h2 class="section-title gold-title">Contacts</h2>
-        </div>
-      </section>
-    </main>
+          </div>
+        </section>
+        <section class="section video-section" id="video">
+          <div class="container">
+            <h2 class="section-title gold-title">Video journey</h2>
+          <!-- TODO: add video to folder -->
+              <video src="assets/video/video.mp4" poster="assets/video/poster.jpg" controls></video>
+              <!--TODO: apply style for progress bar???  -->
+            <input type="range">
+          </div>
+        </section>
+        <section class="section gallery-section dark-section " id="gallery">
+          <div class="container">
+            <h2 class="section-title">Explore</h2>
+          </div>
+        </section>
+        <section class="section tickets-section underline-title" id="tickets">
+          <div class="container">
+            <h2 class="section-title gold-title">Buy tickets</h2>
+            <input type="button" value="" class="radio-btn-tickets">
+            <input type="button" value="" class="radio-btn-tickets">
+            <input type="button" value="" class="radio-btn-tickets">
+            <input type="number" name="" id="" class="input-number-tickets">
+            <input type="number" name="" id="" class="input-number-tickets">
+          </div>
+        </section>
+        <div class="nowrap"></div>
+        <section class="section contacts-section underline-title" id="contacts">
+          <div class="container">
+            <h2 class="section-title gold-title">Contacts</h2>
+          </div>
+        </section>
+      </main>
+    </div>
   </div>
   <footer class="footer"></footer>
 </body>
