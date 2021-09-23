@@ -1,3 +1,113 @@
+/*    COMMON STYLE    */
+html { scroll-behavior: smooth;}
+
+li {
+  list-style: none; 
+}
+a {
+  text-decoration: none;
+}
+
+/*    END COMMON STYLE    */
+
+/*    HEADER STYLE   */
+
+.header-container {
+ /*positionning*/
+  display: flex;
+  justify-content: flex;
+  align-items: center;
+  max-height: 150px;
+  /*box model*/
+
+  /*typgraphy*/
+
+  /*style*/
+  background-color: #030303;
+  
+  /*animation
+
+  /* other*/
+}
+
+.header-logo-logo {
+ /*positionning*/
+
+  /*box model*/
+  height: 26px;
+  width: 49px;
+
+  /*typgraphy*/
+
+  /*style*/
+  background-image: url("./assets/logo.svg");  
+  background-size: auto;
+
+  /*animation*/
+
+  /* other*/
+}
+
+.header-logo-text{
+ /*positionning*/
+
+  /*box model*/
+  
+
+  /*typgraphy*/
+  color: #fff;
+  font-family: Forum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 31px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+
+  /*style*/
+  
+  /*animation
+
+  /* other*/
+}
+
+.header-nav-list {
+  display: flex;
+  justify-content: flex;
+  align-items: center;
+
+  max-width: 720px;
+}
+
+.header-nav-link {
+ /*positionning*/
+
+  /*box model*/
+  display: block;
+
+  /*typgraphy*/
+  color: #fff;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 2px;
+
+  /*style*/
+  
+  /*animation
+
+  /* other*/
+
+}
+
+/*      END HEADER STYLE      */
+
+
+
+/*  MAIN SYLE    */
+
 .section {
  /*positionning*/
 
@@ -59,49 +169,7 @@
   /* other*/
 }
 
-.header-container {
- /*positionning*/
-  display: flex;
-  justify-content: flex;
-  align-items: center;
-  /*box model*/
 
-  /*typgraphy*/
-
-  /*style*/
-  
-  /*animation
-
-  /* other*/
-}
-
-.header-logo {
- /*positionning*/
-
-  /*box model*/
-
-  /*typgraphy*/
-
-  /*style*/
-  background-image: url("/assets/logo.svg");  
-  /*animation*/
-
-  /* other*/
-}
-
-.header-logo-text{
- /*positionning*/
-
-  /*box model*/
-
-  /*typgraphy*/
-
-  /*style*/
-  
-  /*animation
-
-  /* other*/
-}
 
 
 .template {
