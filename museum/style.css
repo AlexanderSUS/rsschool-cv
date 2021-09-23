@@ -87,7 +87,7 @@ a {
 
   /*typgraphy*/
   color: #fff;
-  font-family: Roboto;
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 200;
   font-size: 22px;
@@ -169,7 +169,20 @@ a {
   /* other*/
 }
 
+.section-title {
+  font-family: Forum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 80px;
+  line-height: 90px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #fff;
+}
 
+.gold-title {
+  color: #9d8665;
+}
 
 
 .template {
