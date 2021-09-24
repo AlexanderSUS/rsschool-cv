@@ -26,7 +26,6 @@ $title-font: 'Forum', cursive;
   align-items: center;
 }
 
-
 html { 
   box-sizing: border-box;
 
@@ -50,38 +49,53 @@ a { text-decoration: none; }
 
 /*    END COMMON STYLE    */
 
+/*  VIew page style     */
+
 .outer-wrapper {
   max-width: 1920px;
   margin: 0 auto;
 
   background-color: $bg-dark;
-}
+
+    @media screen and (max-width: 1024px) {
+
+      max-width: 1024px;
+    };
+    
+  }
 
 .wrapper {
   max-width: 1440px;
   margin: 0 auto;
 
   background-color: #fff;
+    @media screen and (max-width: 1024px) {
+
+      max-width: 1024px;
+    };
 }
 .nowrap {
   max-width: 1920px;
   margin: 0 auto;
+
+    @media screen and (max-width: 1024px) {
+
+      max-width: 1024px;
+    };
 }
+
+/* END VIEW PAGE STYLE    */
 
 /*    HEADER STYLE   */
-.header {
-  position: fixed;
-  top: 0;
-  left: calc((1920 - 1440)/2);
-  height: 100%;
-}
-
 .header-container {
   @include set-standard-flex(space-between);
-
+  position: fixed;
+  top: 0;
+  height: 100%;
   max-height: 150px;
   max-width: 1440px;
   width: 100%;
+  margin: 0% auto;
 
   background-color: $bg-dark;
 }
@@ -92,64 +106,57 @@ a { text-decoration: none; }
   align-items: center;
 
   max-width: 199px;
-}
+  width: 100%;
 
-.header-logo-logo {
-  height: 26px;
-  width: 49px;
+  .header-logo-logo {
+    height: 26px;
+    width: 49px;
 
-  background-image: url("../assets/logo.svg");  
-  background-size: 49px 26px;
-}
-
-.logo-text-container {
-
-  margin-left: 25px;
-  h2 {
-    margin: 0;
+    background-image: url("../assets/logo.svg");  
   }
-}
 
-.header-logo-text{
-  font-family:'Forum', cursive;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 28px;
-  line-height: 31px;
-  letter-spacing: 5px;
-  text-transform: uppercase;
+  .header-logo-text{
+    margin: 0;
+
+    font-family:'Forum', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 31px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+  }  
 }
 
 .header-nav-list {
   @include set-standard-flex(space-between);
-  
-  // padding-top: 62px;
 
   max-width: 775px;
-}
+  width: 100%;
 
-.header-nav-item {
-  margin-right: 55px;
-  &:last-child {
-    margin-right: 0;
+  background-color: $bg-dark;
+
+  .header-nav-item {
+    margin-right: 55px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .header-nav-link {
+    display: block;
+
+    @include default-font-style(200, $least-font-size);
+    color: #fff;
+    font-style: normal;
+    line-height: 26px;
+    letter-spacing: 2px;
   }
 }
-
-.header-nav-link {
-  display: block;
-
-
-  @include default-font-style(200, $least-font-size);
-  color: #fff;
-  font-style: normal;
-  line-height: 26px;
-  letter-spacing: 2px;
-}
-
 /*      END HEADER STYLE      */
 
 /*  MAIN SYLE    */
-/* COMMON STYLES    */
+/* COMMON  MAIN STYLES    */
 .section { padding: 75px 0; }
 
 .dark-section { background-color: #030303; }
@@ -157,11 +164,13 @@ a { text-decoration: none; }
 .video { padding-top: 90px; }
 
 .container {
+  // max-width: 1440px;
+  width: 100%;
   margin: 0 auto;
-  width: 1440px;
+
 }
 
-/*    TITLE STYLE   */
+/*    TITLES STYLE   */
 .section-title {
   font-family: Forum;
   font-style: normal;
@@ -187,26 +196,40 @@ a { text-decoration: none; }
   width: 100%;
   background-color: #710707;
 }
-/*    END TITLE STYLE   */
+/*    END TITLES STYLE   */
 
+/*   WELCOME SECTION (first slide)*/
+
+// .welcome-section {
+//   box-sizing: content-box;
+//   height: 810px;
+
+//   padding-top: 150px;
+//   padding-bottom: 0;
+
+//   background-image:  url(../assets/mona.png);
+//   background-size: 1000px 750px;
+//   background-repeat: no-repeat;
+//   background-position: 100% 150px;
 .welcome-section {
   box-sizing: content-box;
-  height: 810px;
+  max-height: 810px;
 
   padding-top: 150px;
   padding-bottom: 0;
 
+   
 
-  background-image: url(../assets/mona.jpg);
-  background-size: 1000px 750px;
-  background-repeat: no-repeat;
-  background-position: 100% 150px;
+}
+
+
+  
   // background-position: calc(100% - 10px) calc(100% - 10px);
 
-  .container {
+  .welcome-content{
     max-width: 598px;
     max-height: 380px;
-    padding-top: calc(150px + 150px);
+    padding-top: 150px;
     margin: 0;
 
     h1 {
