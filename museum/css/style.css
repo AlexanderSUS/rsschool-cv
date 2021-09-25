@@ -79,6 +79,7 @@ a {
   position: fixed;
   top: 0;
   height: 100%;
+  z-index: 5;
   max-height: 150px;
   max-width: 1440px;
   width: 100%;
@@ -150,11 +151,6 @@ a {
   padding-top: 90px;
 }
 
-.container {
-  width: 100%;
-  margin: 0 auto;
-}
-
 /*    TITLES STYLE   */
 .section-title {
   font-family: Forum;
@@ -189,23 +185,18 @@ a {
 /*    END TITLES STYLE   */
 /*   WELCOME SECTION (first slide)*/
 .welcome-section {
-  box-sizing: content-box;
-  height: 810px;
-  padding-top: 150px;
-  padding-bottom: 0;
-  background-image: url(../assets/mona.png);
-  background-size: 1000px 750px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 960px;
+  padding: 0;
+  background-image: url(../assets/mona.jpg);
   background-repeat: no-repeat;
-  background-position: 100% 150px;
+  background-position: right bottom 60px;
 }
 .welcome-section .container {
-  max-width: 598px;
-  max-height: 380px;
-  padding-top: 150px;
-  margin: 0;
-}
-.welcome-section .container h1 {
-  margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 .welcome-section .container p {
   margin-top: 25px;
