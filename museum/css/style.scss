@@ -36,8 +36,11 @@ html {
 *::after {
   box-sizing: inherit;
 }
+
 body { 
-  @include default-font-style($main-font-weight, $least-font-size);
+  font-family: $text-font;
+  font-size: $least-font-size;
+  font-weight: $main-font-weight;
   color: #fff;
 
   background-color: $bg-dark;
@@ -45,7 +48,10 @@ body {
 
 li { list-style: none; }
 
-a { text-decoration: none; }
+a { 
+  text-decoration: none;
+  @include default-font-style(100, 22px);
+}
 
 /*    END COMMON STYLE    */
 
@@ -61,7 +67,6 @@ a { text-decoration: none; }
 
       max-width: 1024px;
     };
-    
   }
 
 .wrapper {
@@ -134,7 +139,6 @@ a { text-decoration: none; }
   }
 }  
 
-
 .header-nav-list {
   @include set-standard-flex(space-between);
 
@@ -182,6 +186,8 @@ a { text-decoration: none; }
 //   margin: 0 auto;
 // }
 
+/*    END COMMON MAIN STYLES    */
+
 /*    TITLES STYLE   */
 .section-title {
   font-family: Forum;
@@ -201,7 +207,7 @@ a { text-decoration: none; }
 .underline-title::after {
   content: "";
   position: absolute;
-  bottom: -25px;
+  top: 190px;
   left: 0;
   right: 0;
   height: 3px;
@@ -256,17 +262,36 @@ a { text-decoration: none; }
       }
     }
   }
-  }
+}
+/*    END WELCOME SECTION   */
 
 
 /*    VISITING SECTION    */
+.section-title { 
+  margin-bottom: 103px;
+  margin-top: 0;
+}
+
 .visiting-cards {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  // row-gap: 60px;
+  // flex-wrap: wrap;
+  justify-content: space-between;
+  // align-items: center;
   /*gap: TODO add this property for gap*/
 }
 
-.cards { display: block; }
+.cards { 
+  display: block; 
+
+  p { margin: 0;
+
+    &:last-of-type {
+      font-size: 18px;
+    }
+  }
+ }
 
 /*    END VISITING SECTION    */
 

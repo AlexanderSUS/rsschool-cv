@@ -33,6 +33,9 @@ li {
 
 a {
   text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  font-weight: 100;
 }
 
 /*    END COMMON STYLE    */
@@ -159,6 +162,7 @@ a {
   padding-top: 90px;
 }
 
+/*    END COMMON MAIN STYLES    */
 /*    TITLES STYLE   */
 .section-title {
   font-family: Forum;
@@ -182,7 +186,7 @@ a {
 .underline-title::after {
   content: "";
   position: absolute;
-  bottom: -25px;
+  top: 190px;
   left: 0;
   right: 0;
   height: 3px;
@@ -227,15 +231,28 @@ a {
   filter: brightness(130%);
 }
 
+/*    END WELCOME SECTION   */
 /*    VISITING SECTION    */
+.section-title {
+  margin-bottom: 103px;
+  margin-top: 0;
+}
+
 .visiting-cards {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-between;
   /*gap: TODO add this property for gap*/
 }
 
 .cards {
   display: block;
+}
+.cards p {
+  margin: 0;
+}
+.cards p:last-of-type {
+  font-size: 18px;
 }
 
 /*    END VISITING SECTION    */
