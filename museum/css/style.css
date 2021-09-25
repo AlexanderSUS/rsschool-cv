@@ -39,33 +39,11 @@ a {
 }
 
 /*    END COMMON STYLE    */
-/*  VIew page style     */
-.wrapper {
-  max-width: 1920px;
-  margin: 0 auto;
-  background-color: #fff;
-}
-@media screen and (max-width: 1024px) {
-  .wrapper {
-    max-width: 1024px;
-  }
-}
-
-.nowrap {
-  max-width: 1920px;
-  margin: 0 auto;
-}
-@media screen and (max-width: 1024px) {
-  .nowrap {
-    max-width: 1024px;
-  }
-}
-
-/* END VIEW PAGE STYLE    */
 /*    HEADER STYLE   */
 .header-wrapper {
   max-width: 1440px;
   margin: 0 auto;
+  background-color: #030303;
 }
 
 .header-container {
@@ -144,10 +122,10 @@ a {
 /*  MAIN SYLES    */
 /* COMMON  MAIN STYLES    */
 .section {
-  width: 100%;
   max-width: 1920px;
   margin: 0 auto;
   padding: 75px 0;
+  background-color: #fff;
 }
 
 .dark-section {
@@ -171,7 +149,6 @@ a {
   font-style: normal;
   font-weight: normal;
   font-size: 80px;
-  line-height: 90px;
   letter-spacing: 5px;
   text-transform: uppercase;
   color: #fff;
@@ -184,7 +161,6 @@ a {
 .underline-title {
   position: relative;
 }
-
 .underline-title::after {
   content: "";
   position: absolute;
@@ -192,7 +168,8 @@ a {
   left: 0;
   right: 0;
   height: 3px;
-  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
   background-color: #710707;
 }
 
@@ -243,19 +220,49 @@ a {
 
 .visiting-cards {
   display: grid;
+  height: 935px;
   grid-template-columns: auto auto auto;
   justify-content: space-between;
+  align-content: space-between;
   /*gap: TODO add this property for gap*/
 }
 
 .cards {
   display: block;
+  color: #000;
+}
+.cards h3 {
+  position: relative;
+  margin-top: 25px;
+  margin-bottom: 22px;
+  font-family: "Forum", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 33px;
+  line-height: 35px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+.cards h3::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  bottom: -10px;
+  left: 0;
+  width: 300px;
+  background-color: #710707;
+  transition: 0.5s;
 }
 .cards p {
   margin: 0;
 }
 .cards p:last-of-type {
   font-size: 18px;
+  margin-top: 10px;
+}
+
+.visiting-cards a:hover h3::after {
+  width: 100%;
 }
 
 /*    END VISITING SECTION    */

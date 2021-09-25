@@ -55,47 +55,14 @@ a {
 
 /*    END COMMON STYLE    */
 
-/*  VIew page style     */
-
-// .outer-wrapper {
-//   max-width: 1920px;
-//   margin: 0 auto;
-
-//   background-color: $bg-dark;
-
-//     @media screen and (max-width: 1024px) {
-
-//       max-width: 1024px;
-//     };
-//   }
-
-.wrapper {
-  max-width: 1920px;
-  margin: 0 auto;
-
-  background-color: #fff;
-    @media screen and (max-width: 1024px) {
-
-      max-width: 1024px;
-    };
-}
-.nowrap {
-  max-width: 1920px;
-  margin: 0 auto;
-
-    @media screen and (max-width: 1024px) {
-
-      max-width: 1024px;
-    };
-}
-
-/* END VIEW PAGE STYLE    */
-
 /*    HEADER STYLE   */
 .header-wrapper {
   max-width: 1440px;
   margin: 0 auto;
+
+  background-color: $bg-dark;
 }
+
 .header-container {
   @include set-standard-flex(space-between);
   position: fixed;
@@ -177,11 +144,12 @@ a {
 
 /*  MAIN SYLES    */
 /* COMMON  MAIN STYLES    */
-
 .section { 
   max-width: 1920px;
   margin: 0 auto;
   padding: 75px 0; 
+
+  background-color: #fff;
 }
 
 .dark-section { background-color: #030303; }
@@ -202,7 +170,7 @@ a {
   font-style: normal;
   font-weight: normal;
   font-size: 80px;
-  line-height: 90px;
+ 
   letter-spacing: 5px;
   text-transform: uppercase;
   color: #fff;
@@ -210,17 +178,20 @@ a {
 
 .gold-title { color: $font-gold; }
 
-.underline-title { position: relative; }
+.underline-title { 
+  position: relative; 
 
-.underline-title::after {
-  content: "";
-  position: absolute;
-  top: 190px;
-  left: 0;
-  right: 0;
-  height: 3px;
-  width: 100%;
-  background-color: #710707;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 190px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: #710707;
+  }
 }
 /*    END TITLES STYLE   */
 
@@ -240,7 +211,6 @@ a {
     .welcome-content {
     display: flex;
     flex-direction: column;
-    
 
       p {
         margin-top: 25px; 
@@ -283,10 +253,12 @@ a {
 
 .visiting-cards {
   display: grid;
+  height: 935px;
   grid-template-columns: auto auto auto;
   // row-gap: 60px;
   // flex-wrap: wrap;
   justify-content: space-between;
+  align-content: space-between; 
   // align-items: center;
   /*gap: TODO add this property for gap*/
 }
@@ -294,14 +266,52 @@ a {
 .cards { 
   display: block; 
 
-  p { margin: 0;
+  color: #000;
+
+  h3 {
+    position: relative;
+
+    margin-top: 25px;
+    margin-bottom: 22px;
+
+    font-family: $title-font;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 33px;
+    line-height: 35px;
+    letter-spacing: 5px; 
+    text-transform: uppercase;
+
+    &::after {
+      position: absolute;
+      content: '';
+      height: 2px;
+      bottom: -10px;
+      left: 0;
+
+      width: 300px;
+      
+      background-color: $dark-red;
+
+      transition: 0.5s;
+    }
+  }
+  p { 
+    margin: 0;
 
     &:last-of-type {
       font-size: 18px;
+      margin-top: 10px;
     }
   }
- }
+}
 
+.visiting-cards a:hover  {
+  h3::after { 
+    width: 100%;
+  }
+}
+ 
 /*    END VISITING SECTION    */
 
 /*    EXPLORE SECTION     */
