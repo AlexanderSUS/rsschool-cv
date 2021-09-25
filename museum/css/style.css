@@ -40,19 +40,8 @@ a {
 
 /*    END COMMON STYLE    */
 /*  VIew page style     */
-.outer-wrapper {
-  max-width: 1920px;
-  margin: 0 auto;
-  background-color: #030303;
-}
-@media screen and (max-width: 1024px) {
-  .outer-wrapper {
-    max-width: 1024px;
-  }
-}
-
 .wrapper {
-  max-width: 1440px;
+  max-width: 1920px;
   margin: 0 auto;
   background-color: #fff;
 }
@@ -74,6 +63,11 @@ a {
 
 /* END VIEW PAGE STYLE    */
 /*    HEADER STYLE   */
+.header-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 .header-container {
   display: flex;
   flex-wrap: wrap;
@@ -82,7 +76,6 @@ a {
   position: fixed;
   top: 0;
   height: 100%;
-  z-index: 5;
   max-height: 150px;
   max-width: 1440px;
   width: 100%;
@@ -151,6 +144,9 @@ a {
 /*  MAIN SYLES    */
 /* COMMON  MAIN STYLES    */
 .section {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
   padding: 75px 0;
 }
 
@@ -160,6 +156,12 @@ a {
 
 .video {
   padding-top: 90px;
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 /*    END COMMON MAIN STYLES    */
@@ -197,24 +199,25 @@ a {
 /*    END TITLES STYLE   */
 /*   WELCOME SECTION (first slide)*/
 .welcome-section {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  height: 960px;
   padding: 0;
+}
+.welcome-section .container {
+  display: flex;
+  height: 960px;
+  align-items: center;
   background-image: url(../assets/mona.jpg);
   background-repeat: no-repeat;
   background-position: right bottom 60px;
 }
-.welcome-section .container {
+.welcome-section .container .welcome-content {
   display: flex;
   flex-direction: column;
 }
-.welcome-section .container p {
+.welcome-section .container .welcome-content p {
   margin-top: 25px;
   margin-bottom: 75px;
 }
-.welcome-section .container a {
+.welcome-section .container .welcome-content a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -225,7 +228,7 @@ a {
   border-radius: 10px;
   transition: 0.1s;
 }
-.welcome-section .container a:hover, .welcome-section .container a:focus {
+.welcome-section .container .welcome-content a:hover, .welcome-section .container .welcome-content a:focus {
   text-decoration: underline;
   border: 1px solid #fff;
   filter: brightness(130%);

@@ -14,8 +14,8 @@
   <!-- TODO: add icon !!!-->
 </head>
 <body>
-  <div class="outer-wrapper"> 
-    <div class="wrapper">
+  <div class="wrapper">
+    <div class="header-wrapper">
       <header class="header header-container">
         <div class="header-container-logo">
           <div class="header-logo-logo"></div>
@@ -32,19 +32,21 @@
             </ul>
           </nav>
       </header>
-      <main class="main">
-        <section class="section welcome-section dark-section" id="welcome">
-          <div class="container welcome-content">
+    </div>
+    <main class="main">
+      <section class="section welcome-section dark-section" id="welcome">
+        <div class="container">
+          <div class="welcome-content">
             <h1 class="section-title"> Welcome<br>to the Louvre</h1>
             <p>From the castle to the museum</p>
-            <a href="https://www.google.com/maps/@48.8618159,2.3366818,3a,75y,81.55h,73.4t/data=!3m7!1e1!3m5!1sAF1QipOVxZQuSy3Bx9T_HpH_7FtBHDTXvI6SF-A10ocT!2e10!3e12!7i5472!8i2736" 
+            <a href="https://www.google.com/maps/@48.8618159,2.3366818,3a,75y,81.55h,73.4t/data=!3m7!1e1!3m5!1sAF1QipOVxZQuSy3Bx9T_HpH_7FtBHDTXvI6SF-A10ocT!2e10!3e12!7i5472!8i2736"
             class="main-btn" target="_blank">Discover the Louvre</a>
           </div>
-        </section>
-        <section class="section visiting-section underline-title" id="visiting">
-          <div class="container">
-            <h2 class="section-title gold-title">Virtual tour</h2>
-          </div>
+        </div>
+      </section>
+      <section class="section visiting-section underline-title" id="visiting">
+        <div class="container">
+          <h2 class="section-title gold-title">Virtual tour</h2>
           <div class="visiting-cards">
             <a href="./tours/tour1.html" class="cards"><img class="card-image" src="./assets/card1.jpg" alt="Royal Palace" width="440" height="285">
               <h3>Royal palace</h3>
@@ -71,49 +73,49 @@
               <p>360&#176; Virtual Tour</p><p>Google Street Panorama View</p>
             </a>
           </div>
-        </section>
-        <section class="section explore-section dark-section underline-title" id="explore">
-          <div class="container">
-            <h2 class="section-title">Picture Explore</h2>
-            <p>Las Meninas is a 1656 painting by Diego Velázquez, the leading artist of the Spanish Golden Age.</p>
-            <!-- TODO: add style for span -->
-            <p>It was cleaned in 1984 to remove a <span>"yellow veil"</span> of dust that had gathered since the previous restoration in the 19th century.</p>
-            <p>The cleaning provoked furious protests, not because the picture had been damaged in any way, but because it looked different.</p>
+        </div>
+      </section>
+      <section class="section explore-section dark-section underline-title" id="explore">
+        <div class="container">
+          <h2 class="section-title">Picture Explore</h2>
+          <p>Las Meninas is a 1656 painting by Diego Velázquez, the leading artist of the Spanish Golden Age.</p>
+          <!-- TODO: add style for span -->
+          <p>It was cleaned in 1984 to remove a <span>"yellow veil"</span> of dust that had gathered since the previous restoration in the 19th century.</p>
+          <p>The cleaning provoked furious protests, not because the picture had been damaged in any way, but because it looked different.</p>
 
-          </div>
-        </section>
-        <section class="section video-section" id="video">
-          <div class="container">
-            <h2 class="section-title gold-title">Video journey</h2>
-          <!-- TODO: add video to folder -->
-              <video src="assets/video/video.mp4" poster="assets/video/poster.jpg" controls></video>
-              <!--TODO: apply style for progress bar???  -->
-            <input type="range">
-          </div>
-        </section>
-        <section class="section gallery-section dark-section " id="gallery">
-          <div class="container">
-            <h2 class="section-title">Explore</h2>
-          </div>
-        </section>
-        <section class="section tickets-section underline-title" id="tickets">
-          <div class="container">
-            <h2 class="section-title gold-title">Buy tickets</h2>
-            <input type="button" value="" class="radio-btn-tickets">
-            <input type="button" value="" class="radio-btn-tickets">
-            <input type="button" value="" class="radio-btn-tickets">
-            <input type="number" name="" id="" class="input-number-tickets">
-            <input type="number" name="" id="" class="input-number-tickets">
-          </div>
-        </section>
-        <div class="nowrap"></div>
-        <section class="section contacts-section underline-title" id="contacts">
-          <div class="container">
-            <h2 class="section-title gold-title">Contacts</h2>
-          </div>
-        </section>
-      </main>
-    </div>
+        </div>
+      </section>
+      <section class="section video-section" id="video">
+        <div class="container">
+          <h2 class="section-title gold-title">Video journey</h2>
+        <!-- TODO: add video to folder -->
+            <video src="assets/video/video.mp4" poster="assets/video/poster.jpg" controls></video>
+            <!--TODO: apply style for progress bar???  -->
+          <input type="range">
+        </div>
+      </section>
+      <section class="section gallery-section dark-section " id="gallery">
+        <div class="container">
+          <h2 class="section-title">Explore</h2>
+        </div>
+      </section>
+      <section class="section tickets-section underline-title" id="tickets">
+        <div class="container">
+          <h2 class="section-title gold-title">Buy tickets</h2>
+          <input type="button" value="" class="radio-btn-tickets">
+          <input type="button" value="" class="radio-btn-tickets">
+          <input type="button" value="" class="radio-btn-tickets">
+          <input type="number" name="" id="" class="input-number-tickets">
+          <input type="number" name="" id="" class="input-number-tickets">
+        </div>
+      </section>
+      <div class="nowrap"></div>
+      <section class="section contacts-section underline-title" id="contacts">
+        <div class="container">
+          <h2 class="section-title gold-title">Contacts</h2>
+        </div>
+      </section>
+    </main>
   </div>
   <footer class="footer"></footer>
 </body>

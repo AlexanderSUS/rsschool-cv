@@ -57,20 +57,20 @@ a {
 
 /*  VIew page style     */
 
-.outer-wrapper {
-  max-width: 1920px;
-  margin: 0 auto;
+// .outer-wrapper {
+//   max-width: 1920px;
+//   margin: 0 auto;
 
-  background-color: $bg-dark;
+//   background-color: $bg-dark;
 
-    @media screen and (max-width: 1024px) {
+//     @media screen and (max-width: 1024px) {
 
-      max-width: 1024px;
-    };
-  }
+//       max-width: 1024px;
+//     };
+//   }
 
 .wrapper {
-  max-width: 1440px;
+  max-width: 1920px;
   margin: 0 auto;
 
   background-color: #fff;
@@ -92,12 +92,15 @@ a {
 /* END VIEW PAGE STYLE    */
 
 /*    HEADER STYLE   */
+.header-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
 .header-container {
   @include set-standard-flex(space-between);
   position: fixed;
   top: 0;
   height: 100%;
-  z-index: 5;
   max-height: 150px;
   max-width: 1440px;
   width: 100%;
@@ -175,16 +178,21 @@ a {
 /*  MAIN SYLES    */
 /* COMMON  MAIN STYLES    */
 
-.section { padding: 75px 0; }
+.section { 
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 75px 0; 
+}
 
 .dark-section { background-color: #030303; }
 
 .video { padding-top: 90px; }
 
-// .container {
-//   width: 100%;
-//   margin: 0 auto;
-// }
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
 
 /*    END COMMON MAIN STYLES    */
 
@@ -218,48 +226,49 @@ a {
 
 /*   WELCOME SECTION (first slide)*/
 .welcome-section {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-
-  height: 960px;
-  // max-height: 960px;
   padding: 0;
-
-  background-image: url(../assets/mona.jpg);
-  background-repeat: no-repeat;
-  background-position: right bottom 60px;
 
   .container {
     display: flex;
+    height: 960px;
+    align-items: center;
+
+    background-image: url(../assets/mona.jpg);
+    background-repeat: no-repeat;
+    background-position: right bottom 60px;
+
+    .welcome-content {
+    display: flex;
     flex-direction: column;
+    
 
-    p {
-      margin-top: 25px; 
-      margin-bottom: 75px;
-    }
-
-    a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      width: 360px;
-      height: 75px;
-
-      color: #fff;
-
-      background-color: $dark-red;
-      border-radius: 10px;
-
-      transition: 0.1s;
-
-      &:hover, 
-      &:focus {
-        text-decoration: underline;
-        border: 1px solid #fff;
-        filter: brightness(130%);
+      p {
+        margin-top: 25px; 
+        margin-bottom: 75px;
       }
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 360px;
+        height: 75px;
+
+        color: #fff;
+
+        background-color: $dark-red;
+        border-radius: 10px;
+
+        transition: 0.1s;
+
+        &:hover, 
+        &:focus {
+          text-decoration: underline;
+          border: 1px solid #fff;
+          filter: brightness(130%);
+      }
+     } 
     }
   }
 }
