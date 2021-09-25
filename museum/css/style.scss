@@ -116,7 +116,7 @@ a { text-decoration: none; }
     background-image: url("../assets/logo.svg");  
   }
 
-  .header-logo-text{
+  .header-logo-text {
     margin: 0;
 
     font-family:'Forum', cursive;
@@ -126,8 +126,14 @@ a { text-decoration: none; }
     line-height: 31px;
     letter-spacing: 5px;
     text-transform: uppercase;
-  }  
-}
+    transition: 0.3s;
+
+      &:hover {
+        color: $font-gold;
+      }
+  }
+}  
+
 
 .header-nav-list {
   @include set-standard-flex(space-between);
@@ -152,12 +158,19 @@ a { text-decoration: none; }
     font-style: normal;
     line-height: 26px;
     letter-spacing: 2px;
+    transition: 0.3s;
+
+    &:hover,
+    &:active{
+      color: $font-gold;
+    }
   }
 }
 /*      END HEADER STYLE      */
 
-/*  MAIN SYLE    */
+/*  MAIN SYLES    */
 /* COMMON  MAIN STYLES    */
+
 .section { padding: 75px 0; }
 
 .dark-section { background-color: #030303; }
@@ -232,6 +245,15 @@ a { text-decoration: none; }
 
       background-color: $dark-red;
       border-radius: 10px;
+
+      transition: 0.1s;
+
+      &:hover, 
+      &:focus {
+        text-decoration: underline;
+        border: 1px solid #fff;
+        filter: brightness(130%);
+      }
     }
   }
   }

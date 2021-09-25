@@ -108,6 +108,10 @@ a {
   line-height: 31px;
   letter-spacing: 5px;
   text-transform: uppercase;
+  transition: 0.3s;
+}
+.header-container-logo .header-logo-text:hover {
+  color: #9d8665;
 }
 
 .header-nav-list {
@@ -134,10 +138,14 @@ a {
   font-style: normal;
   line-height: 26px;
   letter-spacing: 2px;
+  transition: 0.3s;
+}
+.header-nav-list .header-nav-link:hover, .header-nav-list .header-nav-link:active {
+  color: #9d8665;
 }
 
 /*      END HEADER STYLE      */
-/*  MAIN SYLE    */
+/*  MAIN SYLES    */
 /* COMMON  MAIN STYLES    */
 .section {
   padding: 75px 0;
@@ -211,6 +219,12 @@ a {
   color: #fff;
   background-color: #710707;
   border-radius: 10px;
+  transition: 0.1s;
+}
+.welcome-section .container a:hover, .welcome-section .container a:focus {
+  text-decoration: underline;
+  border: 1px solid #fff;
+  filter: brightness(130%);
 }
 
 /*    VISITING SECTION    */
