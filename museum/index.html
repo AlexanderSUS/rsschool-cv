@@ -14,128 +14,126 @@
   <!-- TODO: add icon !!!-->
 </head>
 <body>
-  <div class="wrapper">
-    <div class="header-wrapper">
-      <header class="header header-container">
-        <div class="header-container-logo">
-          <div class="header-logo-logo mask"></div>
-          <div class="logo-text-container"><h2 class="header-logo-text">Louvre</h2></div>
-        </div>
-          <nav class="header-nav">
-            <ul class="header-nav-list">
-              <li class="header-nav-item"><a href="#visiting" class="header-nav-link">Visiting</a></li>
-              <li class="header-nav-item"><a href="#explore" class="header-nav-link">Explore</a></li>
-              <li class="header-nav-item"><a href="#video" class="header-nav-link">Video</a></li>
-              <li class="header-nav-item"><a href="#gallery" class="header-nav-link">Gallery</a></li>
-              <li class="header-nav-item"><a href="#tickets" class="header-nav-link">Tickets</a></li>
-              <li class="header-nav-item"><a href="#contacts" class="header-nav-link">Contacts</a></li>
-            </ul>
-          </nav>
-      </header>
-    </div>
-    <main class="main">
-      <section class="section welcome-section dark-section" id="welcome">
-        <div class="container">
-          <div class="welcome-content">
-            <h1 class="section-title"> Welcome<br>to the Louvre</h1>
-            <p>From the castle to the museum</p>
-            <a href="https://www.google.com/maps/@48.8618159,2.3366818,3a,75y,81.55h,73.4t/data=!3m7!1e1!3m5!1sAF1QipOVxZQuSy3Bx9T_HpH_7FtBHDTXvI6SF-A10ocT!2e10!3e12!7i5472!8i2736"
-            class="main-btn" target="_blank">Discover the Louvre</a>
-          </div>
-          <div class="welcome-slider">
-            <div class="slide-num"><span>01</span> | 05</div>
-            <div class="slide-squares">
-              <div class="square"></div>
-              <div class="square"></div>
-              <div class="square"></div>
-              <div class="square"></div>
-              <div class="square"></div>
-            </div>
-            <div class="welcome-control">
-              <div class="arrow" id="back">&#8592;</div>
-              <div class="arrow" id="forward">&#8594;</div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section visiting-section underline-title" id="visiting">
-        <div class="container">
-          <h2 class="section-title gold-title">Virtual tour</h2>
-          <div class="visiting-cards">
-            <a href="./tours/tour1.html" class="cards"><img class="card-image" src="./assets/card6.jpg" alt="Royal Palace" width="440" height="285">
-              <h3>Royal palace</h3>
-              <p>360&#176; Virtual Tour</p><p>Google Street Panorama View</p>
-            </a>
-            <a href="./tours/tour2.html" class="cards"><img class="card-image" src="./assets/card5.jpg" alt="denon wing" width="440" height="285">
-              <h3>Denon wing</h3>
-              <p>360&#176; Virtual Tour</p><p>Google Street Panorama View</p>
-            </a>
-            <a href="./tours/tour3.html" class="cards"><img class="card-image" src="./assets/card4.jpg" alt="colonnade perraul" width="440" height="285">
-              <h3>Colonnade Perrault</h3>
-              <p>360&#176; Virtual Tour</p><p>Google Street Panorama View</p>
-            </a>
-            <a href="./tours/tour4.html" class="cards"><img class="card-image" src="./assets/card3.jpg" alt="greek hall" width="440" height="285">
-              <h3>Greek hall</h3>
-              <p>360&#176; Virtual Tour</p><p>Google Street Panorama View</p>
-            </a>
-            <a href="./tours/tour5.html" class="cards"><img class="card-image" src="./assets/card2.jpg" alt="mona lisa" width="440" height="285">
-              <h3>Mona Lisa</h3>
-              <p>360&#176; Virtual Tour</p><p>Google Street Panorama View</p>
-            </a>
-            <a href="./tours/tour6.html" class="cards"><img class="card-image" src="./assets/card1.jpg" alt="night palace" width="440" height="285">
-              <h3>Night Palace</h3>
-              <p>360&#176; Virtual Tour</p><p>Google Street Panorama View</p>
-            </a>
-          </div>
-        </div>
-      </section>
-      <section class="section explore-section dark-section underline-title" id="explore">
-        <div class="container">
-          <div class="text-content">
-            <h2 class="section-title">Picture Explore</h2>
-            <p>Las Meninas is a 1656 painting by Diego Velázquez, the leading artist of the Spanish Golden Age.</p>
-            <p>It was cleaned in 1984 to remove a <span>"yellow veil"</span> of dust that had gathered since the previous restoration in the 19th century.</p>
-            <p>The cleaning provoked furious protests, not because the picture had been damaged in any way, but because it looked different.</p>
-          </div>
-          <div class="slider-container">
-            <div class="img background-img"></div>
-            <div class="img foreground-img"></div>
-            <input type="range" min="1" max="100" value="50" class="slider" id="slider">
-            <div class="slider-button"></div>
-          </div>
-        </div>
-      </section>
-      <section class="section video-section" id="video">
-        <div class="container">
-          <h2 class="section-title gold-title">Video journey</h2>
-        <!-- TODO: add video to folder -->
-            <video src="assets/video/video.mp4" poster="assets/video/poster.jpg" controls></video>
-            <!--TODO: apply style for progress bar???  -->
-          <input type="range">
-        </div>
-      </section>
-      <section class="section gallery-section dark-section " id="gallery">
-        <div class="container">
-          <h2 class="section-title">Explore</h2>
-        </div>
-      </section>
-      <section class="section tickets-section underline-title" id="tickets">
-        <div class="container">
-          <h2 class="section-title gold-title">Buy tickets</h2>
-          <input type="button" value="" class="radio-btn-tickets">
-          <input type="button" value="" class="radio-btn-tickets">
-          <input type="button" value="" class="radio-btn-tickets">
-          <input type="number" name="" id="" class="input-number-tickets">
-          <input type="number" name="" id="" class="input-number-tickets">
-        </div>
-      </section>
-      <section class="section contacts-section underline-title" id="contacts">
-        <div class="container">
-          <h2 class="section-title gold-title">Contacts</h2>
-        </div>
-      </section>
-    </main>
+  <div class="header-wrapper">
+    <header class="header header-container">
+      <div class="header-container-logo">
+        <div class="header-logo-logo mask"></div>
+        <div class="logo-text-container"><h2 class="header-logo-text">Louvre</h2></div>
+      </div>
+        <nav class="header-nav">
+          <ul class="header-nav-list">
+            <li class="header-nav-item"><a href="#visiting" class="header-nav-link">Visiting</a></li>
+            <li class="header-nav-item"><a href="#explore" class="header-nav-link">Explore</a></li>
+            <li class="header-nav-item"><a href="#video" class="header-nav-link">Video</a></li>
+            <li class="header-nav-item"><a href="#gallery" class="header-nav-link">Gallery</a></li>
+            <li class="header-nav-item"><a href="#tickets" class="header-nav-link">Tickets</a></li>
+            <li class="header-nav-item"><a href="#contacts" class="header-nav-link">Contacts</a></li>
+          </ul>
+        </nav>
+    </header>
   </div>
+  <main class="main">
+    <section class="section welcome-section dark-section" id="welcome">
+      <div class="container">
+        <div class="welcome-content">
+          <h1 class="section-title"> Welcome<br>to the Louvre</h1>
+          <p>From the castle to the museum</p>
+          <a href="https://www.google.com/maps/@48.8618159,2.3366818,3a,75y,81.55h,73.4t/data=!3m7!1e1!3m5!1sAF1QipOVxZQuSy3Bx9T_HpH_7FtBHDTXvI6SF-A10ocT!2e10!3e12!7i5472!8i2736"
+          class="main-btn" target="_blank">Discover the Louvre</a>
+        </div>
+        <div class="welcome-slider">
+          <div class="slide-num"><span>01</span> | 05</div>
+          <div class="slide-squares">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+          </div>
+          <div class="welcome-control">
+            <div class="arrow" id="back">&#8592;</div>
+            <div class="arrow" id="forward">&#8594;</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section visiting-section underline-title" id="visiting">
+      <div class="container">
+        <h2 class="section-title gold-title">Virtual tour</h2>
+        <div class="visiting-cards">
+          <a href="./tours/tour1.html" class="cards"><img class="card-image" src="./assets/card6.jpg" alt="Royal Palace" width="440" height="285">
+            <h3>Royal palace</h3>
+            <p>360&#176; Virtual Tour</p><p>Google Street Panorama View</p>
+          </a>
+          <a href="./tours/tour2.html" class="cards"><img class="card-image" src="./assets/card5.jpg" alt="denon wing" width="440" height="285">
+            <h3>Denon wing</h3>
+            <p>360&#176; Virtual Tour</p><p>Google Street Panorama View</p>
+          </a>
+          <a href="./tours/tour3.html" class="cards"><img class="card-image" src="./assets/card4.jpg" alt="colonnade perraul" width="440" height="285">
+            <h3>Colonnade Perrault</h3>
+            <p>360&#176; Virtual Tour</p><p>Google Street Panorama View</p>
+          </a>
+          <a href="./tours/tour4.html" class="cards"><img class="card-image" src="./assets/card3.jpg" alt="greek hall" width="440" height="285">
+            <h3>Greek hall</h3>
+            <p>360&#176; Virtual Tour</p><p>Google Street Panorama View</p>
+          </a>
+          <a href="./tours/tour5.html" class="cards"><img class="card-image" src="./assets/card2.jpg" alt="mona lisa" width="440" height="285">
+            <h3>Mona Lisa</h3>
+            <p>360&#176; Virtual Tour</p><p>Google Street Panorama View</p>
+          </a>
+          <a href="./tours/tour6.html" class="cards"><img class="card-image" src="./assets/card1.jpg" alt="night palace" width="440" height="285">
+            <h3>Night Palace</h3>
+            <p>360&#176; Virtual Tour</p><p>Google Street Panorama View</p>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="section explore-section dark-section underline-title" id="explore">
+      <div class="container">
+        <div class="text-content">
+          <h2 class="section-title">Picture Explore</h2>
+          <p>Las Meninas is a 1656 painting by Diego Velázquez, the leading artist of the Spanish Golden Age.</p>
+          <p>It was cleaned in 1984 to remove a <span>"yellow veil"</span> of dust that had gathered since the previous restoration in the 19th century.</p>
+          <p>The cleaning provoked furious protests, not because the picture had been damaged in any way, but because it looked different.</p>
+        </div>
+        <div class="slider-container">
+          <div class="img background-img"></div>
+          <div class="img foreground-img"></div>
+          <input type="range" min="1" max="100" value="50" class="slider" id="slider">
+          <div class="slider-button"></div>
+        </div>
+      </div>
+    </section>
+    <section class="section video-section" id="video">
+      <div class="container">
+        <h2 class="section-title gold-title">Video journey</h2>
+      <!-- TODO: add video to folder -->
+          <video src="assets/video/video.mp4" poster="assets/video/poster.jpg" controls></video>
+          <!--TODO: apply style for progress bar???  -->
+        <input type="range">
+      </div>
+    </section>
+    <section class="section gallery-section dark-section " id="gallery">
+      <div class="container">
+        <h2 class="section-title">Explore</h2>
+      </div>
+    </section>
+    <section class="section tickets-section underline-title" id="tickets">
+      <div class="container">
+        <h2 class="section-title gold-title">Buy tickets</h2>
+        <input type="button" value="" class="radio-btn-tickets">
+        <input type="button" value="" class="radio-btn-tickets">
+        <input type="button" value="" class="radio-btn-tickets">
+        <input type="number" name="" id="" class="input-number-tickets">
+        <input type="number" name="" id="" class="input-number-tickets">
+      </div>
+    </section>
+    <section class="section contacts-section underline-title" id="contacts">
+      <div class="container">
+        <h2 class="section-title gold-title">Contacts</h2>
+      </div>
+    </section>
+  </main>
   <footer class="footer"></footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
   <script src="script.js"></script>

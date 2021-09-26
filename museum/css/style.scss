@@ -4,27 +4,9 @@
 $bg-dark: #030303;
 $dark-red: #710707;
 $font-gold: #9d8665;
-$font-large: 80px;
-$font2: 32px;
 
 $text-font: 'Roboto', sans-serif;
-$least-font-size: 22px;
-$main-font-weight: 300;
-
 $title-font: 'Forum', cursive;
-
-@mixin default-font-style($font-weight, $font-size) {
-  font-family: $text-font;
-  font-size: $font-size;
-  font-weight: $font-weight;
-}
-
-@mixin set-standard-flex ($justify-content) {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: $justify-content;
-  align-items: center;
-}
 
 html { 
   box-sizing: border-box;
@@ -38,9 +20,10 @@ html {
 }
 
 body { 
+  padding-top: 150px;
   font-family: $text-font;
-  font-size: $least-font-size;
-  font-weight: $main-font-weight;
+  font-size: 22px;
+  font-weight: 300;
   color: #fff;
 
   background-color: $bg-dark;
@@ -50,30 +33,39 @@ li { list-style: none; }
 
 a { 
   text-decoration: none;
-  @include default-font-style(100, 22px);
+  font-family:'Roboto', sans-serif;
+  font-size: 22px;
+  font-weight: 100;
 }
 
 /*    END COMMON STYLE    */
 
 /*    HEADER STYLE   */
 .header-wrapper {
-  max-width: 1440px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
   margin: 0 auto;
 
   background-color: $bg-dark;
 }
 
 .header-container {
-  @include set-standard-flex(space-between);
-  position: fixed;
-  top: 0;
-  height: 100%;
-  max-height: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 150px;
   max-width: 1440px;
   width: 100%;
-  margin: 0% auto;
 
-  background-color: $bg-dark;
+  // background-color: $bg-dark;
 }
 
 .header-container-logo {
@@ -95,8 +87,6 @@ a {
     }
   }
 
-
-
   .header-logo-text {
     margin: 0;
 
@@ -115,25 +105,26 @@ a {
   }
 }  
 
-.header-nav-list {
-  @include set-standard-flex(space-between);
-
+.header-nav {
   max-width: 775px;
   width: 100%;
+}
+
+.header-nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 
   background-color: $bg-dark;
-
-  .header-nav-item {
-    margin-right: 55px;
-    &:last-child {
-      margin-right: 0;
-    }
-  }
 
   .header-nav-link {
     display: block;
 
-    @include default-font-style(200, $least-font-size);
+    font-family:'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 300;
+
     color: #fff;
     font-style: normal;
     line-height: 26px;
@@ -141,7 +132,7 @@ a {
     transition: 0.3s;
 
     &:hover,
-    &:active{
+    &:active {
       color: $font-gold;
     }
   }
@@ -208,7 +199,7 @@ a {
   .container {
     display: flex;
     flex-wrap: wrap;
-    height: 960px;
+    height: 810px;
     align-items: center;
 
     background-image: url(../assets/mona.jpg);
