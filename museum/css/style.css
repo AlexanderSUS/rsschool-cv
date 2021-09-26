@@ -185,16 +185,10 @@ a {
   flex-wrap: wrap;
   padding-bottom: 60px;
 }
-.welcome-section .container img {
-  width: 100%;
-  height: auto;
-}
 .welcome-section .container .slide {
-  display: none;
-}
-.welcome-section .container .active {
-  display: block;
-  filter: linear-gradient(to left, #030303, rgba(3, 3, 3, 0));
+  width: 1000px;
+  height: 750px;
+  background-image: linear-gradient(to left, rgba(3, 3, 3, 0), rgba(3, 3, 3, 0), rgba(3, 3, 3, 0), #030303), url(../assets/1.jpg);
 }
 .welcome-section .container .slide-control-wrapper {
   position: absolute;

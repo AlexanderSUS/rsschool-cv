@@ -1,16 +1,14 @@
 const prev = document.getElementById('btn-prev'),
       next = document.getElementById('btn-next'),
-      slides = document.querySelectorAll('.slide'),
+      slide = document.getElementById('slide'),
       squares = document.querySelectorAll('.square'),
       num = document.getElementById('slide-num');
 
-let index = 0;
+const maxIndex = 5;
+let index = 1;
 
 const asctiveSlide = n => {
-  for(slide of slides) {
-    slide.classList.remove('active');
-  }
-  slides[n].classList.add('active');
+  slide.style.backgroundImage = "url(./assets/" + n + ".jpg)"; 
 }
 
 const asctiveSquare= n => {
@@ -20,28 +18,27 @@ const asctiveSquare= n => {
   }
   squares[n].classList.add('active');
   squares[n].style.backgroundColor = "#9d8665";
-  num.innerHTML = index + 1;
+  num.innerHTML = index; 
 }
 
 const showCurrentSlide = ind => {
   asctiveSlide(ind);
-  asctiveSquare(ind);
+  asctiveSquare(ind - 1);
 }
 
 const nextSlide = () => {
-  if(index == slides.length - 1) {
-    index = 0;
+  if(index == 5) {
+    index = 1;
     showCurrentSlide(index);
-  } 
-  else {
+  } else {
     index++;
     showCurrentSlide(index);
   }
 }
 
 const prevSlide = () => {
-  if(index == 0) {
-    index = slides.length - 1;
+  if(index == 1) {
+    index = 5; 
     showCurrentSlide(index);
   } 
   else {
@@ -52,7 +49,7 @@ const prevSlide = () => {
 
 squares.forEach((item, indexSquare) => {
   item.addEventListener('click', () => {
-    index = indexSquare;
+    index = indexSquare + 1;
     showCurrentSlide(index);
   })
 })
