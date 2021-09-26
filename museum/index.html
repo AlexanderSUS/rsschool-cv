@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>museum</title>
   <link rel="stylesheet" href="./css/style.css">
-  <link rel="icon" href="assset/favicon.ico">
+  <link rel="icon" href="./assets/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com"> 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
     <div class="header-wrapper">
       <header class="header header-container">
         <div class="header-container-logo">
-          <div class="header-logo-logo"></div>
+          <div class="header-logo-logo mask"></div>
           <div class="logo-text-container"><h2 class="header-logo-text">Louvre</h2></div>
         </div>
           <nav class="header-nav">
@@ -77,12 +77,18 @@
       </section>
       <section class="section explore-section dark-section underline-title" id="explore">
         <div class="container">
-          <h2 class="section-title">Picture Explore</h2>
-          <p>Las Meninas is a 1656 painting by Diego Velázquez, the leading artist of the Spanish Golden Age.</p>
-          <!-- TODO: add style for span -->
-          <p>It was cleaned in 1984 to remove a <span>"yellow veil"</span> of dust that had gathered since the previous restoration in the 19th century.</p>
-          <p>The cleaning provoked furious protests, not because the picture had been damaged in any way, but because it looked different.</p>
-
+          <div class="text-content">
+            <h2 class="section-title">Picture Explore</h2>
+            <p>Las Meninas is a 1656 painting by Diego Velázquez, the leading artist of the Spanish Golden Age.</p>
+            <p>It was cleaned in 1984 to remove a <span>"yellow veil"</span> of dust that had gathered since the previous restoration in the 19th century.</p>
+            <p>The cleaning provoked furious protests, not because the picture had been damaged in any way, but because it looked different.</p>
+          </div>
+          <div class="slider-container">
+            <div class="img background-img"></div>
+            <div class="img foreground-img"></div>
+            <input type="range" min="1" max="100" value="50" class="slider" id="slider">
+            <div class="slider-button"></div>
+          </div>
         </div>
       </section>
       <section class="section video-section" id="video">
@@ -117,5 +123,7 @@
     </main>
   </div>
   <footer class="footer"></footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+  <script src="script.js"></script>
 </body>
 </html>
