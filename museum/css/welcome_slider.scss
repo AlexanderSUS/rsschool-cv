@@ -1,4 +1,16 @@
-.welcome-slider {
+img {
+  width: 100%;
+  height: auto;
+}
+
+.slide {
+  display: none;
+}
+.active {
+  display: block;
+}
+
+.slide-control-wrapper {
   position: absolute;
   left: calc(50% + 120px);
   top: 840px;
@@ -15,7 +27,7 @@
 
   background-color: $bg-dark;
 
-  .welcome-control {
+  .arrow-control {
     display: flex;
     justify-content: space-between;
 
@@ -24,7 +36,7 @@
     font-size: 38px;
   }
 
-  .slide-squares {
+  .square-control {
     display: flex;
     justify-content: space-around;
     align-items: center;

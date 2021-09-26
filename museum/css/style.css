@@ -185,11 +185,18 @@ a {
   flex-wrap: wrap;
   height: 810px;
   align-items: center;
-  background-image: url(../assets/mona.jpg);
-  background-repeat: no-repeat;
-  background-position: right bottom 60px;
 }
-.welcome-section .container .welcome-slider {
+.welcome-section .container img {
+  width: 100%;
+  height: auto;
+}
+.welcome-section .container .slide {
+  display: none;
+}
+.welcome-section .container .active {
+  display: block;
+}
+.welcome-section .container .slide-control-wrapper {
   position: absolute;
   left: calc(50% + 120px);
   top: 840px;
@@ -202,24 +209,24 @@ a {
   font-weight: 400;
   background-color: #030303;
 }
-.welcome-section .container .welcome-slider .welcome-control {
+.welcome-section .container .slide-control-wrapper .arrow-control {
   display: flex;
   justify-content: space-between;
   width: 80px;
   font-size: 38px;
 }
-.welcome-section .container .welcome-slider .slide-squares {
+.welcome-section .container .slide-control-wrapper .square-control {
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 180px;
 }
-.welcome-section .container .welcome-slider .square {
+.welcome-section .container .slide-control-wrapper .square {
   height: 16px;
   width: 16px;
   background-color: #fff;
 }
-.welcome-section .container .welcome-slider .square:first-of-type {
+.welcome-section .container .slide-control-wrapper .square:first-of-type {
   background-color: #9d8665;
 }
 .welcome-section .container .welcome-content {
