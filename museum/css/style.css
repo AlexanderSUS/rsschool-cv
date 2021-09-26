@@ -183,11 +183,45 @@ a {
 }
 .welcome-section .container {
   display: flex;
+  flex-wrap: wrap;
   height: 960px;
   align-items: center;
   background-image: url(../assets/mona.jpg);
   background-repeat: no-repeat;
   background-position: right bottom 60px;
+}
+.welcome-section .container .welcome-slider {
+  position: absolute;
+  left: calc(50% + 120px);
+  top: 840px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 600px;
+  height: 120px;
+  font-size: 22px;
+  font-weight: 400;
+  background-color: #030303;
+}
+.welcome-section .container .welcome-slider .welcome-control {
+  display: flex;
+  justify-content: space-between;
+  width: 80px;
+  font-size: 38px;
+}
+.welcome-section .container .welcome-slider .slide-squares {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 180px;
+}
+.welcome-section .container .welcome-slider .square {
+  height: 16px;
+  width: 16px;
+  background-color: #fff;
+}
+.welcome-section .container .welcome-slider .square:first-of-type {
+  background-color: #9d8665;
 }
 .welcome-section .container .welcome-content {
   display: flex;
@@ -216,9 +250,7 @@ a {
   transition: 0.1s;
 }
 .welcome-section .container .welcome-content a:hover, .welcome-section .container .welcome-content a:focus {
-  text-decoration: underline;
-  border: 1px solid #fff;
-  filter: brightness(130%);
+  background-color: #9d8665;
 }
 
 /*    END WELCOME SECTION   */
@@ -229,10 +261,13 @@ a {
 }
 
 .visiting-cards {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   height: 935px;
   grid-template-columns: repeat(auto-fit, 424px);
   grid-column-gap: 60px;
+  justify-content: space-between;
+  align-items: center;
   /*gap: TODO add this property for gap*/
 }
 

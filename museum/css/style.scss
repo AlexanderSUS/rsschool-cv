@@ -207,6 +207,7 @@ a {
 
   .container {
     display: flex;
+    flex-wrap: wrap;
     height: 960px;
     align-items: center;
 
@@ -214,7 +215,10 @@ a {
     background-repeat: no-repeat;
     background-position: right bottom 60px;
 
+    @import "welcome_slider";
+
     .welcome-content {
+    
     display: flex;
     flex-direction: column;
 
@@ -247,11 +251,9 @@ a {
 
         &:hover, 
         &:focus {
-          text-decoration: underline;
-          border: 1px solid #fff;
-          filter: brightness(130%);
-      }
-     } 
+          background-color: $font-gold;
+        }
+      } 
     }
   }
 }
@@ -265,14 +267,13 @@ a {
 }
 
 .visiting-cards {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   height: 935px;
   grid-template-columns: repeat(auto-fit, 424px);
   grid-column-gap: 60px;
-  // flex-wrap: wrap;
-  // justify-content: space-between;
-  // align-content: space-between; 
-  // align-items: center;
+  justify-content: space-between;
+  align-items: center;
   /*gap: TODO add this property for gap*/
 }
 

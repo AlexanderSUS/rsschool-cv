@@ -1,0 +1,45 @@
+.welcome-slider {
+  position: absolute;
+  left: calc(50% + 120px);
+  top: 840px;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  width: 600px;
+  height: 120px;
+
+  font-size: 22px;
+  font-weight: 400;
+
+  background-color: $bg-dark;
+
+  .welcome-control {
+    display: flex;
+    justify-content: space-between;
+
+    width: 80px;
+
+    font-size: 38px;
+  }
+
+  .slide-squares {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 180px;
+  }
+  .square {
+    height: 16px;
+    width: 16px;
+    background-color: #fff;
+
+    &:first-of-type {
+      background-color: $font-gold;
+    }
+  }
+
+
+}
