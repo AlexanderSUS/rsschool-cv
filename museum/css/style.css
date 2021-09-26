@@ -184,19 +184,17 @@ a {
   display: flex;
   flex-wrap: wrap;
   padding-bottom: 60px;
-  align-items: center;
 }
 .welcome-section .container img {
   width: 100%;
   height: auto;
-  object-fit: none;
-  object-position: right top;
 }
 .welcome-section .container .slide {
   display: none;
 }
 .welcome-section .container .active {
   display: block;
+  filter: linear-gradient(to left, #030303, rgba(3, 3, 3, 0));
 }
 .welcome-section .container .slide-control-wrapper {
   position: absolute;
@@ -241,6 +239,7 @@ a {
 }
 .welcome-section .container .welcome-content h1 {
   margin-bottom: 0;
+  margin-top: 150px;
 }
 .welcome-section .container .welcome-content p {
   margin-top: 25px;

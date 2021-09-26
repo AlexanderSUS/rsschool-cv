@@ -1,8 +1,6 @@
 img {
   width: 100%;
   height: auto;
-  object-fit: none;
-  object-position: right top;
 }
 
 .slide {
@@ -10,7 +8,10 @@ img {
 }
 .active {
   display: block;
-}
+  filter: linear-gradient(to left, rgba($bg-dark, 1), rgba($bg-dark, 0));
+
+  // background-image: linear-gradient(to left, rgba($bg-dark, 1), rgba($bg-dark, 0));
+} 
 
 .slide-control-wrapper {
   position: absolute;
