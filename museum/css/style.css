@@ -183,12 +183,14 @@ a {
 .welcome-section .container {
   display: flex;
   flex-wrap: wrap;
-  height: 810px;
+  padding-bottom: 60px;
   align-items: center;
 }
 .welcome-section .container img {
   width: 100%;
   height: auto;
+  object-fit: none;
+  object-position: right top;
 }
 .welcome-section .container .slide {
   display: none;
@@ -232,6 +234,10 @@ a {
 .welcome-section .container .welcome-content {
   display: flex;
   flex-direction: column;
+  z-index: 5;
+  max-width: 440px;
+  white-space: nowrap;
+  overflow: visible;
 }
 .welcome-section .container .welcome-content h1 {
   margin-bottom: 0;

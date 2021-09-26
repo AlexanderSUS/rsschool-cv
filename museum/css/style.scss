@@ -199,21 +199,31 @@ a {
   .container {
     display: flex;
     flex-wrap: wrap;
-    height: 810px;
+    // height: 810px;
+    padding-bottom: 60px;
     align-items: center;
-
-    // background-image: url(../assets/mona.jpg);
-    // background-repeat: no-repeat;
-    // background-position: right bottom 60px;
 
     @import "welcome_slider";
 
+    // .slide-wrapper {
+    // object-fit: none;
+    // object-position: right top;
+    // }
+
     .welcome-content {
-    
     display: flex;
     flex-direction: column;
+    z-index: 5;
 
-      h1 { margin-bottom: 0; };
+    max-width: 440px;
+  
+    white-space: nowrap;
+    overflow: visible;
+
+      h1 { 
+        margin-bottom: 0;
+
+      }
 
       p {
         margin-top: 25px; 
