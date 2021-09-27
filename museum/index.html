@@ -153,11 +153,43 @@
     <section class="section tickets-section underline-title" id="tickets">
       <div class="container">
         <h2 class="section-title gold-title">Buy tickets</h2>
-        <input type="button" value="" class="radio-btn-tickets">
-        <input type="button" value="" class="radio-btn-tickets">
-        <input type="button" value="" class="radio-btn-tickets">
-        <input type="number" name="" id="" class="input-number-tickets">
-        <input type="number" name="" id="" class="input-number-tickets">
+        <div class="tickets-content-container">
+          <div class="ticket-image tickets"></div>
+          <form class="input-area tickets">
+            <div class="ticket-type">
+              <h4>Ticket Type</h4>
+              <label class="lablel-container" for="permanent">
+                <input class="radio-btn-tickets" type="radio" name="ticket_type" id="permanent" value="Permanent exhibition">
+                Permanent exhibition
+                <span class="chekmark"></span>
+              </label>
+              <label class="lablel-container" for="temporary">
+                <input class="radio-btn-tickets" type="radio" class="radio-btn-tickets" name="ticket_type" id="temporary" value="Temporary exhibition">
+                Temporary exhibition
+                <span class="chekmark"></span>
+              </label>
+              <label  class="lablel-container"for="combined">
+                <input class="radio-btn-tickets" type="radio" class="radio-btn-tickets" name="ticket_type" id="combined" value="Combined Admission">
+                Combined Admission
+                <span class="chekmark"></span>
+              </label>
+            </div>
+            <div class="ticket-amount">
+              <h4>Amount</h4>
+              <div class="ticket-amount-age">
+                <label for="basic_amount">Basic 18+</label>
+                <input type="number" name="" id="basic_amount" class="input-number-tickets">
+              </div>
+              <div class="ticket-amount-age">
+                <label for="senior_amount">Senior 65+</label>
+                <input type="number" name="" id="senior_amount" class="input-number-tickets">
+              </div>
+            </div>
+            <span class="output-sum-text">Total &euro;</span>
+            <output class="output-sum"></output>
+            <input class="submit" type="submit" value="Buy Now">
+          </form>
+        </div>
       </div>
     </section>
     <section class="section contacts-section underline-title" id="contacts">
