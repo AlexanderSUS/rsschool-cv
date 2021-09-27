@@ -151,6 +151,7 @@ a {
   font-style: normal;
   font-weight: normal;
   font-size: 80px;
+  line-height: 90px;
   letter-spacing: 5px;
   text-transform: uppercase;
   color: #fff;
@@ -188,7 +189,7 @@ a {
 .welcome-section .container .slide {
   width: 1000px;
   height: 750px;
-  background-image: linear-gradient(to left, rgba(3, 3, 3, 0), rgba(3, 3, 3, 0), rgba(3, 3, 3, 0), #030303), url(../assets/1.jpg);
+  background-image: linear-gradient(to left, rgba(3, 3, 3, 0), rgba(3, 3, 3, 0), rgba(3, 3, 3, 0), rgba(3, 3, 3, 0.5)), url(../assets/1.jpg);
 }
 .welcome-section .container .slide-control-wrapper {
   position: absolute;
@@ -394,5 +395,55 @@ a {
 
 /*    BEFORE AND AFTER SLIDER STYLE   */
 /*  END  BEFORE AND AFTER SLIDER STYLE   */
+/*    VIDEO SECTION   */
+.video-section .text-content {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.video-section h2 {
+  max-width: 610px;
+  margin-bottom: 75px;
+}
+.video-section p {
+  max-width: 720px;
+  margin: 0;
+  line-height: 38px;
+  color: #000;
+}
+.video-section .video-module {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+}
+.video-section .video-module .slider-container {
+  display: flex;
+  flex-direction: column;
+}
+.video-section .video-module .preview-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.video-section .video-module .preview-iframe {
+  max-width: 452px;
+}
+.video-section .dots-control {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 200px;
+  height: 12px;
+  margin: 40px auto 0 auto;
+}
+.video-section .dot-btn {
+  height: 12px;
+  width: 12px;
+  background-color: #999;
+  border-radius: 50%;
+}
+
+/*    END VIDEO SECTION   */
 
 /*# sourceMappingURL=style.css.map */
