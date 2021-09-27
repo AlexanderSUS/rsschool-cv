@@ -1,0 +1,45 @@
+.picture-container {
+  max-height: 1960px;
+  overflow: hidden;
+}
+.picture-inner-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 33.3%;
+
+  &:nth-of-type(odd) {
+    padding-top: 50px;
+  }
+  &:nth-of-type(even) {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+}
+
+.column img {
+  vertical-align: middle;
+  width: 100%;
+  
+  padding-bottom: 24px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
