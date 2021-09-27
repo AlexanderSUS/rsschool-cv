@@ -1,0 +1,96 @@
+.tickets-content-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 550px;
+
+  color: #000;
+}
+
+.tickets {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 720px;
+  height: 550px;
+
+  h4 { margin-top: 0; }
+
+  .ticket-type { 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 211px;
+    width: 270;
+    padding-left: 60px; 
+    padding-right: 240px;
+
+    h4 {
+      margin-bottom: 50px; 
+    }
+    
+    label { 
+      margin-bottom: 25px;
+
+      &:last-of-type {
+      margin-bottom: 0;
+      }
+    }
+  }
+
+  .ticket-amount { 
+    display: flex;
+    flex-direction: column;
+    max-height: 341px; 
+    max-width: 150px;
+
+      h4 { 
+        margin-bottom: 25px;
+        text-align: right;
+      }
+
+      .ticket-amount-age {
+        box-sizing: content-box;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+
+        height: 91px;
+        width: 150px;
+
+        padding-bottom: 10px;
+      }
+      
+  }
+  input[type=submit] {
+    position: relative;
+    left: -25px;
+
+    align-items: unset;
+
+    height: 50px; 
+    width: 175px;
+
+    font-family: Roboto, sans-serif;
+    font-size: 22px;
+    font-weight: 300;;
+    color: #fff;
+
+    border: none;
+    background-color: #000;
+  }
+
+  // input[type=number] {
+
+  // }
+}
+.output-sum-text {
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.ticket-image {
+  background-image: url(../assets/ticket_img.jpg);
+}
