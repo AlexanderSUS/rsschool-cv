@@ -31,6 +31,8 @@
     font-size: 38px;
   }
 
+  .arrow:hover { cursor: pointer;}
+
   .square-control {
     display: flex;
     justify-content: space-around;
@@ -45,6 +47,11 @@
 
     &:first-of-type {
       background-color: $font-gold;
+    }
+
+    &:hover { 
+      background-color: #9d8665;
+      cursor: pointer;
     }
   }
 

@@ -5,6 +5,10 @@
   width: 100%;
   height: auto;
 
+  .main-screen { display: none;}
+
+  .active { display: block;}
+
   .slider-container {
     display: flex;
     flex-direction: column;
@@ -12,12 +16,16 @@
     
   .preview-container {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
   }
 
-  .preview-iframe {
+  .slide-screen {
     max-width: 452px;
+    &:hover { 
+      cursor: pointer;
+    }
   }
 }
 
@@ -30,11 +38,17 @@
   
   margin: 40px auto 0 auto;
 }
-
 .dot-btn {
   height: 12px;
   width: 12px;
 
   background-color: #999;
   border-radius: 50%;
+
+  &:hover { 
+    background-color: $dark-red; 
+    cursor: pointer;
+  }
 }
+
+.active-dot { background-color: #333; }

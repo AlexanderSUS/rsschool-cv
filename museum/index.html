@@ -120,20 +120,20 @@
           </div>
         </div>
         <div class="video-module">
-          <iframe width="1440" height="650" src="https://www.youtube.com/embed/zp1BXPX8jcU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe class="main-screen active" width="1440" height="650" src="https://www.youtube.com/embed/zp1BXPX8jcU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <iframe class="main-screen" width="1440" height="650" src="https://www.youtube.com/embed/Vi5D6FKhRmo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <iframe class="main-screen" width="1440" height="650" src="https://www.youtube.com/embed/NOhDysLnTvY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
           <div class="video-control">
             <input type="range">
           </div>
           <div class="slider-container">
             <div class="preview-container">
-              <div class="preview-iframe"><iframe width="452" height="254" src="https://www.youtube.com/embed/zp1BXPX8jcU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazzy"></iframe></div>
-              <div class="preview-iframe"><iframe width="452" height="254" src="https://www.youtube.com/embed/Vi5D6FKhRmo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazzy"></iframe></div>
-              <div class="preview-iframe"><iframe width="452" height="254" src="https://www.youtube.com/embed/NOhDysLnTvY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazzy"></iframe></div>
+              <img class="slide-screen" width="452" height="254" src="./assets/poster0.jpg" alt=""></img>
+              <img class="slide-screen" width="452" height="254" src="./assets/poster1.jpg" alt=""></img>
+              <img class="slide-screen" width="452" height="254" src="./assets/poster2.jpg" alt=""></img>
             </div>
             <div class="dots-control">
-              <div class="dot-btn"></div>
-              <div class="dot-btn"></div>
-              <div class="dot-btn"></div>
+              <div class="dot-btn active-dot"></div>
               <div class="dot-btn"></div>
               <div class="dot-btn"></div>
             </div>
@@ -166,6 +166,7 @@
   <footer class="footer"></footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
   <script src="script.js"></script>
-  <script src="welcome_slider1.js"></script>
+  <script src="welcome_slider.js"></script>
+  <script src="video_slider.js"></script>
 </body>
 </html>
