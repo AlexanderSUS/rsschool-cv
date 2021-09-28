@@ -6,7 +6,6 @@ ol {
   margin: 0;
   padding: 0;
   border: 0;
-  background-color: red;
 }
 
 html {
@@ -144,7 +143,6 @@ a {
   margin: 0 auto;
 }
 
-/*    END COMMON MAIN STYLES    */
 /*    TITLES STYLE   */
 .section-title {
   font-family: Forum;
@@ -177,6 +175,7 @@ a {
 }
 
 /*    END TITLES STYLE   */
+/*    END COMMON MAIN STYLES    */
 /*   WELCOME SECTION (first slide)*/
 .welcome-section {
   padding: 0;
@@ -189,7 +188,7 @@ a {
 .welcome-section .container .slide {
   width: 1000px;
   height: 750px;
-  background-image: linear-gradient(to left, rgba(3, 3, 3, 0), rgba(3, 3, 3, 0), rgba(3, 3, 3, 0), rgba(3, 3, 3, 0.5)), url(../assets/1.jpg);
+  background-image: url(../assets/1.jpg), linear-gradient(to left, rgba(3, 3, 3, 0), rgba(3, 3, 3, 0), rgba(3, 3, 3, 0), rgba(3, 3, 3, 0.5));
 }
 .welcome-section .container .slide-control-wrapper {
   position: absolute;
@@ -756,12 +755,20 @@ footer {
 .footer-nav {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  height: 363px;
 }
 
 .footer-nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-height: 128;
+  max-width: 363px;
   background-color: #030303;
+}
+.footer-nav-list li {
+  display: inline-block;
 }
 .footer-nav-list .footer-nav-link {
   display: block;

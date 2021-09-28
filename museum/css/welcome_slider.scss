@@ -1,7 +1,7 @@
 .slide {
   width: 1000px;
   height: 750px;
-  background-image: linear-gradient(to left, rgba($bg-dark, 0), rgba($bg-dark, 0),rgba($bg-dark, 0), rgba($bg-dark, .5)), url(../assets/1.jpg); 
+  background-image: url(../assets/1.jpg), linear-gradient(to left, rgba($bg-dark, 0), rgba($bg-dark, 0),rgba($bg-dark, 0), rgba($bg-dark, .5)); 
 }
 //  
 

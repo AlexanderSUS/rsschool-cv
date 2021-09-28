@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>museum</title>
   <link rel="stylesheet" href="./css/style.css">
-  <link rel="icon" href="/assets/favicon.ico">
+  <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com"> 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
@@ -56,8 +56,8 @@
             <div class="square"></div>
           </div>
           <div class="arrow-control">
-            <div class="arrow" id="btn-prev">&#8592;</div>
-            <div class="arrow" id="btn-next">&#8594;</div>
+            <img class="arrow" id="btn-prev" src="./assets/left.svg" alt="arrow left" width="30" height="8">
+            <img class="arrow" id="btn-next" src="./assets/right.svg" alt="arrow right" width="30" height="8">
           </div>
         </div>
       </div>
@@ -213,10 +213,10 @@
   <footer class="footer">
     <div class="inner-footer">
       <div class="footer-nav">
-      <div class="footer-container-logo">
-        <div class="footer-logo-logo mask"></div>
-        <div class="logo-text-container"><h2 class="footer-logo-text">Louvre</h2></div>
-      </div>
+        <div class="footer-container-logo">
+          <div class="footer-logo-logo mask"></div>
+          <div class="logo-text-container"><h2 class="footer-logo-text">Louvre</h2></div>
+        </div>
         <nav class="footer-nav">
           <ul class="footer-nav-list">
             <li class="footer-nav-item"><a href="#visiting" class="footer-nav-link">Visiting</a></li>
@@ -233,10 +233,10 @@
     </div>
   </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
-  <script src="script.js"></script>
-  <script src="welcome_slider.js"></script>
-  <script src="video_slider.js"></script>
-  <script src="gallery.js"></script>
+  <script src="./scripts/explore.js"></script>
+  <script src="./scripts/welcome_slider.js"></script>
+  <script src="./scripts/video_slider.js"></script>
+  <script src="./scripts/gallery.js"></script>
   <script>
     L.mapbox.accessToken = 'pk.eyJ1IjoibW9uc3RyYWRhbXVzIiwiYSI6ImNrdTNrN2syNTJzM2Iyb3A4OW1zdG5iY3YifQ.p4Ow_8bmlBSPgDI4me6T1A';
     var map = L.mapbox.map('map')
