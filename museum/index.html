@@ -11,6 +11,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+  <script src='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js'></script>
+  <link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' />
   <!-- TODO: add icon !!!-->
 </head>
 <body>
@@ -154,55 +156,97 @@
       <div class="container">
         <h2 class="section-title gold-title">Buy tickets</h2>
         <div class="tickets-content-container">
-          <div class="ticket-image tickets"></div>
-          <form class="input-area tickets">
+          <div class="ticket-image"></div>
+          <form class="ticket-input-area">
             <div class="ticket-type">
               <h4>Ticket Type</h4>
+              <input class="radio-btn-tickets" type="radio" name="ticket_type" id="permanent" value="Permanent exhibition">
               <label class="lablel-container" for="permanent">
-                <input class="radio-btn-tickets" type="radio" name="ticket_type" id="permanent" value="Permanent exhibition">
-                Permanent exhibition
-                <span class="chekmark"></span>
-              </label>
+                Permanent exhibition</label>
+              <input class="radio-btn-tickets" type="radio" class="radio-btn-tickets" name="ticket_type" id="temporary" value="Temporary exhibition">
               <label class="lablel-container" for="temporary">
-                <input class="radio-btn-tickets" type="radio" class="radio-btn-tickets" name="ticket_type" id="temporary" value="Temporary exhibition">
-                Temporary exhibition
-                <span class="chekmark"></span>
-              </label>
+                Temporary exhibition</label>
+              <input class="radio-btn-tickets" type="radio" class="radio-btn-tickets" name="ticket_type" id="combined" value="Combined Admission">
               <label  class="lablel-container"for="combined">
-                <input class="radio-btn-tickets" type="radio" class="radio-btn-tickets" name="ticket_type" id="combined" value="Combined Admission">
-                Combined Admission
-                <span class="chekmark"></span>
-              </label>
+                Combined Admission</label>
             </div>
             <div class="ticket-amount">
               <h4>Amount</h4>
-              <div class="ticket-amount-age">
+              <div class="number-input">
                 <label for="basic_amount">Basic 18+</label>
-                <input type="number" name="" id="basic_amount" class="input-number-tickets">
+                <!-- <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button> -->
+                <input class="quantity" type="number" name="" id="basic_amount" value="1" min="1" max="300" required>
+                <!-- <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button> -->
               </div>
-              <div class="ticket-amount-age">
+              <div class="number-input">
                 <label for="senior_amount">Senior 65+</label>
-                <input type="number" name="" id="senior_amount" class="input-number-tickets">
+                <!-- <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button> -->
+                <input class="quantity" type="number" name="" id="senior_amount" value="1" min="1" max="300" required>
+                <!-- <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button> -->
               </div>
             </div>
-            <span class="output-sum-text">Total &euro;</span>
-            <output class="output-sum"></output>
-            <input class="submit" type="submit" value="Buy Now">
+            <div class="confirm-container">
+              <span class="output-sum-text">Total &euro; </span>
+              <output class="output-sum"></output>
+              <input class="submit" type="submit" value="Buy Now">
+            </div>
           </form>
         </div>
       </div>
     </section>
+    <div class="parallax"></div>
     <section class="section contacts-section underline-title" id="contacts">
       <div class="container">
         <h2 class="section-title gold-title">Contacts</h2>
+        <div class="contact-wrapper">
+          <div class="contacts-content contacts">
+            <h3>Palais Royal<br>Musee du Louvre</h3>
+            <p>75001 Paris, France</p>
+            <p>phone: +33(0) 1 40 20 50 50</p>
+            <p>mail: info@louvre.fr</p>
+          </div>
+          <div class="contacts-content map" id="map"></div>
+        </div>
       </div>
     </section>
   </main>
-  <footer class="footer"></footer>
+  <footer class="footer">
+    <div class="inner-footer">
+      <div class="footer-nav">
+      <div class="footer-container-logo">
+        <div class="footer-logo-logo mask"></div>
+        <div class="logo-text-container"><h2 class="footer-logo-text">Louvre</h2></div>
+      </div>
+        <nav class="footer-nav">
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item"><a href="#visiting" class="footer-nav-link">Visiting</a></li>
+            <li class="footer-nav-item"><a href="#explore" class="footer-nav-link">Explore</a></li>
+            <li class="footer-nav-item"><a href="#video" class="footer-nav-link">Video</a></li>
+            <li class="footer-nav-item"><a href="#gallery" class="footer-nav-link">Gallery</a></li>
+            <li class="footer-nav-item"><a href="#tickets" class="footer-nav-link">Tickets</a></li>
+            <li class="footer-nav-item"><a href="#contacts" class="footer-nav-link">Contacts</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-socials"></div>
+      <div class="footer-bottom"></div>
+    </div>
+  </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
   <script src="script.js"></script>
   <script src="welcome_slider.js"></script>
   <script src="video_slider.js"></script>
   <script src="gallery.js"></script>
+  <script>
+    L.mapbox.accessToken = 'pk.eyJ1IjoibW9uc3RyYWRhbXVzIiwiYSI6ImNrdTNrN2syNTJzM2Iyb3A4OW1zdG5iY3YifQ.p4Ow_8bmlBSPgDI4me6T1A';
+    var map = L.mapbox.map('map')
+        .setView([48.86091, 2.3364], 17)
+        .addLayer(L.mapbox.styleLayer('mapbox://styles/mapbox/streets-v11'));
+       L.marker([48.86091, 2.3364]).addTo(map);
+       L.marker([48.8602,2.3333]).addTo(map);
+       L.marker([48.8607,2.3397]).addTo(map);
+       L.marker([48.8619,2.3330]).addTo(map);
+       L.marker([48.8625,2.3365]).addTo(map);
+    </script>
 </body>
 </html>

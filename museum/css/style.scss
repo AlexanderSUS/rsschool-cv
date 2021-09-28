@@ -460,6 +460,56 @@ a {
 
 @import "art_gallery.scss";
 
-/*    TIKET SECTION   */
+/*    TICKET SECTION   */
 
 @import "tickets.scss";
+
+/* END TIKET SECTION    */
+
+/*    PARALLAX    */
+.parallax {
+  width: 100%;
+  min-height: 400px;
+  background-image: url(../assets/parallax.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/*  END PARALLAX    */
+/* COTANCTS   */
+// .contacts-section  {
+//   display: flex;
+//   flex-wrap: wrap;
+//   flex-direction: row;
+//   height: 620px;
+
+// }
+
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.contacts {
+  width: 480px;
+  height: auto;
+
+  h3 {
+    margin: 0 0 50px 0;
+    color: #000;
+  }
+  p {
+    margin: 0 0 25px 0;
+    color: #000;
+  }
+}
+
+#map {
+  width: 960px;
+  height: 620px;
+}
+
+/*  FOOTER */
+
+@import "footer.scss"
