@@ -266,6 +266,11 @@ a {
 }
 
 /*    END WELCOME SECTION   */
+.underline-title::after {
+  right: 0;
+  max-width: 1440px;
+}
+
 /*    VISITING SECTION    */
 .section-title {
   margin-bottom: 103px;
@@ -708,13 +713,6 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0 0 25px 0;
   color: #000;
 }
-.contacts a {
-  color: #000;
-  font-weight: 300;
-}
-.contacts a:hover {
-  text-decoration: underline;
-}
 
 #map {
   width: 960px;
@@ -803,4 +801,4 @@ footer {
 
 /*  END FOOTER  NAVIGATION  */
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css%5BA.map */

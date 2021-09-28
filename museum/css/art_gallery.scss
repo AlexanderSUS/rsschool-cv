@@ -1,12 +1,16 @@
+.gallery-section .container .section-title { margin-bottom: 75px; }
 .picture-container {
-  height: 1960px;
+  height: 1885px;
+  max-width: 1440px;
   overflow-y: hidden;
 }
 .picture-inner-container {
-  max-height: 3020px;
   display: flex;
   flex-flow: column wrap;
   justify-content: space-between;
+
+  max-height: 3020px;
+  max-width: 1440px;
 
   img {
     width: 456px;
