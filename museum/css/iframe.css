@@ -1,5 +1,5 @@
 body {
-  margin: 0;            /* Reset default margin */
+  margin: 0 auto;            /* Reset default margin */
 }
 iframe {
   display: block;       /* iframes are inline by default */
