@@ -832,7 +832,7 @@ footer {
   display: block;
 }
 .footer-socials li a:hover {
-  color: #9d8665;
+  background-color: #9d8665;
 }
 
 .footer-bottom {

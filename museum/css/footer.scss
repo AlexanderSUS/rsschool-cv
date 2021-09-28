@@ -123,11 +123,12 @@ footer {
 
   li a {
       display: block;
-      &:hover {
-        color: $font-gold;
+      &:hover  {
+        background-color: $font-gold;
       }
     }
 }
+
 .footer-bottom {
   display: flex;
   flex-wrap: wrap;
