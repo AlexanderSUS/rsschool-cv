@@ -11,6 +11,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+  <script src='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js'></script>
+  <link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' />
   <!-- TODO: add icon !!!-->
 </head>
 <body>
@@ -158,21 +160,15 @@
           <form class="ticket-input-area">
             <div class="ticket-type">
               <h4>Ticket Type</h4>
+              <input class="radio-btn-tickets" type="radio" name="ticket_type" id="permanent" value="Permanent exhibition">
               <label class="lablel-container" for="permanent">
-                <input class="radio-btn-tickets" type="radio" name="ticket_type" id="permanent" value="Permanent exhibition">
-                <div class="checkmark-text">Permanent exhibition</div>
-                <span class="checkmark"></span>
-              </label>
+                Permanent exhibition</label>
+              <input class="radio-btn-tickets" type="radio" class="radio-btn-tickets" name="ticket_type" id="temporary" value="Temporary exhibition">
               <label class="lablel-container" for="temporary">
-                <input class="radio-btn-tickets" type="radio" class="radio-btn-tickets" name="ticket_type" id="temporary" value="Temporary exhibition">
-                <div class="checkmark-text">Temporary exhibition</div>
-                <span class="checkmark"></span>
-              </label>
+                Temporary exhibition</label>
+              <input class="radio-btn-tickets" type="radio" class="radio-btn-tickets" name="ticket_type" id="combined" value="Combined Admission">
               <label  class="lablel-container"for="combined">
-                <input class="radio-btn-tickets" type="radio" class="radio-btn-tickets" name="ticket_type" id="combined" value="Combined Admission">
-                <div class="checkmark-text">Combined Admission</div>
-                <span class="checkmark"></span>
-              </label>
+                Combined Admission</label>
             </div>
             <div class="ticket-amount">
               <h4>Amount</h4>
@@ -194,9 +190,19 @@
         </div>
       </div>
     </section>
+    <div class="parallax"></div>
     <section class="section contacts-section underline-title" id="contacts">
       <div class="container">
         <h2 class="section-title gold-title">Contacts</h2>
+        <div class="contact-wrapper">
+          <div class="contacts-content contacts">
+            <h3>Palais Royal<br>Musee du Louvre</h3>
+            <p>75001 Paris, France</p>
+            <p>phone: +33(0) 1 40 20 50 50</p>
+            <p>mail: info@louvre.fr</p>
+          </div>
+          <div class="contacts-content map" id="map"></div>
+        </div>
       </div>
     </section>
   </main>
@@ -206,5 +212,16 @@
   <script src="welcome_slider.js"></script>
   <script src="video_slider.js"></script>
   <script src="gallery.js"></script>
+  <script>
+    L.mapbox.accessToken = 'pk.eyJ1IjoibW9uc3RyYWRhbXVzIiwiYSI6ImNrdTNrN2syNTJzM2Iyb3A4OW1zdG5iY3YifQ.p4Ow_8bmlBSPgDI4me6T1A';
+    var map = L.mapbox.map('map')
+        .setView([48.86091, 2.3364], 17)
+        .addLayer(L.mapbox.styleLayer('mapbox://styles/mapbox/streets-v11'));
+       L.marker([48.86091, 2.3364]).addTo(map);
+       L.marker([48.8602,2.3333]).addTo(map);
+       L.marker([48.8607,2.3397]).addTo(map);
+       L.marker([48.8619,2.3330]).addTo(map);
+       L.marker([48.8625,2.3365]).addTo(map);
+    </script>
 </body>
 </html>
