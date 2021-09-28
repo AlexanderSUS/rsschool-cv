@@ -119,9 +119,14 @@ footer {
   width: 100%;
   max-height: 48px;
 
-  img {
-    display: block;
-  }
+  li { display: inline-block; }
+
+  li a {
+      display: block;
+      &:hover {
+        color: $font-gold;
+      }
+    }
 }
 .footer-bottom {
   display: flex;

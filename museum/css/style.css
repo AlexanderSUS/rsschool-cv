@@ -825,8 +825,14 @@ footer {
   width: 100%;
   max-height: 48px;
 }
-.footer-socials img {
+.footer-socials li {
+  display: inline-block;
+}
+.footer-socials li a {
   display: block;
+}
+.footer-socials li a:hover {
+  color: #9d8665;
 }
 
 .footer-bottom {
