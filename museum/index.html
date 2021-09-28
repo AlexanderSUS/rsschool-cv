@@ -122,17 +122,17 @@
           </div>
         </div>
         <div class="video-module">
-          <iframe class="main-screen active" width="1440" height="650" src="https://www.youtube.com/embed/zp1BXPX8jcU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-          <iframe class="main-screen" width="1440" height="650" src="https://www.youtube.com/embed/Vi5D6FKhRmo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-          <iframe class="main-screen" width="1440" height="650" src="https://www.youtube.com/embed/NOhDysLnTvY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <iframe class="main-screen active" width="1440" height="650" src="https://www.youtube.com/embed/zp1BXPX8jcU" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <iframe class="main-screen" width="1440" height="650" src="https://www.youtube.com/embed/Vi5D6FKhRmo" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <iframe class="main-screen" width="1440" height="650" src="https://www.youtube.com/embed/NOhDysLnTvY" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
           <div class="video-control">
             <input type="range">
           </div>
           <div class="slider-container">
             <div class="preview-container">
-              <img class="slide-screen" width="452" height="254" src="./assets/poster0.jpg" alt=""></img>
-              <img class="slide-screen" width="452" height="254" src="./assets/poster1.jpg" alt=""></img>
-              <img class="slide-screen" width="452" height="254" src="./assets/poster2.jpg" alt=""></img>
+              <img class="slide-screen" width="452" height="254" src="./assets/poster0.jpg" alt="video1">
+              <img class="slide-screen" width="452" height="254" src="./assets/poster1.jpg" alt="video2">
+              <img class="slide-screen" width="452" height="254" src="./assets/poster2.jpg" alt="video3">
             </div>
             <div class="dots-control">
               <div class="dot-btn active-dot"></div>
@@ -148,8 +148,8 @@
       <div class="container">
         <h2 class="section-title">Art gallery</h2>
         <div class="picture-container">
-          <div class="picture-inner-container">
-          </div>
+          <div class="picture-inner-container"></div>
+        </div>
       </div>
     </section>
     <section class="section tickets-section underline-title" id="tickets">
@@ -163,11 +163,11 @@
               <input class="radio-btn-tickets" type="radio" name="ticket_type" id="permanent" value="Permanent exhibition">
               <label class="lablel-container" for="permanent">
                 Permanent exhibition</label>
-              <input class="radio-btn-tickets" type="radio" class="radio-btn-tickets" name="ticket_type" id="temporary" value="Temporary exhibition">
+              <input class="radio-btn-tickets" type="radio"  name="ticket_type" id="temporary" value="Temporary exhibition">
               <label class="lablel-container" for="temporary">
                 Temporary exhibition</label>
-              <input class="radio-btn-tickets" type="radio" class="radio-btn-tickets" name="ticket_type" id="combined" value="Combined Admission">
-              <label  class="lablel-container"for="combined">
+              <input class="radio-btn-tickets" type="radio"  name="ticket_type" id="combined" value="Combined Admission">
+              <label  class="lablel-container" for="combined">
                 Combined Admission</label>
             </div>
             <div class="ticket-amount">
@@ -175,13 +175,13 @@
               <div class="number-input">
                 <label for="basic_amount">Basic 18+</label>
                 <!-- <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button> -->
-                <input class="quantity" type="number" name="" id="basic_amount" value="1" min="1" max="300" required>
+                <input class="quantity" type="number" name="quantity" id="basic_amount" value="1" min="1" max="300" required>
                 <!-- <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button> -->
               </div>
               <div class="number-input">
                 <label for="senior_amount">Senior 65+</label>
                 <!-- <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button> -->
-                <input class="quantity" type="number" name="" id="senior_amount" value="1" min="1" max="300" required>
+                <input class="quantity" type="number" name="quantity" id="senior_amount" value="1" min="1" max="300" required>
                 <!-- <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button> -->
               </div>
             </div>
@@ -202,7 +202,7 @@
           <div class="contacts-content contacts">
             <h3>Palais Royal<br>Musee du Louvre</h3>
             <p>address: 75001 Paris, France</p>
-            <p>phone: <a href="tel:+33(0) 1 40 20 50 50">+33(0) 1 40 20 50 50</a></p>
+            <p>phone: <a href="tel:+33(0)140205050">+33(0) 1 40 20 50 50</a></p>
             <p>mail: <a href="mailto:info@louvre.fr">info@louvre.fr</a></p>
           </div>
           <div class="contacts-content map" id="map"></div>
