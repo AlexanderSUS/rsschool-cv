@@ -25,6 +25,7 @@
   // background-color: $bg-dark;
 }
 
+
 .header-container-logo {
   display: flex;
   justify-content: space-between;
@@ -37,11 +38,18 @@
     height: 26px;
     width: 49px;
 
-    background-image: url("../assets/logo.svg");  
-
-    &:hover {
-      background-color: $font-gold;
+    svg {
+      fill: #fff;
+      
+      &:hover {
+      fill: $font-gold; 
+      }
     }
+    // background-image: url("../assets/logo.svg");  
+
+    // &:hover {
+    //   background-color: $font-gold;
+    // }
   }
 
   .header-logo-text {

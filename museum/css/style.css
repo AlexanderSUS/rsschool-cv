@@ -72,10 +72,12 @@ a {
 .header-container-logo .header-logo-logo {
   height: 26px;
   width: 49px;
-  background-image: url("../assets/logo.svg");
 }
-.header-container-logo .header-logo-logo:hover {
-  background-color: #9d8665;
+.header-container-logo .header-logo-logo svg {
+  fill: #fff;
+}
+.header-container-logo .header-logo-logo svg:hover {
+  fill: #9d8665;
 }
 .header-container-logo .header-logo-text {
   margin: 0;
