@@ -1,16 +1,14 @@
 
-const mainScreen = document.querySelectorAll('.main-screen');
-const slides = document.querySelectorAll('.slide-screen');
+const mainScreen = document.getElementById('main-screen');
+const leftArrow = document.getElementById('left-arrow');
+const rightArrow = document.getElementById('right-arrow');
 const dots = document.querySelectorAll('.dot-btn');
 
 let indexV = 0;
 
-
 const activeVideo = n => {
-  for (screen of mainScreen) {
-    screen.classList.remove('active')
-  }
-  mainScreen[n].classList.add('active');
+  mainScreen.scr = "assets/video/video" + n + ".mp4";
+  mainScreen.poster = "assets/video/poster" + n + ".jpg";
 }
 
 const activeDot= n => {
@@ -27,8 +25,8 @@ const showCurrentVideo = ind => {
 }
 
 const nextVideo = () => {
-  if(indexV == 5) {
-    indexV = 1;
+  if(indexV == 4) {
+    indexV = 0;
     showCurrentVideo(indexV);
   } else {
     indexV++;
@@ -37,8 +35,8 @@ const nextVideo = () => {
 }
 
 const prevVideo = () => {
-  if(indexV == 1) {
-    indexV = 5; 
+  if(indexV == 0) {
+    indexV = 4; 
     showCurrentVideo(indexV);
   } 
   else {
@@ -47,16 +45,13 @@ const prevVideo = () => {
   }
 }
 
+
+// leftArrow.addEventListener('click', prevVideo());
+// rightArrow.addEventListener('click', nextVideo());
+
 dots.forEach((item, indexDot) => {
   item.addEventListener('click', () => {
     indexV = indexDot;
-    showCurrentVideo(indexV);
-  })
-})
-
-slides.forEach((item, indexVideo) => {
-  item.addEventListener('click', () => {
-    indexV = indexVideo;
     showCurrentVideo(indexV);
   })
 })
