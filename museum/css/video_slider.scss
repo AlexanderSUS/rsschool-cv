@@ -37,14 +37,6 @@
   height: 12px;
   
   margin: 40px auto 0 auto;
-
-  svg path {
-    fill: #999999;
-
-    &:hover {
-      fill: $dark-red;
-    }
-  }
 }
 .dot-btn {
   height: 12px;

@@ -1,0 +1,28 @@
+@media only screen and (max-width: 1024px) {
+.welcome-section {
+
+  .container {
+    padding-bottom: 120px;
+
+    @import "welcome_slider_1024";
+
+    .welcome-content {
+
+      h1 { 
+        margin-bottom: 0;
+        margin-top: 50px;
+      }
+
+      p {
+        margin-top: 25px; 
+        margin-bottom: 50px;
+      }
+
+      a {
+        width: 300px;
+        height: 60px;
+       }
+      } 
+    }
+  }
+}

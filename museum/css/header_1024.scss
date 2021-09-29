@@ -1,0 +1,15 @@
+@media only screen and (max-width: 1024px) {
+  header {
+    max-width: 1024px;
+  }
+  .header-container {
+    height: 130px;
+    max-width: 1024px;
+    width: 100%;
+    justify-content: start;
+  }
+
+  .header-nav {
+    display: none;
+  }
+}

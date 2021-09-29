@@ -1,13 +1,9 @@
-.header-wrapper {
-  position: fixed;
+header {
+  position: fixed;  
   top: 0;
-  z-index: 999;
+  z-index: 20;
+
   width: 100%;
-
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-
   margin: 0 auto;
 
   background-color: $bg-dark;
@@ -20,11 +16,9 @@
   align-items: center;
   height: 150px;
   max-width: 1440px;
-  width: 100%;
 
-  // background-color: $bg-dark;
+  margin: 0 auto;
 }
-
 
 .header-container-logo {
   display: flex;
@@ -46,11 +40,6 @@
       fill: $font-gold; 
       }
     }
-    // background-image: url("../assets/logo.svg");  
-
-    // &:hover {
-    //   background-color: $font-gold;
-    // }
   }
 
   .header-logo-text {
