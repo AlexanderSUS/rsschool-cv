@@ -28,6 +28,15 @@
     width: 80px;
 
     font-size: 38px;
+
+    svg {
+      fill: #fff;
+      transition: 0.7s;
+
+      &:hover {
+        fill: $font-gold;
+      }
+    }
   }
 
   .arrow:hover { cursor: pointer;}
@@ -43,6 +52,7 @@
     height: 16px;
     width: 16px;
     background-color: #fff;
+    transition: 0.7s;
 
     &:first-of-type {
       background-color: $font-gold;

@@ -75,6 +75,7 @@ a {
 }
 .header-container-logo .header-logo-logo svg {
   fill: #fff;
+  transition: 0.7s;
 }
 .header-container-logo .header-logo-logo svg:hover {
   fill: #9d8665;
@@ -211,6 +212,13 @@ a {
   width: 80px;
   font-size: 38px;
 }
+.welcome-section .container .slide-control-wrapper .arrow-control svg {
+  fill: #fff;
+  transition: 0.7s;
+}
+.welcome-section .container .slide-control-wrapper .arrow-control svg:hover {
+  fill: #9d8665;
+}
 .welcome-section .container .slide-control-wrapper .arrow:hover {
   cursor: pointer;
 }
@@ -224,6 +232,7 @@ a {
   height: 16px;
   width: 16px;
   background-color: #fff;
+  transition: 0.7s;
 }
 .welcome-section .container .slide-control-wrapper .square:first-of-type {
   background-color: #9d8665;
@@ -758,10 +767,13 @@ footer {
 .footer-container-logo .footer-logo-logo {
   height: 26px;
   width: 49px;
-  background-image: url("../assets/logo.svg");
 }
-.footer-container-logo .footer-logo-logo:hover {
-  background-color: #9d8665;
+.footer-container-logo .footer-logo-logo svg {
+  fill: #fff;
+  transition: 0.7s;
+}
+.footer-container-logo .footer-logo-logo svg:hover {
+  fill: #9d8665;
 }
 .footer-container-logo .footer-logo-text {
   margin: 0;
@@ -833,8 +845,19 @@ footer {
 .footer-socials li a {
   display: block;
 }
-.footer-socials li a:hover {
-  background-color: #9d8665;
+.footer-socials li a svg rect {
+  stroke: #fff;
+  transition: 0.7s;
+}
+.footer-socials li a svg path {
+  fill: #fff;
+  transition: 0.7s;
+}
+.footer-socials li a:hover svg rect {
+  stroke: #9d8665;
+}
+.footer-socials li a:hover svg path {
+  fill: #9d8665;
 }
 
 .footer-bottom {
