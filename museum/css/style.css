@@ -724,15 +724,36 @@ input[type=number] {
 .confirm-container {
   text-align: right;
 }
-.confirm-container input[type=submit] {
+.confirm-container .buy-now {
+  position: relative;
   height: 50px;
   width: 175px;
   font-family: Roboto, sans-serif;
   font-size: 22px;
   font-weight: 300;
   color: #fff;
+  overflow: hidden;
+  cursor: pointer;
   border: none;
   background-color: #000;
+}
+.confirm-container .buy-now:after {
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+.confirm-container .buy-now:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
 }
 
 .output-sum-text {
