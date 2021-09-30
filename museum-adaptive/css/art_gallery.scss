@@ -8,10 +8,9 @@
 .picture-inner-container {
   display: flex;
   flex-flow: column wrap;
-  justify-content: space-between;
+  align-content: space-between;
 
   max-height: 3020px;
-  max-width: 1440px;
 
   img {
     width: 456px;
