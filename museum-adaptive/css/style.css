@@ -776,14 +776,11 @@ video {
 .tickets-content-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
   max-height: 550px;
   color: #000;
-}
-
-.ticket-image {
-  width: 720px;
-  height: 550px;
   background-image: url(../assets/ticket_img.jpg);
+  background-repeat: no-repeat;
 }
 
 .ticket-input-area {
@@ -975,8 +972,102 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /* END NUM INPUT STYLE  */
+@media only screen and (max-width: 1024px) {
+  .tickets-content-container {
+    height: 440px;
+    background-image: url(../assets/ticket_img_1024.png);
+  }
+
+  .ticket-input-area {
+    max-width: 175px;
+    margin-right: 29px;
+  }
+
+  .ticket-type {
+    display: none;
+  }
+
+  .ticket-amount {
+    max-height: 321px;
+    max-width: 175px;
+    margin-left: 80px;
+  }
+  .ticket-amount h4 {
+    text-align: left;
+  }
+  .ticket-amount .number-input {
+    height: 90px;
+    width: 175px;
+  }
+  .ticket-amount .number-input:first-of-type {
+    padding-bottom: 29px;
+  }
+  .ticket-amount .number-input:last-of-type {
+    padding-bottom: 25px;
+  }
+  .ticket-amount .number-input label {
+    margin-bottom: 10px;
+  }
+  .ticket-amount .number-input p {
+    line-height: 29px;
+  }
+
+  input[type=number] {
+    width: 175px;
+    height: 50px;
+  }
+
+  .confirm-container {
+    text-align: left;
+  }
+  .confirm-container .buy-now {
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    background-color: #000;
+  }
+  .confirm-container .buy-now:hover {
+    background-color: #9d8665;
+  }
+  .confirm-container .buy-now:after {
+    content: "";
+    background: #710707;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s;
+  }
+  .confirm-container .buy-now:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+  }
+
+  .output-sum-text {
+    display: block;
+    margin-bottom: 69px;
+    line-height: 26px;
+  }
+
+  /* RADIO BUTTON STYLE   */
+  /* END  RADIO BUTTON STYLE */
+  /* NUM INPUT STYLE    */
+}
 /* END TIKET SECTION    */
 /*    PARALLAX    */
+.parallax {
+  width: 100%;
+  min-height: 400px;
+  background-image: url(../assets/parallax.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .parallax {
   width: 100%;
   min-height: 400px;
