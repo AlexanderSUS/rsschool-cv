@@ -1,0 +1,161 @@
+footer {
+  height: 392px;
+}
+.inner-footer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  justify-content: space-between;
+
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-top: 75px;
+  padding-bottom: 50px;
+
+  border-bottom: 3px solid #666;
+}
+
+.wrapper-logo-nav {
+  display: block;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  max-width: 603px;
+}
+
+/* FOOTER LOGO  */
+.footer-container-logo {
+  display: flex;
+  justify-content: space-between;
+
+  max-width: 195px;
+  width: 100%;
+
+  .footer-logo-logo {
+    height: 26px;
+    width: 49px;
+
+    svg {
+      fill: #fff;
+      transition: 0.7s;
+
+      &:hover {
+        fill: $font-gold;
+      }
+    }
+  }
+
+  .footer-logo-text {
+    margin: 0;
+
+    font-family:'Forum', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 31px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    transition: 0.3s;
+
+      &:hover {
+        color: $font-gold;
+      }
+  }
+}  
+/*  FOOTER  NAVIGATION    */
+.footer-nav {
+  display: flex;
+  justify-self: left;
+}
+
+.footer-nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+
+  
+  max-width: 363px;
+  max-height: 128px;
+
+  background-color: $bg-dark;
+}
+
+.footer-nav-item {
+  padding-bottom: 25px;
+  padding-right: 150px;
+
+  &:nth-of-type(3n+3) {
+  padding-bottom: 0;
+  }
+}
+
+.footer-nav-link {
+  display: block;
+
+  font-family:'Roboto', sans-serif;
+  font-size: 22px;
+  font-weight: 100;
+
+  color: #fff;
+  font-style: normal;
+  line-height: 26px;
+  letter-spacing: 2px;
+  transition: 0.3s;
+
+  &:hover,
+  &:active {
+    color: $font-gold;
+  }
+}
+
+
+.footer-socials {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: flex-end;
+  max-width: 340px;
+  width: 100%;
+  max-height: 48px;
+
+  li { 
+    display: inline-block; 
+
+    a { 
+      display: block;
+
+      svg rect {
+        stroke: #fff; 
+        transition: 0.7s;
+      }
+                
+      svg path {
+        fill: #fff; 
+        transition: 0.7s;
+      }
+    
+      &:hover {
+        svg rect { stroke: $font-gold; }
+
+        svg path { fill: $font-gold;}
+      }
+    }
+  }
+}
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  max-width: 1440px;
+  height: 124px;
+  margin: 0 auto;
+  font-weight: 100;
+}
+/*  END FOOTER  NAVIGATION  */
