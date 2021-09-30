@@ -43,8 +43,6 @@ a {
 @media only screen and (max-width: 1024px) {
   body {
     padding-top: 130px;
-    padding-left: 20px;
-    padding-right: 20px;
   }
 }
 /*    END COMMON STYLE    */
@@ -130,12 +128,12 @@ header {
 
 @media only screen and (max-width: 1024px) {
   header {
-    max-width: 1024px;
+    width: 100%;
+    padding: 0 20px;
   }
 
   .header-container {
     height: 130px;
-    max-width: 1024px;
     width: 100%;
     justify-content: start;
   }
@@ -147,7 +145,7 @@ header {
 /*      END HEADER STYLE      */
 /*  MAIN SYLES    */
 .section {
-  max-width: 1920px;
+  width: 100%;
   margin: 0 auto;
   padding: 75px 0;
   background-color: #fff;
@@ -201,12 +199,13 @@ header {
 /*    END TITLES STYLE   */
 @media only screen and (max-width: 1024px) {
   .section {
-    max-width: 1024px;
-    padding: 60px 0;
+    width: auto;
+    padding: 60px 20px;
   }
 
   .container {
-    max-width: 1024px;
+    width: auto;
+    margin: 0 auto;
   }
 
   .section-title {
@@ -222,28 +221,28 @@ header {
 /*    END MAIN  STYLES    */
 /*   WELCOME SECTION (first slide)*/
 .welcome-section {
+  display: flex;
   margin: 0 auto;
   padding: 0;
 }
 .welcome-section .container {
   display: flex;
-  justify-content: space-between;
-  padding-bottom: 60px;
-}
-.welcome-section .container .slide {
-  width: 1000px;
-  height: 750px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: space-between;
+  height: 810px;
   background-image: linear-gradient(to left, rgba(3, 3, 3, 0), rgba(3, 3, 3, 0), rgba(3, 3, 3, 0), #030303), url("../assets/1.jpg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 1000px 750px;
 }
 .welcome-section .container .slide-control-wrapper {
-  position: absolute;
-  right: calc(50% - 720px);
-  top: 840px;
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
+  justify-content: space-evenly;
   width: 600px;
   height: 120px;
+  margin-top: 690px;
   font-size: 22px;
   font-weight: 400;
   background-color: #030303;
@@ -283,30 +282,23 @@ header {
   background-color: #9d8665;
   cursor: pointer;
 }
-.welcome-section .container .welcome-content {
-  display: flex;
-  flex-direction: column;
-  z-index: 5;
-  max-width: 3px;
-  white-space: nowrap;
-  overflow: visible;
-}
-.welcome-section .container .welcome-content h1 {
+.welcome-section .container h1 {
   margin-bottom: 0;
   margin-top: 150px;
 }
-.welcome-section .container .welcome-content p {
+.welcome-section .container p {
   margin-top: 25px;
   margin-bottom: 75px;
   font-size: 28px;
   letter-spacing: 2px;
 }
-.welcome-section .container .welcome-content a {
+.welcome-section .container a {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 360px;
   height: 75px;
+  margin-bottom: 272px;
   color: #fff;
   font-weight: 300;
   letter-spacing: 2px;
@@ -314,11 +306,15 @@ header {
   border-radius: 10px;
   transition: 0.1s;
 }
-.welcome-section .container .welcome-content a:hover, .welcome-section .container .welcome-content a:focus {
+.welcome-section .container a:hover, .welcome-section .container a:focus {
   background-color: #9d8665;
 }
 
 @media only screen and (max-width: 1024px) {
+  .welcome-section {
+    width: auto;
+    padding: 0 20px;
+  }
   .welcome-section .container {
     padding-bottom: 120px;
   }
@@ -607,15 +603,14 @@ header {
 }
 
 video {
-  height: 650px;
-  width: 1440px;
+  margin-bottom: 40px;
 }
 
 /*      VIDEO CONTROLL    */
 .video-control {
+  display: none;
   height: 85px;
-  margin-bottom: 40px;
-  background-color: #000;
+  background-color: #fff;
 }
 
 /* Styles for slider */

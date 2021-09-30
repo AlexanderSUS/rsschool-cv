@@ -1,61 +1,61 @@
 .welcome-section {
-  
+  display: flex; 
   margin: 0 auto;
   padding: 0;
 
   .container {
     display: flex;
-    // flex-wrap: wrap;
-    justify-content: space-between;
-    padding-bottom: 60px;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    align-content: space-between;
+
+    
+    height: 810px;
+
+    background-image: linear-gradient(to left, rgba($bg-dark, 0), rgba($bg-dark, 0) ,rgba($bg-dark, 0), rgba($bg-dark, 1)), url('../assets/1.jpg'); 
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 1000px 750px;
 
     @import "welcome_slider";
-
-    .welcome-content {
-    display: flex;
-    flex-direction: column;
-    z-index: 5;
-
-    max-width: 3px;
   
-    white-space: nowrap;
-    overflow: visible;
-
-      h1 { 
-        margin-bottom: 0;
-        margin-top: 150px;
-      }
-
-      p {
-        margin-top: 25px; 
-        margin-bottom: 75px;
-
-        font-size: 28px;
-        letter-spacing: 2px;
-      }
-
-      a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        width: 360px;
-        height: 75px;
-
-        color: #fff;
-        font-weight: 300;
-        letter-spacing: 2px;
-
-        background-color: $dark-red;
-        border-radius: 10px;
-
-        transition: 0.1s;
-
-        &:hover, 
-        &:focus {
-          background-color: $font-gold;
-        }
-      } 
+    h1 { 
+      margin-bottom: 0;
+      margin-top: 150px;
     }
+
+    p {
+      margin-top: 25px; 
+      margin-bottom: 75px;
+
+      font-size: 28px;
+      letter-spacing: 2px;
+    }
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 360px;
+      height: 75px;
+
+      margin-bottom: 272px;
+
+      color: #fff;
+      font-weight: 300;
+      letter-spacing: 2px;
+
+      background-color: $dark-red;
+      border-radius: 10px;
+
+      transition: 0.1s;
+
+      &:hover, 
+      &:focus {
+        background-color: $font-gold;
+      }
+    } 
   }
 }
