@@ -1,17 +1,13 @@
 .section-title { 
-  margin-bottom: 103px;
   margin-top: 0;
 }
 
 .visiting-cards {
-  display: flex;
-  flex-wrap: wrap;
-  height: 923px;
+  display: grid;;
   grid-template-columns: repeat(auto-fit, 424px);
-  grid-column-gap: 60px;
-  justify-content: space-between;
-  align-content: space-between;
-  /*gap: TODO add this property for gap*/
+  grid-gap: 60px 75px;
+  
+  height: 923px;
 }
 
 .cards { 
