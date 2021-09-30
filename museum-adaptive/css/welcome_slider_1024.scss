@@ -1,69 +1,46 @@
 @media only screen and (max-width: 1024px) {
- .slide {
-  width: 700px;
-  height: 525px;
-  background-size: 700px 525px;
-  background-image: linear-gradient(to left, rgba($bg-dark, 0), rgba($bg-dark, 0) ,rgba($bg-dark, 0), rgba($bg-dark, 1)), url('../assets/1.jpg'); 
-}
+   
+  .slide-control-wrapper {
+    align-self: flex-end; 
 
-.slide-control-wrapper {
-  position: absolute;
-  left: 304px;
-  top: 655px;
+    justify-content: flex-end;
 
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+    width: 700px;
 
-  width: 700px;
-  height: 120px;
+    margin-top: 72px;
 
-  font-size: 22px;
-  font-weight: 400;
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: 400;
 
-  background-color: $bg-dark;
+    background-color: $bg-dark;
+  }
+
+  #pipe { padding: 0 5px;}
 
   .arrow-control {
-    display: flex;
-    justify-content: space-between;
-
-    width: 80px;
-
-    font-size: 38px;
-
-    svg {
-      fill: #fff;
-      transition: 0.7s;
-
-      &:hover {
-        fill: $font-gold;
-      }
-    }
+    box-sizing: content-box;
+    padding-left: 45px;
+    padding-right: 75px;
   }
-
-  .arrow:hover { cursor: pointer;}
 
   .square-control {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    width: auto;
 
-    width: 180px;
   }
+
   .square {
-    height: 16px;
-    width: 16px;
-    background-color: #fff;
-    transition: 0.7s;
+    box-sizing: content-box;
+    // padding-left: 45px;
 
+    height: 12px;
+    width: 12px;
+
+    margin-left: 25px;
     &:first-of-type {
-      background-color: $font-gold;
+    margin-left: 45px;
+
     }
 
-    &:hover { 
-      background-color: #9d8665;
-      cursor: pointer;
-    }
   }
-}   
 }

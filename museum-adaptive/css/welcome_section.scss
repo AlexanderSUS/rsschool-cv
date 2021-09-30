@@ -6,6 +6,8 @@
   .container {
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
+
     flex-direction: column;
 
     align-content: space-between;
@@ -18,7 +20,6 @@
     background-position: right top;
     background-size: 1000px 750px;
 
-    @import "welcome_slider";
   
     h1 { 
       margin-bottom: 0;
@@ -59,3 +60,5 @@
     } 
   }
 }
+
+@import "welcome_slider";

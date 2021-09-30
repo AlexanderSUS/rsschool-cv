@@ -22,15 +22,19 @@
   }
 }
 
-// video { 
+video { 
+  margin-bottom: 40px;
+}
 //   height: 650px;
 //   width: 1440px;
-// }
+
 /*      VIDEO CONTROLL    */
 .video-control {
+  display: none;
   height: 85px;
-  margin-bottom: 40px;
-  background-color: #000;
+  // margin-bottom: 40px;
+  // background-color: #000;
+  background-color: #fff;
 }
 
 
