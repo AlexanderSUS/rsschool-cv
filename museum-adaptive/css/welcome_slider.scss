@@ -1,20 +1,14 @@
-.slide {
-  width: 1000px;
-  height: 750px;
-  background-image: linear-gradient(to left, rgba($bg-dark, 0), rgba($bg-dark, 0) ,rgba($bg-dark, 0), rgba($bg-dark, 1)), url('../assets/1.jpg'); 
-}
-
 .slide-control-wrapper {
-  position: absolute;
-  right: calc(50% - 720px);
-  top: 840px;
-
   display: flex;
-  justify-content: space-evenly;
+
   align-items: center;
+  justify-content: space-evenly;
+
 
   width: 600px;
   height: 120px;
+
+  margin-top: 690px;
 
   font-size: 22px;
   font-weight: 400;
