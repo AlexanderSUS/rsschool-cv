@@ -118,10 +118,14 @@ input[type=number] {
 
     border: none;
     background-color: #000;
+
+    &:hover {
+      background-color: $font-gold;
+    }
   }
   .buy-now:after {
     content: "";
-    background: #f1f1f1;
+    background: $dark-red;
     display: block;
     position: absolute;
     padding-top: 300%;

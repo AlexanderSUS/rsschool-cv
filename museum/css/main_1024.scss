@@ -1,16 +1,19 @@
 @media only screen and (max-width: 1024px) {
   .section { 
     max-width: 1024px;
-    padding: 0 0; 
+    padding: 60px 0; 
   }
 
   .container { max-width: 1024px; }
 
-  .section-title { font-size: 50px; }
+  .section-title { 
+    font-size: 50px; 
+    line-height: 75px;
+  }
 
 
   .underline-title::after { 
       top: 155px;
-      max-width: 984px;
+      max-width: calc(1024px / 984px);
     }
 }

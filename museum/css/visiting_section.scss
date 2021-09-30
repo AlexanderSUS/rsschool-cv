@@ -6,7 +6,7 @@
 .visiting-cards {
   display: flex;
   flex-wrap: wrap;
-  height: 923px;
+  height: auto;
   grid-template-columns: repeat(auto-fit, 424px);
   grid-column-gap: 60px;
   justify-content: space-between;
