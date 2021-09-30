@@ -403,7 +403,7 @@ header {
 .visiting-cards {
   display: flex;
   flex-wrap: wrap;
-  height: auto;
+  height: 923px;
   grid-template-columns: repeat(auto-fit, 424px);
   grid-column-gap: 60px;
   justify-content: space-between;
@@ -590,10 +590,6 @@ header {
 /*  END  BEFORE AND AFTER SLIDER STYLE   */
 /*    END EXPLORE SECTION   */
 /*    VIDEO SECTION   */
-.video-section {
-  /*      VIDEO CONTROLL    */
-  /* Styles for slider */
-}
 .video-section .text-content {
   display: inline-flex;
   justify-content: space-between;
@@ -609,39 +605,50 @@ header {
   line-height: 38px;
   color: #000;
 }
-.video-section .video-control {
+
+video {
+  height: 650px;
+  width: 1440px;
+}
+
+/*      VIDEO CONTROLL    */
+.video-control {
   height: 85px;
+  margin-bottom: 40px;
   background-color: #000;
 }
-.video-section .video-module {
+
+/* Styles for slider */
+.video-module {
   display: flex;
   flex-direction: column;
   width: 100%;
   height: auto;
 }
-.video-section .video-module .main-screen {
+.video-module .main-screen {
   display: none;
 }
-.video-section .video-module .active {
+.video-module .active {
   display: block;
 }
-.video-section .video-module .slider-container {
+.video-module .slider-container {
   display: flex;
   flex-direction: column;
 }
-.video-section .video-module .preview-container {
+.video-module .preview-container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
 }
-.video-section .video-module .slide-screen {
+.video-module .slide-screen {
   max-width: 452px;
 }
-.video-section .video-module .slide-screen:hover {
+.video-module .slide-screen:hover {
   cursor: pointer;
 }
-.video-section .dots-control {
+
+.dots-control {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -649,17 +656,19 @@ header {
   height: 12px;
   margin: 40px auto 0 auto;
 }
-.video-section .dot-btn {
+
+.dot-btn {
   height: 12px;
   width: 12px;
   background-color: #999;
   border-radius: 50%;
 }
-.video-section .dot-btn:hover {
+.dot-btn:hover {
   background-color: #710707;
   cursor: pointer;
 }
-.video-section .active-dot {
+
+.active-dot {
   background-color: #333;
 }
 

@@ -20,9 +20,16 @@
     line-height: 38px;
     color: #000;
   }
+}
+
+video { 
+  height: 650px;
+  width: 1440px;
+}
 /*      VIDEO CONTROLL    */
 .video-control {
   height: 85px;
+  margin-bottom: 40px;
   background-color: #000;
 }
 
@@ -30,5 +37,3 @@
   /* Styles for slider */
 
   @import "video_slider.scss";
-
-}
