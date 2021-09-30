@@ -103,8 +103,8 @@ input[type=number] {
 .confirm-container {
   text-align: right;
 
-  input[type=submit] {
-
+  .buy-now {
+    position: relative;
     height: 50px; 
     width: 175px;
 
@@ -113,8 +113,34 @@ input[type=number] {
     font-weight: 300;;
     color: #fff;
 
+    overflow: hidden;
+    cursor: pointer;
+
     border: none;
     background-color: #000;
+
+    &:hover {
+      background-color: $font-gold;
+    }
+  }
+  .buy-now:after {
+    content: "";
+    background: $dark-red;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+  }
+  
+  .buy-now:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
   }
 }
 

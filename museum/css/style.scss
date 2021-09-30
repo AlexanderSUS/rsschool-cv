@@ -4,300 +4,50 @@
 
 /*    HEADER STYLE   */
 @import 'header.scss';
+@import 'header_1024.scss';
 /*      END HEADER STYLE      */
 
 /*  MAIN SYLES    */
-/* COMMON  MAIN STYLES    */
-.section { 
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 75px 0; 
+@import 'main.scss';
+@import 'main_1024';
+/*    END MAIN  STYLES    */
 
-  background-color: #fff;
-}
-
-.dark-section { background-color: #030303; }
-
-.video { padding-top: 90px; }
-
-.container {
-  max-width: 1440px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-/*    TITLES STYLE   */
-.section-title {
-  font-family: Forum;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 80px;
-  line-height: 90px;
- 
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  color: #fff;
-}
-
-.gold-title { color: $font-gold; }
-
-.underline-title { 
-  position: relative; 
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 190px;
-    left: 0;
-    right: 0;
-    height: 3px;
-    max-width: 1440px;
-    margin: 0 auto;
-    background-color: #710707;
-  }
-}
-/*    END TITLES STYLE   */
-
-/*    END COMMON MAIN STYLES    */
 
 /*   WELCOME SECTION (first slide)*/
-.welcome-section {
-  padding: 0;
-
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    padding-bottom: 60px;
-
-    @import "welcome_slider";
-
-    .welcome-content {
-    display: flex;
-    flex-direction: column;
-    z-index: 5;
-
-    max-width: 440px;
-  
-    white-space: nowrap;
-    overflow: visible;
-
-      h1 { 
-        margin-bottom: 0;
-        margin-top: 150px;
-
-      }
-
-      p {
-        margin-top: 25px; 
-        margin-bottom: 75px;
-
-        font-size: 28px;
-        letter-spacing: 2px;
-      }
-
-      a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        width: 360px;
-        height: 75px;
-
-        color: #fff;
-        font-weight: 300;
-        letter-spacing: 2px;
-
-        background-color: $dark-red;
-        border-radius: 10px;
-
-        transition: 0.1s;
-
-        &:hover, 
-        &:focus {
-          background-color: $font-gold;
-        }
-      } 
-    }
-  }
-}
+@import "welcome_section";
+@import "welcome_section_1024";
 /*    END WELCOME SECTION   */
 
-
 /*    VISITING SECTION    */
-.section-title { 
-  margin-bottom: 103px;
-  margin-top: 0;
-}
-
-.visiting-cards {
-  display: flex;
-  flex-wrap: wrap;
-  height: 923px;
-  grid-template-columns: repeat(auto-fit, 424px);
-  grid-column-gap: 60px;
-  justify-content: space-between;
-  align-content: space-between;
-  /*gap: TODO add this property for gap*/
-}
-
-.cards { 
-  display: block; 
-
-  color: #000;
-
-  h3 {
-    position: relative;
-
-    margin-top: 25px;
-    margin-bottom: 22px;
-
-    font-family: $title-font;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 33px;
-    line-height: 35px;
-    letter-spacing: 5px; 
-    text-transform: uppercase;
-
-    &::after {
-      position: absolute;
-      content: '';
-      height: 2px;
-      bottom: -10px;
-      left: 0;
-
-      width: 300px;
-      
-      background-color: $dark-red;
-
-      transition: 0.5s;
-    }
-  }
-  p { 
-    margin: 0;
-
-    &:last-of-type {
-      font-size: 18px;
-      margin-top: 10px;
-    }
-  }
-}
-
-.visiting-cards a:hover  {
-  h3::after { 
-    width: 100%;
-  }
-}
- 
+@import "visiting_section";
+@import "visiting_section_1024";
 /*    END VISITING SECTION    */
 
 /*    EXPLORE SECTION     */
-
 @import 'explore.scss';
+/*    END EXPLORE SECTION   */
 
 
 /*    VIDEO SECTION   */
-.video-section {
-
-  .text-content {
-    display: inline-flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  h2 {
-    max-width: 610px;
-
-    margin-bottom: 75px;
-  }
-
-  p {
-    max-width: 720px;
-
-    margin: 0;
-
-    line-height: 38px;
-    color: #000;
-  }
-/*      VIDEO CONTROLL    */
-.video-control {
-  height: 85px;
-  background-color: #000;
-}
-
-
-  /* Styles for slider */
-
-  @import "video_slider.scss";
-
-}
+@import "video_section";
 /*    END VIDEO SECTION   */
 
 /*  GALLERY SECTION   */
-
 @import "art_gallery.scss";
+/*  END GALLERY SECTION   */
 
 /*    TICKET SECTION   */
-
 @import "tickets.scss";
-
 /* END TIKET SECTION    */
 
 /*    PARALLAX    */
-.parallax {
-  width: 100%;
-  min-height: 400px;
-  background-image: url(../assets/parallax.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-}
-
+@import 'parallax.scss';
 /*  END PARALLAX    */
-/* COTANCTS   */
-// .contacts-section  {
-//   display: flex;
-//   flex-wrap: wrap;
-//   flex-direction: row;
-//   height: 620px;
 
-// }
-
-.contact-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-
-.contacts {
-  width: 480px;
-  height: auto;
-
-  h3 {
-    margin: 0 0 50px 0;
-    color: #000;
-  }
-  p {
-    margin: 0 0 25px 0;
-    color: #000;
-  }
-
-  a {
-    color: #000; 
-    font-weight: 300; 
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
-
-
-
-#map {
-  width: 960px;
-  height: 620px;
-}
+/*   COTANCTS SECTION  */
+@import "contacts_section";
+/*   END CONTACTS SECTION    */
 
 /*  FOOTER */
-
-@import "footer.scss"
+@import "footer.scss";
+/*  END FOOTER    */
