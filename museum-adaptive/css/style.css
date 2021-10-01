@@ -26,7 +26,7 @@ body {
   font-size: 22px;
   font-weight: 300;
   color: #fff;
-  background-color: #030303;
+  background-color: #fff;
 }
 
 li {
@@ -1068,14 +1068,16 @@ input[type=number]::-webkit-outer-spin-button {
   background-attachment: fixed;
 }
 
-.parallax {
-  width: 100%;
-  min-height: 400px;
-  background-image: url(../assets/parallax.jpg);
-  background-size: cover;
-  background-attachment: fixed;
+@media only screen and (max-width: 1024px) {
+  .parallax {
+    width: 100%;
+    min-height: 400px;
+    background-image: url(../assets/parallax_1024.jpg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
 }
-
 /*  END PARALLAX    */
 /*   COTANCTS SECTION  */
 .contact-wrapper {
@@ -1109,10 +1111,33 @@ input[type=number]::-webkit-outer-spin-button {
   height: 620px;
 }
 
+@media only screen and (max-width: 1024px) {
+  .contacts {
+    width: 274px;
+    height: auto;
+  }
+  .contacts h3 {
+    margin: 0 0 35px 0;
+    font-size: 24px;
+  }
+  .contacts p {
+    font-size: 20px;
+    margin: 0 0 15px 0;
+  }
+  .contacts a {
+    font-size: 20px;
+  }
+
+  #map {
+    width: 694px;
+    height: 454px;
+  }
+}
 /*   END CONTACTS SECTION    */
 /*  FOOTER */
 footer {
   height: 392px;
+  background-color: #030303;
 }
 
 .inner-footer {
@@ -1122,29 +1147,27 @@ footer {
   justify-content: space-between;
   max-width: 1440px;
   margin: 0 auto;
-  box-sizing: border-box;
   padding-top: 75px;
   padding-bottom: 50px;
   border-bottom: 3px solid #666;
 }
 
 .wrapper-logo-nav {
-  display: block;
+  display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-between;
-  max-width: 603px;
+  width: 604px;
 }
 
 /* FOOTER LOGO  */
 .footer-container-logo {
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  max-width: 195px;
-  width: 100%;
-}
-.footer-container-logo .footer-logo-logo {
-  height: 26px;
-  width: 49px;
+  width: 195px;
+  height: 128px;
+  margin: 0 0;
 }
 .footer-container-logo .footer-logo-logo svg {
   fill: #fff;
@@ -1171,7 +1194,6 @@ footer {
 /*  FOOTER  NAVIGATION    */
 .footer-nav {
   display: flex;
-  justify-self: left;
 }
 
 .footer-nav-list {
@@ -1179,7 +1201,7 @@ footer {
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 363px;
+  max-width: 257px;
   max-height: 128px;
   background-color: #030303;
 }
@@ -1213,6 +1235,7 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   align-self: flex-end;
+  justify-self: end;
   max-width: 340px;
   width: 100%;
   max-height: 48px;
@@ -1250,6 +1273,52 @@ footer {
 }
 
 /*  END FOOTER  NAVIGATION  */
+@media only screen and (max-width: 1024px) {
+  footer {
+    height: 368px;
+    padding: 0 20px;
+  }
+
+  .inner-footer {
+    width: 100%;
+    padding-top: 65px;
+  }
+
+  .wrapper-logo-nav {
+    box-sizing: content-box;
+    width: 493px;
+  }
+
+  /* FOOTER LOGO  */
+  .footer-container-logo {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    width: 194px;
+  }
+
+  /*  FOOTER  NAVIGATION    */
+  .footer-nav-list {
+    width: 313px;
+  }
+
+  .footer-nav-item {
+    box-sizing: content-box;
+    width: 107px;
+    padding-right: 100px;
+  }
+
+  .footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    height: 124px;
+    margin: 0 auto;
+    font-weight: 100;
+  }
+}
 /*  END FOOTER    */
 
 /*# sourceMappingURL=style.css.map */

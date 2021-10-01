@@ -46,13 +46,15 @@
 
 /*    PARALLAX    */
 @import 'parallax.scss';
-@import 'parallax.scss';
+@import 'parallax_1024.scss';
 /*  END PARALLAX    */
 
 /*   COTANCTS SECTION  */
 @import "contacts_section";
+@import "contacts_section_1024";
 /*   END CONTACTS SECTION    */
 
 /*  FOOTER */
 @import "footer.scss";
+@import "footer_1024.scss";
 /*  END FOOTER    */
