@@ -63,8 +63,8 @@ header {
 .header-nav {
   max-width: 775px;
   width: 100%;
-}
 
+}
 .header-nav-list {
   display: flex;
   flex-wrap: wrap;
@@ -73,22 +73,29 @@ header {
 
   background-color: $bg-dark;
 
-  .header-nav-link {
-    display: block;
+}
+.header-nav-link {
+  display: block;
 
-    font-family:'Roboto', sans-serif;
-    font-size: 22px;
-    font-weight: 300;
+  font-family:'Roboto', sans-serif;
+  font-size: 22px;
+  font-weight: 300;
 
-    color: #fff;
-    font-style: normal;
-    line-height: 26px;
-    letter-spacing: 2px;
-    transition: 0.3s;
+  color: #fff;
+  font-style: normal;
+  line-height: 26px;
+  letter-spacing: 2px;
+  transition: 0.3s;
 
-    &:hover,
-    &:active {
-      color: $font-gold;
-    }
+  &:hover,
+  &:active {
+    color: $font-gold;
   }
 }
+/* HAMBURGER MENU   */
+
+.gamburger,
+.menu-arrow { 
+  display: none;
+}
+/* END HAMBURGER MENU     */

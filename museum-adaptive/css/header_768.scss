@@ -1,0 +1,16 @@
+@media only screen and (max-width: 768px) {
+  header {
+
+    width: 100%;
+    padding: 0 20px;
+  }
+  .header-container {
+    height: 110px;
+    width: 100%;
+    justify-content: start;
+  }
+
+  .header-nav {
+    display: none;
+  }
+}
