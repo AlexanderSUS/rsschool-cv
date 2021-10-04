@@ -1463,6 +1463,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 @media only screen and (max-width: 768px) {
   .contacts h3 {
+    margin: 0 0 40px 0;
     font-size: 20px;
     line-height: 23px;
     font-weight: 500;
@@ -1481,6 +1482,7 @@ input[type=number]::-webkit-outer-spin-button {
   #map {
     width: 728px;
     height: 476px;
+    margin-bottom: 27px;
   }
 }
 /*   END CONTACTS SECTION    */
@@ -1660,7 +1662,7 @@ footer {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    max-width: 1440px;
+    max-width: 984px;
     height: 124px;
     margin: 0 auto;
     font-size: 22px;
@@ -1684,7 +1686,7 @@ footer {
     flex-direction: column;
     flex-wrap: wrap;
     height: 180px;
-    max-width: 100%;
+    width: auto;
   }
 
   /* FOOTER LOGO  */
@@ -1700,12 +1702,7 @@ footer {
   }
 
   /*  FOOTER  NAVIGATION    */
-  .footer-nav {
-    display: inline;
-  }
-
   .footer-nav-list {
-    justify-self: right;
     margin-top: 18px;
     margin-left: 100px;
     width: auto;
@@ -1715,6 +1712,9 @@ footer {
   .footer-nav-item {
     max-width: 85px;
     padding-right: 0;
+  }
+  .footer-nav-item:nth-of-type(1n+4) {
+    margin-left: 168px;
   }
 
   .footer-nav-link {
@@ -1730,6 +1730,10 @@ footer {
   .footer-bottom {
     max-width: 768px;
     height: 102px;
+  }
+
+  #year {
+    margin-right: 30px;
   }
 }
 /*  END FOOTER    */
