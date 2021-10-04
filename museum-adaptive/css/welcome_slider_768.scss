@@ -1,0 +1,48 @@
+@media only screen and (max-width: 768px) {
+   
+  .slide-control-wrapper {
+
+    justify-content: center;
+    align-self: center;
+
+    max-width: 401px;
+    height: 100px;
+
+    margin-top: 546px;
+    margin-bottom: 0px;
+
+    // font-size: 20px;
+    // line-height: 40px;
+    // font-weight: 400;
+
+    // background-color: $bg-dark;
+  }
+
+  // #pipe { padding: 0 5px;}
+
+  .arrow-control {
+    box-sizing: content-box;
+    padding-left: 45px;
+    padding-right: 0;
+  }
+
+  // .square-control {
+  //   width: auto;
+
+  // }
+
+  // .square {
+  //   box-sizing: content-box;
+  //   // padding-left: 45px;
+
+  //   height: 12px;
+  //   width: 12px;
+
+  //   margin-left: 25px;
+  //   &:first-of-type {
+  //   margin-left: 45px;
+
+  //   }
+
+  // }
+}

@@ -25,11 +25,6 @@ html {
 }
 
 body { 
-  width: 100%;
-  margin: 0 auto;
-
-
-  padding-top: 150px;
   font-family: $text-font;
   font-size: 22px;
   font-weight: 300;
@@ -48,14 +43,7 @@ a {
 }
 
 @media only screen and (max-width: 1024px) {
-  body { 
-    padding-top: 130px; 
-    // padding-left: 20px;
-    // padding-right: 20px;
-  }
+a { font-size: 20px; }
 }
-@media only screen and (max-width: 768px) {
-  body { 
-    padding-top: 110px; 
-  }
-}
+// @media only screen and (max-width: 768px) {
+// }

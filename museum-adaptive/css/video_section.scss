@@ -23,7 +23,12 @@
 }
 
 video { 
+  max-width: 1440px;
+  max-height: 900px;
+
   margin-bottom: 40px;
+
+  object-fit: fill;
 }
 
 /*      VIDEO CONTROLL    */

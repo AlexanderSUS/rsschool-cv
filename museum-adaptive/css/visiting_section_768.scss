@@ -1,0 +1,42 @@
+@media only screen and (max-width: 768px) {
+
+  .visiting-cards {
+    height: auto;
+    grid-template-columns: repeat(auto-fit, 280px);
+    grid-gap: 40px 58px;
+    // justify-content: center;
+
+    padding-bottom: 40px;
+
+    a img {
+      width: 280px;
+      height: 180px;
+    }
+  }
+
+  .cards { 
+
+    h3 {
+      margin-top: 20px;
+
+      font-size: 22px;
+      line-height: 24px;
+      // letter-spacing: 3px; 
+
+      // &::after {
+      //   width: 150px;
+      // }
+    }
+
+    p { 
+      font-size: 18px;
+      line-height: 21px;
+
+      &:last-of-type {
+        font-size: 16px;
+        line-height: 19px;
+        // margin-top: 10px;
+      }
+    }
+  }
+}

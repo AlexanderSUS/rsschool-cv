@@ -1,5 +1,6 @@
 @media only screen and (max-width: 1024px) {
-  .gallery-section .container .section-title { margin-bottom: 75px; }
+  .gallery-section .container .section-title { margin-bottom: 60px; }
+  section.gallery-section { padding-bottom: 0;}
 
   .picture-container {
     height: 1265px;
@@ -12,8 +13,8 @@
     max-height: 2020px;
 
     img {
-      width: 304px;
-      height: auto;
+      max-width: 304px;
+      // width: 100%;
       padding-bottom: 24px;
 
       &:first-of-type {

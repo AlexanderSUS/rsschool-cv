@@ -32,9 +32,9 @@ footer {
 
 /* FOOTER LOGO  */
 .footer-container-logo {
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
+  // box-sizing: border-box;
+  // display: flex;
+  // justify-content: space-between;
 
   width: 194px;
   // height: 128px;
@@ -155,16 +155,20 @@ footer {
 //   }
 // }
 
-.footer-bottom {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  .footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 
-  max-width: 1440px;
-  height: 124px;
-  margin: 0 auto;
-  font-weight: 100;
-}
+    max-width: 984px;
+    height: 124px;
+    margin: 0 auto;
+
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: 100;
+    letter-spacing: 2px;
+  }
 
 }

@@ -13,8 +13,9 @@
   max-height: 3020px;
 
   img {
-    width: 456px;
-    height: fit-content;
+    max-width: 456px;
+    width: 100%;
+    height: auto;
     padding-bottom: 24px;
 
     &:first-of-type {

@@ -1,7 +1,7 @@
 @media only screen and (max-width: 1024px) {
 
   .visiting-cards {
-    height: 1155px;
+    height: auto;
     grid-template-columns: repeat(auto-fit, 330px);
     grid-gap: 60px 108px;
     justify-content: center;

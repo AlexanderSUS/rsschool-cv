@@ -1,16 +1,11 @@
 @media only screen and (max-width: 1024px) {
   header {
-    width: 100%;
     padding: 0 20px;
   }
   .header-container {
     height: 130px;
-    width: 100%;
+    max-width: 984px;
   }
-
-  // .header-nav {
-  //   display: none;
-  // }
 
   /* HAMBURGER MENU   */
   .gamburger { 
@@ -19,8 +14,6 @@
     left: 0;
     width: 32px;
     height: 18px;
-
-    // transition: all 0.7s ease 0s;
 
     span {
       position: absolute;
