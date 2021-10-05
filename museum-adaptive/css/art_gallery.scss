@@ -13,8 +13,7 @@
   max-height: 3020px;
 
   img {
-    max-width: 456px;
-    width: 100%;
+    width: calc((100% - 72px) / 3);
     height: auto;
     padding-bottom: 24px;
 

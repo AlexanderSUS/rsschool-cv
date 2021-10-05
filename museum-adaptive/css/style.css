@@ -1009,8 +1009,7 @@ video {
   max-height: 3020px;
 }
 .picture-inner-container img {
-  max-width: 456px;
-  width: 100%;
+  width: calc((100% - 72px) / 3);
   height: auto;
   padding-bottom: 24px;
 }
@@ -1036,15 +1035,6 @@ video {
     align-content: space-between;
     max-height: 2020px;
   }
-  .picture-inner-container img {
-    max-width: 304px;
-    width: 100%;
-    height: auto;
-    padding-bottom: 24px;
-  }
-  .picture-inner-container img:first-of-type {
-    padding-top: 50px;
-  }
 }
 @media only screen and (max-width: 768px) {
   .gallery-section .container .section-title {
@@ -1061,9 +1051,7 @@ video {
     max-height: 3600px;
   }
   .picture-inner-container img {
-    max-width: 352px;
-    width: 100%;
-    height: auto;
+    width: calc((100% - 24px) / 2);
   }
 }
 /*  END GALLERY SECTION   */
