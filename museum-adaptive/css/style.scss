@@ -13,6 +13,7 @@
 @import 'main.scss';
 @import 'main_1024.scss';
 @import 'main_768.scss';
+@import 'main_420.scss';
 /*    END MAIN  STYLES    */
 
 
@@ -20,12 +21,14 @@
 @import "welcome_section.scss";
 @import "welcome_section_1024.scss";
 @import "welcome_section_768.scss";
+@import "welcome_section_420.scss";
 /*    END WELCOME SECTION   */
 
 /*    VISITING SECTION    */
 @import "visiting_section.scss";
 @import "visiting_section_1024.scss";
 @import "visiting_section_768.scss";
+@import "visiting_section_420.scss";
 /*    END VISITING SECTION    */
 
 /*    EXPLORE SECTION     */
@@ -40,23 +43,27 @@
 @import "video_section.scss";
 @import "video_section_1024.scss";
 @import "video_section_768.scss";
+@import "video_section_420.scss";
 /*    END VIDEO SECTION   */
 
 /*  GALLERY SECTION   */
 @import "art_gallery.scss";
 @import "art_gallery_1024.scss";
 @import "art_gallery_768.scss";
+@import "art_gallery_420.scss";
 /*  END GALLERY SECTION   */
 
 /*    TICKET SECTION   */
 @import "tickets.scss";
 @import "tickets_1024.scss";
 @import "tickets_768.scss";
+@import "tickets_420.scss";
 /* END TIKET SECTION    */
 
 /*    PARALLAX    */
 @import 'parallax.scss';
 @import 'parallax_1024.scss';
+
 @import 'parallax_768.scss';
 /*  END PARALLAX    */
 
@@ -64,6 +71,7 @@
 @import "contacts_section.scss";
 @import "contacts_section_1024.scss";
 @import "contacts_section_768.scss";
+@import "contacts_section_420.scss";
 /*   END CONTACTS SECTION    */
 
 /*  FOOTER */
