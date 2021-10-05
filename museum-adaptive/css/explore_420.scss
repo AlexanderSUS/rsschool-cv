@@ -31,15 +31,17 @@
       }
 
       .slider-container {
+        width: 380px;
+        height: 368px;
 
-        width: 728px;
-        height: 705px;
         img {
-          background-size: 728px 100%;
+          max-width: 380px;
+          max-height: 368px;
+        }
+        .background-img {
+          background-size: 380px 368px;
         }
       }
-
-      
     }
   }
 }
