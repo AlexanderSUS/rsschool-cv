@@ -27,7 +27,7 @@ function shuffle(array) {
 
 for (let i = 0; i < pictureMaxNum; i++) {
     pictureInnerContainer.append(newPicture[i]);
-    if (i == 10) {
+    if (i == 10 && screen.width > 768) {
       newPicture[i].style.paddingTop = "50px";
     }
 }

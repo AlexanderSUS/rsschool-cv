@@ -1,18 +1,119 @@
 @media only screen and (max-width: 1024px) {
   header {
-
-    // max-width: 1024px;
-    width: 100%;
     padding: 0 20px;
   }
   .header-container {
     height: 130px;
-    // max-width: 1024px;
-    width: 100%;
-    justify-content: start;
+    max-width: 984px;
   }
 
+  /* HAMBURGER MENU   */
+  .gamburger { 
+    display: block;
+    position: relative;
+    left: 0;
+    width: 32px;
+    height: 18px;
+
+    span {
+      position: absolute;
+      background-color: #fff;
+      left: 0;
+      top: 8px;
+      width: 100%;
+      height: 2px;
+
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+
+      width: 100%;
+      height: 2px;
+
+      background-color: #fff;
+
+      transition: all 0.7s ease 0s;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+  }
+
+  .gamburger.active span {
+    transform: rotate(-45deg); 
+    transform: scale(0);
+    transition: all 0.7s ease 0s;
+  }
+  .gamburger.active::after {
+    transform: rotate(-45deg); 
+    bottom: 8px;
+  }
+  .gamburger.active::before {
+    transform: rotate(45deg); 
+    top: 8px;
+  }
+
+  .menu-arrow { 
+    box-sizing: content-box;
+    display: inline;
+    float: right;
+    fill: #fff;
+    padding-top: 7px;
+  }
+  /* END HAMBURGER MENU     */
   .header-nav {
-    display: none;
+    display: block;
+    position: absolute;
+    top: 130px;
+    left: -297px;
+    width: 297px;
+
+    transition: all 0.7s ease 0s;
+  }
+
+  .header-nav-list {
+    // display: flex;
+    // flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: unset;
+    align-items: unset;
+    height: 100vh;
+
+    // background-color: $bg-dark;
+
+    .header-nav-item {
+      margin: 25px 25px 0px 55px; 
+
+      &:first-of-type { margin-top: 35px;}
+    }
+  }
+  .header-nav.active { left: 0; }
+
+  .header-nav-link {
+    // display: block;
+    width: 122px;
+
+    // font-family:'Roboto', sans-serif;
+    font-size: 20px;
+    // font-weight: 300;
+    // color: #fff;
+    // font-style: normal;
+    line-height: 23px;
+    // letter-spacing: 2px;
+    // transition: 0.3s;
+
+    &:hover,
+    &:active {
+      color: $font-gold;
+
+      .menu-arrow { fill: $font-gold}
+    }
   }
 }

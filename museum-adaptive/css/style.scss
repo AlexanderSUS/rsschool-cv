@@ -5,49 +5,67 @@
 /*    HEADER STYLE   */
 @import 'header.scss';
 @import 'header_1024.scss';
+@import 'header_768.scss';
 /*      END HEADER STYLE      */
 
 /*  MAIN SYLES    */
 @import 'main.scss';
-@import 'main_1024';
+@import 'main_1024.scss';
+@import 'main_768.scss';
 /*    END MAIN  STYLES    */
 
 
 /*   WELCOME SECTION (first slide)*/
-@import "welcome_section";
-@import "welcome_section_1024";
+@import "welcome_section.scss";
+@import "welcome_section_1024.scss";
+@import "welcome_section_768.scss";
 /*    END WELCOME SECTION   */
 
 /*    VISITING SECTION    */
-@import "visiting_section";
-@import "visiting_section_1024";
+@import "visiting_section.scss";
+@import "visiting_section_1024.scss";
+@import "visiting_section_768.scss";
 /*    END VISITING SECTION    */
 
 /*    EXPLORE SECTION     */
 @import 'explore.scss';
+@import 'explore_1024.scss';
+@import 'explore_768.scss';
 /*    END EXPLORE SECTION   */
 
 
 /*    VIDEO SECTION   */
-@import "video_section";
+@import "video_section.scss";
+@import "video_section_1024.scss";
+@import "video_section_768.scss";
 /*    END VIDEO SECTION   */
 
 /*  GALLERY SECTION   */
 @import "art_gallery.scss";
+@import "art_gallery_1024.scss";
+@import "art_gallery_768.scss";
 /*  END GALLERY SECTION   */
 
 /*    TICKET SECTION   */
 @import "tickets.scss";
+@import "tickets_1024.scss";
+@import "tickets_768.scss";
 /* END TIKET SECTION    */
 
 /*    PARALLAX    */
 @import 'parallax.scss';
+@import 'parallax_1024.scss';
+@import 'parallax_768.scss';
 /*  END PARALLAX    */
 
 /*   COTANCTS SECTION  */
-@import "contacts_section";
+@import "contacts_section.scss";
+@import "contacts_section_1024.scss";
+@import "contacts_section_768.scss";
 /*   END CONTACTS SECTION    */
 
 /*  FOOTER */
 @import "footer.scss";
+@import "footer_1024.scss";
+@import "footer_768.scss";
 /*  END FOOTER    */

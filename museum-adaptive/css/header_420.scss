@@ -1,0 +1,36 @@
+@media only screen and (max-width: 420px) {
+  .header-container {
+    height: 90px;
+    max-width: 380px;
+  }
+
+  .header-container-logo {
+    width: 29px;
+    height: 16px;
+
+    svg {
+      width: 29px;
+      height: 16px;
+    }
+  }
+
+  .heder-logo-text {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .header-nav {
+    top: 90px;
+    // left: -100%;
+    // width: 100%;
+  }
+
+  // .header-nav-list { height: 100vh; }
+  // .header-nav.active { left: 0; }
+
+  // .header-nav-link {
+  //   font-size: 20px;
+  //   line-height: 23px;
+  //   }
+}
+

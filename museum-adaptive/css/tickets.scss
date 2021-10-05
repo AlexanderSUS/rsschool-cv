@@ -1,16 +1,13 @@
 .tickets-content-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
   max-height: 550px;
 
   color: #000;
-}
-
-.ticket-image {
-  width: 720px;
-  height: 550px;
 
   background-image: url(../assets/ticket_img.jpg);
+  background-repeat: no-repeat;
 }
 
 .ticket-input-area {

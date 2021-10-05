@@ -1,0 +1,10 @@
+@media only screen and (max-width: 1024px) {
+  .parallax {
+    width: 100%;
+    min-height: 400px;
+    background-image: url(../assets/parallax_1024.jpg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+}
