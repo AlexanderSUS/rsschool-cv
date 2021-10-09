@@ -1,0 +1,40 @@
+@media only screen and (max-width: 1024px) {
+
+  .visiting-cards {
+    height: auto;
+    grid-template-columns: repeat(auto-fit, 330px);
+    grid-gap: 60px 108px;
+    justify-content: center;
+
+    a img {
+      width: 330px;
+      height: 215px;
+    }
+  }
+
+  .cards { 
+
+    h3 {
+      margin-top: 20px;
+
+      font-size: 28px;
+      line-height: 31px;
+      letter-spacing: 3px; 
+
+      &::after {
+        width: 150px;
+      }
+    }
+
+    p { 
+      font-size: 20px;
+      line-height: 23px;
+
+      &:last-of-type {
+        font-size: 16px;
+        line-height: 19px;
+        margin-top: 10px;
+      }
+    }
+  }
+}
