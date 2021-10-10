@@ -33,10 +33,19 @@ video {
 
 /*      VIDEO CONTROLL    */
 .video-control {
-  // display: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
   height: 85px;
   margin-bottom: 40px;
   background-color: #000;
+}
+.volume-icon {
+  display: flex;
+  align-items:center ;
+  justify-content: space-between;
 }
 
 
