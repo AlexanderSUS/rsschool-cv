@@ -1,0 +1,13 @@
+@media only screen and (max-width: 768px) {
+  .section-title { 
+    font-size: 28px; 
+    line-height: 40px;
+    margin-bottom: 63px;
+  }
+
+
+  .underline-title::after { 
+      top: 100px;
+      max-width: 380px;
+    }
+}

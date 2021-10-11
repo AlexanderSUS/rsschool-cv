@@ -1,0 +1,28 @@
+@media only screen and (max-width: 768px) {
+  .gallery-section .container .section-title { margin-bottom: 40px; }
+  // section.gallery-section { padding-bottom: 0;}
+
+  .picture-container {
+    height: 1080px;
+    max-width: 728px;
+    // overflow-y: hidden;
+  }
+  .picture-inner-container {
+    align-content: space-between;
+
+    max-height: 3600px;
+
+    img {
+      width: calc((100% - 24px) / 2);
+      // height: auto;
+      // max-width: 352px;
+      // width: 100%;
+      // height: auto;
+      // padding-bottom: 24px;
+
+      // &:first-of-type {
+      //   padding-top: 50px;
+      // }
+    }
+  }
+}

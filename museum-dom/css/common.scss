@@ -1,0 +1,49 @@
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+$bg-dark: #030303;
+$dark-red: #710707;
+$font-gold: #9d8665;
+
+$text-font: 'Roboto', sans-serif;
+$title-font: 'Forum', cursive;
+
+html { 
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*, *::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body { 
+  font-family: $text-font;
+  font-size: 22px;
+  font-weight: 300;
+  color: #fff;
+
+  background-color: #fff;
+}
+
+li { list-style: none; }
+
+a { 
+  text-decoration: none;
+  font-family:'Roboto', sans-serif;
+  font-size: 22px;
+  font-weight: 100;
+}
+
+@media only screen and (max-width: 1024px) {
+a { font-size: 20px; }
+}
+// @media only screen and (max-width: 768px) {
+// }

@@ -1,0 +1,50 @@
+.section { 
+  width: 100%;
+  margin: 0 auto;
+  padding: 75px 0; 
+
+  background-color: #fff;
+}
+
+.dark-section { background-color: #030303; }
+
+.video { padding-top: 90px; }
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*    TITLES STYLE   */
+.section-title {
+  margin-bottom: 103px;
+  font-family: Forum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 80px;
+  line-height: 90px;
+ 
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.gold-title { color: $font-gold; }
+
+.underline-title { 
+  position: relative; 
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 190px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: #710707;
+  }
+}
+/*    END TITLES STYLE   */

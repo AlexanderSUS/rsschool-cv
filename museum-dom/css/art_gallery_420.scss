@@ -1,0 +1,27 @@
+@media only screen and (max-width: 420px) {
+  // .gallery-section .container .section-title { margin-bottom: 40px; }
+
+  .picture-container {
+    height: 637px;
+    max-width: 380px;
+    // overflow-y: hidden;
+  }
+  .picture-inner-container {
+    align-content: space-between;
+
+    max-height: 1875px;
+
+    img {
+      width: calc((100% - 24px) / 2);
+      // height: auto;
+      // max-width: 352px;
+      // width: 100%;
+      // height: auto;
+      // padding-bottom: 24px;
+
+      // &:first-of-type {
+      //   padding-top: 50px;
+      // }
+    }
+  }
+}
