@@ -1067,11 +1067,17 @@ header {
   color: #000;
 }
 
-video {
+.video-wrapper {
+  max-height: 650px;
   max-width: 1440px;
-  max-height: 900px;
-  width: 100%;
-  object-fit: fill;
+  overflow: hidden;
+}
+
+video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
 }
 
 /*      VIDEO CONTROLL    */
@@ -1096,6 +1102,12 @@ video {
   left: 610px;
 }
 
+.screen-play-btn.fullscreen {
+  position: absolute;
+  top: 42%;
+  left: 47%;
+}
+
 .video-control-btn {
   display: none;
   fill: #b3b3b3;
@@ -1111,6 +1123,7 @@ video {
 .time-range {
   max-width: 929px;
   background: linear-gradient(to right, #710707 0%, #710707 0%, #c4c4c4 0%, #c4c4c4 100%);
+  margin: 0;
 }
 
 .volume-range {

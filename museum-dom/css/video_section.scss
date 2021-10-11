@@ -8,27 +8,28 @@
 
   h2 {
     max-width: 610px;
-
     margin-bottom: 75px;
   }
 
   p {
     max-width: 720px;
-
     margin: 0;
-
     line-height: 38px;
     color: #000;
   }
 }
 
-video { 
+.video-wrapper {
+  max-height: 650px;
   max-width: 1440px;
-  max-height: 900px;
-  width: 100%;
+  overflow: hidden;
+}
 
-
-  object-fit: fill;
+video { 
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
 }
 
 /*      VIDEO CONTROLL    */
@@ -51,6 +52,12 @@ video {
   left: 610px;
 }
 
+.screen-play-btn.fullscreen {
+  position: absolute;
+  top: 42%;
+  left: 47%;
+}
+
 .video-control-btn {
   display: none;
 
@@ -63,11 +70,10 @@ video {
 
 .video-control-btn.active { display: block;}
 
-
-
 .time-range { 
   max-width: 929px; 
   background: linear-gradient(to right, $dark-red 0%, $dark-red 0%, #c4c4c4 0%, #c4c4c4 100%);
+  margin: 0;
 
 }
 
@@ -81,7 +87,6 @@ video {
   width: 100%;
   height: 8px;
   outline: none;
-  // transition: background 450ms ease-in;
   -webkit-appearance: none;
 }
 

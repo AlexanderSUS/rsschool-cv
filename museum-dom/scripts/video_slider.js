@@ -60,40 +60,42 @@ dots.forEach((item, indexDot) => {
   });
 });
 
-/// END switch video and slides
+/* END switch video and slides */
 
+const videoPlayer = document.querySelector('.custom-vp');
+const videoWrapper = document.querySelector('.video-wrapper');
 const timeRange = document.querySelector('.time-range');
 const volumeRange = document.querySelector('.volume-range');
 const toggle = document.querySelectorAll('.toggle-play');
 const toggleSound = document.querySelectorAll('.toggle-sound');
 const video = document.querySelector('.main-screen.active');
 const playBtn = document.querySelectorAll('.play-btn');
+const screenPlayBtn = document.querySelector('.screen-play-btn');
 const pauseBtn = document.querySelector('.pause-btn');
 const soundBtn = document.querySelector('.sound-btn');
 const muteBtn = document.querySelector('.mute-btn');
+const tglScreen = document.querySelectorAll('.toggle-fullscreen');
 const fullscreenBtn = document.querySelector('.fullscreen-btn');
 const exitFullscreenBtn = document.querySelector('.exit-fullscreen-btn');
 
-
 video.volume = volumeRange.value / 1000;
+timeRange.value = 0; 
 
-timeRange.max = Math.ceil(video.duration).toString();
-
-timeRange.value = video.currentTime;
-/// changes of track's color before slider-thumb 
-
+/* Changes of track's color before slider-thumb */
 timeRange.addEventListener('input', function() {
-  let value = this.value;
-  this.style.background = `linear-gradient(to right, #710707 0%, #710707 ${value}%, #c4c4c4 ${value}%, #c4c4c4 100%)`;
+  upgradeTimeRangeColor(timeRange);
 });
 
 volumeRange.addEventListener('input', function() {
-  let value = this.value;
-  this.style.background = `linear-gradient(to right, #710707 0%, #710707 ${value}%, #c4c4c4 ${value}%, #c4c4c4 100%)`;
+  upgradeTimeRangeColor(volumeRange);
 });
 
-/* Toggle play & pause */
+function upgradeTimeRangeColor(el) {
+  let value = el.value;
+  el.style.background = `linear-gradient(to right, #710707 0%, #710707 ${value}%, #c4c4c4 ${value}%, #c4c4c4 100%)`;
+}
 
+/* Toggle play & pause */
 toggle.forEach(element => {
   element.addEventListener('click', togglePlay)});
 
@@ -111,8 +113,7 @@ function togglePlay() {
   }
 }
 
-/* sound  */
-
+/* Sound  */
 toggleSound.forEach(element => {
   element.addEventListener('click', tglSound);
 });
@@ -122,21 +123,16 @@ volumeRange.addEventListener('input', changeVolume);
 function tglSound() {
   if (video.muted) {
     video.muted=false;
-    iconSoundOn();
+    tglSoundBtn();
   } else {
     video.muted=true;
-    iconSoundOf();
+    tglSoundBtn()
   }
 }
 
-function iconSoundOn() {
-  muteBtn.classList.remove('active');
-  soundBtn.classList.add('active');
-}
-
-function iconSoundOf() {
-  soundBtn.classList.remove('active');
-  muteBtn.classList.add('active');
+function tglSoundBtn() {
+  muteBtn.classList.toggle('active');
+  soundBtn.classList.toggle('active');
 }
 
 function changeVolume() {
@@ -145,22 +141,50 @@ function changeVolume() {
       if (muteBtn.classList.contains('active')) {
         return;
       }
-      iconSoundOf();
+      tglSoundBtn();
     } else {
         if (soundBtn.classList.contains('active')) {
           return;
         }
-        iconSoundOn();
+        tglSoundBtn();
+        video.muted=false;
     }
 }
-/*  progress */
 
-timeRange.addEventListener('input', changeTime); 
+/*  Progress */
+video.addEventListener('timeupdate', () => {
+  timeRange.value = (video.currentTime / video.duration) * 100;
+  upgradeTimeRangeColor(timeRange);
+});
 
-function changeTime() {
-  let durationQ = video.duration / 100;
+timeRange.addEventListener('input', () => {
+  video.currentTime =  (video.duration * timeRange.value) / 100 ;
+});
 
-  video.currentTime = timeRange.value * durationQ;
+/* Fullscreen option */
+
+tglScreen.forEach(btn => {
+  btn.addEventListener('click', toggleFullscreen);
+});
+
+function tglFullscreenBtn() {
+  fullscreenBtn.classList.toggle('active');
+  exitFullscreenBtn.classList.toggle('active');
 }
 
-
+function toggleFullscreen() {
+  if (!document.webkitFullscreenElement) {
+    videoPlayer.webkitRequestFullscreen();
+    videoWrapper.style.maxWidth = "100%";
+    videoWrapper.style.maxHeight = "94%"
+    screenPlayBtn.classList.toggle('fullscreen');
+    tglFullscreenBtn();
+    
+  } else {
+    document.webkitExitFullscreen();
+    videoWrapper.style.maxWidth = "1440px";
+    videoWrapper.style.maxHeight = "650px";
+    screenPlayBtn.classList.toggle('fullscreen');
+    tglFullscreenBtn();
+  }
+}
