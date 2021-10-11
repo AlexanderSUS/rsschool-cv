@@ -104,7 +104,6 @@ const swipedetect = (el) => {
 		startX = e.pageX;
 		startY = e.pageY;
 		startTime = new Date().getTime();
-    console.log("mousedown = " + startTime)
 		e.preventDefault();
 	}, false);
 
@@ -112,7 +111,6 @@ const swipedetect = (el) => {
 		distX = e.pageX - startX;
 		distY = e.pageY - startY;
 		elapsedTime = new Date().getTime() - startTime;
-    console.log("elapsed = " + elapsedTime)
 		if (elapsedTime <= allowedTime){
 			if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint){
 				if ((distX > 0)) {
