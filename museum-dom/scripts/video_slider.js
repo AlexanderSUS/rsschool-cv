@@ -107,11 +107,13 @@ function videoOff(n) {
     togglePlay(); 
     }
   videoList[n].classList.remove('active');
+  videoList[n].removeEventListener('click', togglePlay, false);
   screenPlayBtn.classList.remove('active');
 }
 
 function videoOn(n) {
   videoList[n].classList.add('active');
+  videoList[n].addEventListener('click', togglePlay);
   screenPlayBtn.classList.add('active');
     video = document.querySelector('.main-screen.active');
   }
