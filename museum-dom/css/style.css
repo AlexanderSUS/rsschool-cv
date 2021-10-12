@@ -1067,19 +1067,6 @@ header {
   color: #000;
 }
 
-.video-wrapper {
-  max-height: 650px;
-  max-width: 1440px;
-  overflow: hidden;
-}
-
-video {
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-}
-
 /*      VIDEO CONTROLL    */
 .video-control {
   display: flex;
@@ -1110,6 +1097,7 @@ video {
 
 .video-control-btn {
   display: none;
+  z-index: 50;
   fill: #b3b3b3;
 }
 .video-control-btn:hover {
@@ -1151,32 +1139,96 @@ video {
 
 /*    END VIDEO-CONTROL   */
 /* Styles for slider */
-.video-module {
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-height: 753px;
+  overflow: hidden;
+}
+
+.main-screen-wrapper {
+  display: none;
+  position: relative;
+  overflow: hidden;
+  animation: 0.3s ease-in-out;
+}
+
+.main-screen-wrapper.active,
+.main-screen-wrapper.next {
+  display: inline;
+}
+
+.main-screen-wrapper.next {
+  position: absolute;
+  width: 100%;
+}
+
+.main-screen {
+  min-width: 100%;
+  min-height: 100%;
+  height: auto;
+  width: auto;
+  z-index: 0;
+}
+
+.to-left {
+  animation-name: left;
+}
+
+.from-right {
+  animation: right;
+}
+
+.to-right {
+  animation-name: right;
+  animation-direction: reverse;
+}
+
+.from-left {
+  animation-name: left;
+  animation-direction: reverse;
+}
+
+@keyframes left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+@keyframes right {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+.video-arrow {
+  cursor: pointer;
+}
+
+.video-section .container {
   display: flex;
   flex-direction: column;
   width: 100%;
   height: auto;
 }
-.video-module .main-screen {
-  display: none;
-}
-.video-module .active {
-  display: block;
-}
-.video-module .slider-container {
+.video-section .container .slider-container {
   display: flex;
   flex-direction: column;
 }
-.video-module .preview-container {
+.video-section .container .preview-container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
 }
-.video-module .slide-screen {
+.video-section .container .slide-screen {
   max-width: 452px;
 }
-.video-module .slide-screen:hover {
+.video-section .container .slide-screen:hover {
   cursor: pointer;
 }
 
