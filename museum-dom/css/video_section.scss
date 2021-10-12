@@ -19,18 +19,6 @@
   }
 }
 
-.video-wrapper {
-  max-height: 650px;
-  max-width: 1440px;
-  overflow: hidden;
-}
-
-video { 
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-}
 
 /*      VIDEO CONTROLL    */
 .video-control {
@@ -60,6 +48,7 @@ video {
 
 .video-control-btn {
   display: none;
+  z-index: 50;
 
   fill: #b3b3b3;
 
@@ -104,5 +93,118 @@ video {
 
 
   /* Styles for slider */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-height: 753px;
+  overflow: hidden;
+}
 
-  @import "video_slider.scss";
+  .main-screen-wrapper { 
+    display: none;
+    position: relative;
+    overflow: hidden;
+
+    animation: 0.3s ease-in-out;
+  }
+
+  .main-screen-wrapper.active,
+  .main-screen-wrapper.next { 
+    display: inline;
+  }
+
+  .main-screen-wrapper.next {
+    position: absolute;
+    width: 100%;
+  } 
+
+  .main-screen {
+    min-width: 100%;
+    min-height: 100%;
+    height: auto;
+    width: auto;
+    z-index: 0;
+  }
+
+  .to-left { 
+    animation-name: left; 
+  }
+  
+  .from-right { 
+    animation: right; 
+  }
+  
+  .to-right {
+    animation-name: right;
+    animation-direction: reverse;
+  }
+  
+  .from-left {
+    animation-name: left;
+    animation-direction: reverse;
+  }
+  
+  
+  @keyframes left {
+  
+    from { left: 0; }  
+    to { left: -100%; }
+  }
+  
+  @keyframes right {
+    from { left: 100%; }
+    to { left: 0; }
+  }
+  .video-arrow { cursor: pointer;}
+  
+  .video-section .container {
+    display: flex;
+    flex-direction: column;
+  
+    width: 100%;
+    height: auto;
+  
+  
+    .slider-container {
+      display: flex;
+      flex-direction: column;
+    }
+      
+    .preview-container {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .slide-screen {
+      max-width: 452px;
+      &:hover { 
+        cursor: pointer;
+      }
+    }
+  }
+  
+  .dots-control {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 200px;
+    height: 12px;
+    
+    margin: 40px auto 0 auto;
+  }
+  .dot-btn {
+    height: 12px;
+    width: 12px;
+  
+    background-color: #999;
+    border-radius: 50%;
+  
+    &:hover { 
+      background-color: $dark-red; 
+      cursor: pointer;
+    }
+  }
+  
+  .active-dot { background-color: #333; }

@@ -1,74 +1,15 @@
 
-const mainScreen = document.getElementById('main-screen');
+const mainScreen = document.querySelectorAll('.main-screen-wrapper');
 const leftArrow = document.getElementById('left-arrow');
 const rightArrow = document.getElementById('right-arrow');
 const dots = document.querySelectorAll('.dot-btn');
-
-
-
-//// switch wideo and slides 
-
-let indexV = 0;
-
-const activeVideo = n => {
-  mainScreen.scr = "assets/video/video" + n + ".mp4";
-  mainScreen.poster = "assets/video/poster" + n + ".jpg";
-}
-
-const activeDot= n => {
-  for(dot of dots) {
-    dot.classList.remove('active-dot');
-  }
-  dots[n].classList.add('active-dot');
-}
-
-
-const showCurrentVideo = ind => {
-  activeVideo(ind);
-  activeDot(ind);
-}
-
-const nextVideo = () => {
-  if(indexV == 4) {
-    indexV = 0;
-    showCurrentVideo(indexV);
-  } else {
-    indexV++;
-    showCurrentVideo(indexV);
-  }
-}
-
-const prevVideo = () => {
-  if(indexV == 0) {
-    indexV = 4; 
-    showCurrentVideo(indexV);
-  } 
-  else {
-    indexV--;
-    showCurrentVideo(indexV);
-  }
-}
-
-
-// leftArrow.addEventListener('click', prevVideo());
-// rightArrow.addEventListener('click', nextVideo());
-
-dots.forEach((item, indexDot) => {
-  item.addEventListener('click', () => {
-    indexV = indexDot;
-    showCurrentVideo(indexV);
-  });
-});
-
-/* END switch video and slides */
-
+const videoList = document.querySelectorAll('.main-screen');
 const videoPlayer = document.querySelector('.custom-vp');
 const videoWrapper = document.querySelector('.video-wrapper');
 const timeRange = document.querySelector('.time-range');
 const volumeRange = document.querySelector('.volume-range');
 const toggle = document.querySelectorAll('.toggle-play');
 const toggleSound = document.querySelectorAll('.toggle-sound');
-const video = document.querySelector('.main-screen.active');
 const playBtn = document.querySelectorAll('.play-btn');
 const screenPlayBtn = document.querySelector('.screen-play-btn');
 const pauseBtn = document.querySelector('.pause-btn');
@@ -77,6 +18,106 @@ const muteBtn = document.querySelector('.mute-btn');
 const tglScreen = document.querySelectorAll('.toggle-fullscreen');
 const fullscreenBtn = document.querySelector('.fullscreen-btn');
 const exitFullscreenBtn = document.querySelector('.exit-fullscreen-btn');
+let video = document.querySelector('.main-screen.active');
+
+//// switch wideo and slides 
+let isEn = true;
+let currentVideo = 0;
+
+const changeCurrentVideo = n => {
+  currentVideo = (n + mainScreen.length) % mainScreen.length;
+}
+
+function nextVideo(n, bullet) {
+  hideVideo('to-left');
+  if (bullet != undefined) {
+    changeCurrentVideo(bullet);
+  } else {
+    changeCurrentVideo(n + 1);
+  }
+  showVideo('from-right');
+  activeBullet(currentVideo);
+}
+
+function prevVideo(n, bullet) {
+  hideVideo('to-right');
+  if (bullet != undefined) {
+    changeCurrentVideo(bullet);
+  } else {
+    changeCurrentVideo(n - 1);
+  }
+  showVideo('from-left');
+  activeBullet(currentVideo);
+}
+
+function hideVideo(direction) {
+  isEn = false;
+  videoOff(currentVideo);
+  mainScreen[currentVideo].classList.add(direction);
+  mainScreen[currentVideo].addEventListener('animationend', function () {
+    this.classList.remove('active', direction);
+  });
+}
+
+function showVideo(direction) {
+  mainScreen[currentVideo].classList.add('next', direction);
+  mainScreen[currentVideo].addEventListener('animationend', function() {
+    this.classList.remove('next', direction);
+    this.classList.add('active');
+    videoOn(currentVideo);
+    isEn = true;
+  });
+}
+
+const activeBullet = n => {
+  for(dot of dots) {
+    dot.classList.remove('active');
+    dot.style.backgroundColor = "#999";
+  }
+  dots[n].classList.add('active');
+  dots[n].style.backgroundColor = "#333";
+}
+
+dots.forEach((dot, indexDot) => {
+  dot.addEventListener('click', () => {
+    if (indexDot > currentVideo) {
+      nextVideo(currentVideo, indexDot);
+    } else if (indexDot < currentVideo) {
+      prevVideo(currentVideo, indexDot);
+    } else {
+      return;
+    }
+  });
+});
+
+rightArrow.addEventListener('click', function() {
+  if (isEn) {
+    nextVideo(currentVideo);
+  }
+});
+
+leftArrow.addEventListener('click', function() {
+  if (isEn) {
+    prevVideo(currentVideo);
+  }
+});
+
+function videoOff(n) {
+  if (!video.paused) {
+    togglePlay(); 
+    }
+  videoList[n].classList.remove('active');
+  screenPlayBtn.classList.remove('active');
+}
+
+function videoOn(n) {
+  videoList[n].classList.add('active');
+  screenPlayBtn.classList.add('active');
+    video = document.querySelector('.main-screen.active');
+  }
+
+/* END switch video and slides */
+
 
 video.volume = volumeRange.value / 1000;
 timeRange.value = 0; 
@@ -104,13 +145,20 @@ video.addEventListener('click', togglePlay);
 function togglePlay() {
   if (video.paused) {
     video.play(); 
-    playBtn.forEach(btn => btn.classList.remove('active'));
-    pauseBtn.classList.add('active');
+    togglePlayBtn();
   } else {
     video.pause();  
-    pauseBtn.classList.remove('active');
-    playBtn.forEach(btn => btn.classList.add('active'));
+    togglePlayBtn();
   }
+}
+
+video.addEventListener('ended', () => {
+  togglePlayBtn();
+});
+
+function togglePlayBtn() {
+  playBtn.forEach(btn => btn.classList.toggle('active'));
+  pauseBtn.classList.toggle('active');
 }
 
 /* Sound  */
@@ -156,6 +204,8 @@ video.addEventListener('timeupdate', () => {
   timeRange.value = (video.currentTime / video.duration) * 100;
   upgradeTimeRangeColor(timeRange);
 });
+
+
 
 timeRange.addEventListener('input', () => {
   video.currentTime =  (video.duration * timeRange.value) / 100 ;
