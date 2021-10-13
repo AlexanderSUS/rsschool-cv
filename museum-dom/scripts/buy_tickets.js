@@ -8,8 +8,28 @@ const senior = 0.5;
 const permanentEx = 20;
 const temporaryEx = 25;
 const combinedEx = 40;
+const typeArray = [permanentEx, temporaryEx, combinedEx];
 
-updateData();
+saveValue();
+
+function saveValue() {
+  if (sessionStorage.getItem("total")) {
+    output.innerHTML = sessionStorage.getItem("total");
+    document.querySelector('.quantity-basic').value = sessionStorage.getItem("basicQty");
+    document.querySelector('.quantity-senior').value = sessionStorage.getItem("seniorQty");
+    radios[0].checked = false;
+
+    for (let i = 0; i < radios.length; i++) {
+      if (+sessionStorage.getItem("typeCost") == typeArray[i]) {
+        radios[i].checked = true;
+      }
+    }
+  } else {
+    updateData();
+  }
+}
+
+
 
 document.querySelector('.minus-basic').addEventListener('click', () => {
   document.querySelector('.quantity-basic').stepDown();
@@ -27,9 +47,6 @@ document.querySelector('.plus-senior').addEventListener('click', () => {
   document.querySelector('.quantity-senior').stepUp();
 });
 
-
-
-
 radios.forEach(radio => {
   radio.addEventListener('click', updateData);
 });
@@ -46,11 +63,15 @@ function updateData() {
   let total = (typeCost * basicQty) + (typeCost * seniorQty * senior);
 
   output.innerHTML = total;
+
+  sessionStorage.setItem("typeCost", typeCost);
+  sessionStorage.setItem("basicQty", basicQty);
+  sessionStorage.setItem("seniorQty", seniorQty);
+  sessionStorage.setItem("total", total);
 }
 
 
 function getCostType(name) {
-  console.log(name);
   if (name == "permanent") {
     return permanentEx;
   } 

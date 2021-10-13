@@ -240,3 +240,19 @@ function toggleFullscreen() {
     tglFullscreenBtn();
   }
 }
+
+/* Keydown events  */
+document.addEventListener('keydown', (e) => {
+  if (isElementInViewport(videoPlayer)) {
+    console.log("event");
+    if (e.key == ' ') {
+      togglePlay();
+    }
+    if (e.key == 'f') {
+      toggleFullscreen();
+    }
+    if (e.key == 'm') {
+      tglSound();
+    }
+  }
+});
