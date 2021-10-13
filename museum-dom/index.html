@@ -253,13 +253,13 @@
           <form class="ticket-input-area">
             <div class="ticket-type">
               <h4>Ticket Type</h4>
-              <input class="radio-btn-tickets" type="radio" name="ticket_type" id="permanent" value="Permanent exhibition">
+              <input class="radio-btn-tickets" type="radio" name="ticket_type" id="permanent" value="permanent" checked>
               <label class="lablel-container" for="permanent">
                 Permanent exhibition</label>
-              <input class="radio-btn-tickets" type="radio"  name="ticket_type" id="temporary" value="Temporary exhibition">
+              <input class="radio-btn-tickets" type="radio"  name="ticket_type" id="temporary" value="temporary">
               <label class="lablel-container" for="temporary">
                 Temporary exhibition</label>
-              <input class="radio-btn-tickets" type="radio"  name="ticket_type" id="combined" value="Combined Admission">
+              <input class="radio-btn-tickets" type="radio"  name="ticket_type" id="combined" value="combined">
               <label  class="lablel-container" for="combined">
                 Combined Admission</label>
             </div>
@@ -267,19 +267,19 @@
               <h4>Amount</h4>
               <div class="number-input">
                 <label for="basic_amount">Basic 18+</label>
-                <!-- <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button> -->
-                <input class="quantity" type="number" name="quantity" id="basic_amount" value="1" min="1" max="300" required>
-                <!-- <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button> -->
+                <button class="ticket-btn minus-basic" type="button"></button>
+                <input class="ticket-input quantity-basic" type="number" name="quantity" id="basic_amount" value="1" min="0" max="20" disabled>
+                <button  class="ticket-btn plus plus-basic" type="button"></button>
               </div>
               <div class="number-input">
                 <label for="senior_amount">Senior 65+</label>
-                <!-- <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button> -->
-                <input class="quantity" type="number" name="quantity" id="senior_amount" value="1" min="1" max="300" required>
-                <!-- <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button> -->
+                <button class="ticket-btn minus-senior" type="button" ></button>
+                <input class="ticket-input quantity-senior" type="number" name="quantity" id="senior_amount" value="1" min="0" max="20" disabled>
+                <button class="ticket-btn plus plus-senior" type="button"></button>
               </div>
             </div>
             <div class="confirm-container">
-              <span class="output-sum-text">Total &euro; <span id="output-sum">0</span> </span>
+              <span class="output-sum-text">Total &euro; <span id="output-sum"></span></span>
               <output class="output-sum"></output>
               <button class="buy-now" type="button">Buy Now</button>
             </div>
@@ -431,6 +431,7 @@
   <script src="./scripts/video_slider.js"></script>
   <script src="./scripts/gallery.js"></script>
   <script src="./scripts/menu.js"></script>
+  <script src="./scripts/buy_tickets.js"></script>
   <script>
     L.mapbox.accessToken = 'pk.eyJ1IjoibW9uc3RyYWRhbXVzIiwiYSI6ImNrdTNrN2syNTJzM2Iyb3A4OW1zdG5iY3YifQ.p4Ow_8bmlBSPgDI4me6T1A';
     var map = L.mapbox.map('map')
@@ -441,6 +442,7 @@
        L.marker([48.8607,2.3397]).addTo(map);
        L.marker([48.8619,2.3330]).addTo(map);
        L.marker([48.8625,2.3365]).addTo(map);
+       map.setStyle('mapbox://styles/monstradamus/ckunkhtq9fkxy18s0hgczmjhx');
     </script>
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="./scripts/youtube.js"></script>
