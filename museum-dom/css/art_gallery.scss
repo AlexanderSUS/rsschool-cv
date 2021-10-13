@@ -9,16 +9,32 @@
   display: flex;
   flex-flow: column wrap;
   align-content: space-between;
+  justify-content: flex-end;
+  justify-items: flex-end;
 
   max-height: 3020px;
+  // max-height: 3170px;
 
   img {
+    position: relative;
+    top: 50px;
     width: calc((100% - 72px) / 3);
     height: auto;
     padding-bottom: 24px;
 
+    //animation property
+    opacity: 0;
+    transition: opacity 1s ease-out;
+
     &:first-of-type {
       padding-top: 50px;
     }
+
+  }
+
+  img.is-visible {
+    opacity: 1;
+    transform: translateY(-50px);
+    transition: 0.7s ease-in-out;
   }
 }

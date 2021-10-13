@@ -1412,15 +1412,26 @@ header {
   display: flex;
   flex-flow: column wrap;
   align-content: space-between;
+  justify-content: flex-end;
+  justify-items: flex-end;
   max-height: 3020px;
 }
 .picture-inner-container img {
+  position: relative;
+  top: 50px;
   width: calc((100% - 72px) / 3);
   height: auto;
   padding-bottom: 24px;
+  opacity: 0;
+  transition: opacity 1s ease-out;
 }
 .picture-inner-container img:first-of-type {
   padding-top: 50px;
+}
+.picture-inner-container img.is-visible {
+  opacity: 1;
+  transform: translateY(-50px);
+  transition: 0.7s ease-in-out;
 }
 
 @media only screen and (max-width: 1024px) {
