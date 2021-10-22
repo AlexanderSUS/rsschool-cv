@@ -6,10 +6,10 @@ import Time from './components/time';
 import Date from './components/date';
 import Greeting from './components/greeting';
 import Quote from './components/quote';
+
 // import json from './assets/json.json'  FOR WORK WITH JSON FILE
 
 const root = document.getElementById('root');
-
 const header = document.createElement("header");
 const main = document.createElement("main");
 const footer = document.createElement("footer");
@@ -28,11 +28,9 @@ main.appendChild(Greeting);
 
 footer.appendChild(Quote);
 
+
 root.append(header);
 root.append(main);
 root.append(footer);
 
-
-// root.append(Main);
-// root.append(Footer);
 
