@@ -1,7 +1,8 @@
 import setBg from './components/slider/slider';
 import getDate from './components/date/date';
 import showTime from './components/time/time';
-import {showGreeting, saveName, getName} from './components/greeting/greeting'
+import {showGreeting, saveName, getName} from './components/greeting/greeting';
+import {setWeather, setCity, changeCity, saveCity} from './components/weather/weather';
 
 window.onload = () => {
   setBg();
@@ -9,12 +10,22 @@ window.onload = () => {
   getDate();
   showGreeting();
   getName();
+  setCity();
+  setWeather();
 }
-
-window.addEventListener('beforeunload', saveName);
 
 setInterval(() => {
   getDate();
   showTime();
   showGreeting();
 }, 1000); 
+
+changeCity();
+window.addEventListener('beforeunload', bye);
+
+
+
+function bye() {
+  saveName(); 
+  saveCity();
+}

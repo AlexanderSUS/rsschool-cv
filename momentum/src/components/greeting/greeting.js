@@ -1,13 +1,13 @@
 export {showGreeting, saveName, getName}
 
-let name = document.querySelector('.name');
+const name = document.querySelector('.name');
 
 function saveName() {
     localStorage.setItem('name', name.value);
 }
 
 function getName() {
-  if(!localStorage.getItem('name') == undefined) {
+  if(localStorage.getItem('name') !== null) {
     name.value = localStorage.getItem('name');
   }
 }
