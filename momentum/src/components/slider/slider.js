@@ -4,7 +4,6 @@ const body = document.getElementById('body');
 const prev = document.querySelector('.slide-prev'); 
 const next = document.querySelector('.slide-next'); 
 let currentUrlIndex = 0;
-let noTransition = true;
 const maxQtyOfLinks = 20;
 const linksCollection = []; 
 
@@ -46,7 +45,7 @@ function getUrl(link, num, opt) {
   let url;
 
   if (link.name == "github" ) {
-    url = `url(${link.url}${getTimeOfDay()}/${num}.jpg)`;
+    url = `${link.url}${getTimeOfDay()}/${num}.jpg`;
   }
   return url;
 }
@@ -66,30 +65,25 @@ function pickImageUrl() {
 }
 
 function prevSlide() {
-  if (noTransition) {
     changeCurrentUrl(currentUrlIndex - 1);
     setBg();
-    noTransition = false;
-  }
 }
 
 function nextSlide() {
-  if (noTransition) {
     changeCurrentUrl(currentUrlIndex + 1);
     setBg();
-    noTransition = false;
-  }
 }
 
 function setBg() {
   if (linksCollection[currentUrlIndex] === undefined) {
     linksCollection[currentUrlIndex] = pickImageUrl();
   }   
-  body.style.backgroundImage = linksCollection[currentUrlIndex];
+  const img = new Image();
+  img.src = linksCollection[currentUrlIndex];
+  img.onload = () => {
+    body.style.backgroundImage = `url(${img.src})`;
+  }
 }
 
 prev.addEventListener('click', prevSlide);
 next.addEventListener('click', nextSlide);
-body.addEventListener('transitionend', () => {
-  noTransition = true;
-});
