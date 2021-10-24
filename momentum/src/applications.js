@@ -3,6 +3,7 @@ import getDate from './components/date/date';
 import showTime from './components/time/time';
 import {showGreeting, saveName, getName} from './components/greeting/greeting';
 import {setWeather, setCity, changeCity, saveCity} from './components/weather/weather';
+import getQuotes from './components/quote/quote';
 
 window.onload = () => {
   setBg();
@@ -12,6 +13,7 @@ window.onload = () => {
   getName();
   setCity();
   setWeather();
+  getQuotes();
 }
 
 setInterval(() => {
