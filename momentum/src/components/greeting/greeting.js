@@ -1,6 +1,7 @@
 export {showGreeting, saveName, getName}
 
 const name = document.querySelector('.name');
+name.placeholder = 'your name';
 
 function saveName() {
     localStorage.setItem('name', name.value);
