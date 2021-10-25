@@ -4,6 +4,7 @@ import showTime from './components/time/time';
 import {showGreeting, saveName, getName} from './components/greeting/greeting';
 import {setWeather, setCity, changeCity, saveCity} from './components/weather/weather';
 import getQuotes from './components/quote/quote';
+import {initializePlayer, showPlayList} from './components/player/player';
 
 window.onload = () => {
   setBg();
@@ -14,6 +15,8 @@ window.onload = () => {
   setCity();
   setWeather();
   getQuotes();
+  showPlayList();
+  initializePlayer();
 }
 
 setInterval(() => {

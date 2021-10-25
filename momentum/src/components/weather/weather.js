@@ -48,10 +48,10 @@ async function getWeather(weatherLink) {
     temperature.textContent = "Surpasing API Limit";
   } else {
     weatherIcon.classList.add(`owf-${data.weather[0].id}`);
-    temperature.textContent = `${data.main.temp}°C`;
-    weatherDescription.textContent = data.weather[0].description;
-    wind.textContent = `${windSpeedStr}${data.wind.speed}`;
-    humidity.textContent = `${humidityStr}${data.main.humidity}`;
+    temperature.textContent = `${Math.round(data.main.temp)}°C`;
+    weatherDescription.textContent = `${data.weather[0].description}`;
+    wind.textContent = `${windSpeedStr}${Math.round(data.wind.speed)} m/s`;
+    humidity.textContent = `${humidityStr}${Math.round(data.main.humidity)}%`;
   }
 }
 

@@ -1,5 +1,6 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   context: path.resolve(__dirname,'src'),
@@ -37,10 +38,8 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|jpg|gif|mp3|ico)$/,
+        test: /\.(png|jpg|gif|ico)$/,
         type: 'asset/resource',
-        test: /\.svg/,
-        type: 'asset/inline',
       },
     ]
   },
@@ -48,15 +47,15 @@ module.exports = {
       new HTMLWebpackPlugin({
         template: './index.html',
     }),
+      new CopyPlugin({
+        patterns: [
+          { from: "components/player/assets/sounds",
+            to: "assets/sounds"
+          },
+        ]
+      })
   ],
   devServer: {
     port: 5000,
   },
-  resolve: {
-    alias: {
-      Assets: path.resolve(__dirname, 'src/assets/'),
-      Components: path.resolve(__dirname, 'src/components/'),
-      Utils: path.resolve(__dirname, 'src/utils/'),
-    }
-  }
 }
