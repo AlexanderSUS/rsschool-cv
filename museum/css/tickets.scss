@@ -1,0 +1,251 @@
+.tickets-content-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 550px;
+
+  color: #000;
+}
+
+.ticket-image {
+  width: 720px;
+  height: 550px;
+
+  background-image: url(../assets/ticket_img.jpg);
+}
+
+.ticket-input-area {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+  align-content: flex-start;
+
+  max-width: 720px;
+}
+
+.ticket-type { 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: wrap-reverse;
+  // max-width: 330px;
+  padding-left: 60px; 
+
+  h4 {
+    margin-bottom: 50px; 
+    margin-top: 0;
+    
+    font-size: 28px;
+  }
+
+  label { 
+    margin: 0 23px 25px 0;
+    padding-left: 40px;
+
+    &:last-of-type {
+    margin-bottom: 0;
+    }
+  }
+
+  input[type=radio] {
+    margin: 3px 0;
+  }
+}
+
+.ticket-amount { 
+  display: flex;
+  flex-direction: column;
+  max-height: 341px; 
+  max-width: 150px;
+
+  margin-left: 240px;
+
+  h4 { 
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: right;
+    font-size: 28px;
+  }
+
+  .number-input {
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+
+    height: 91px;
+    width: 150px;
+
+    &:first-of-type { padding-bottom: 10px; }
+
+    &:last-of-type { padding-bottom: 50px;}
+
+    label { margin-bottom: 15px;}
+  }
+}
+
+input[type=number] { 
+
+  box-sizing: border-box;
+
+  width: 150px;
+  height: 50px;
+
+  padding: 0;
+
+  text-align: center;
+  font: inherit;
+
+  border: 3px solid #000;
+}
+
+.confirm-container {
+  text-align: right;
+
+  .buy-now {
+    position: relative;
+    height: 50px; 
+    width: 175px;
+
+    font-family: Roboto, sans-serif;
+    font-size: 22px;
+    font-weight: 300;;
+    color: #fff;
+
+    overflow: hidden;
+    cursor: pointer;
+
+    border: none;
+    background-color: #000;
+
+    &:hover {
+      background-color: $font-gold;
+    }
+  }
+  .buy-now:after {
+    content: "";
+    background: $dark-red;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+  }
+  
+  .buy-now:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+  }
+}
+
+.output-sum-text {
+  display: block;
+
+  margin-bottom: 50px;
+
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+/* RADIO BUTTON STYLE   */
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+input[type="radio"]:checked + label,
+input[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    cursor: pointer;
+    line-height: 26px;
+    display: inline-block;
+    color: #666;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 17px;
+    height: 17px;
+    border: 3px solid #000;
+    border-radius: 100%;
+    background: #fff;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 7px;
+    height: 7px;
+    background: #000;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+/* END  RADIO BUTTON STYLE */
+
+/* NUM INPUT STYLE    */
+input[type="number"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+// .number-input button {
+//   position: relative;
+//   top: 19px;
+//   outline:none;
+//   -webkit-appearance: none;
+//   background-color: transparent;
+//   border: none;
+//   align-items: center;
+//   justify-content: center;
+//   width: 3rem;
+//   height: 3rem;
+//   cursor: pointer;
+//   margin: 0;
+//   position: relative;
+// }
+
+// .number-input button:before,
+// .number-input button:after {
+//   display: inline-block;
+//   position: absolute;
+//   content: '';
+//   width: 1rem;
+//   height: 2px;
+//   background-color: #212121;
+//   transform: translate(-50%, -50%);
+// }
+// .number-input button.plus:after {
+//   transform: translate(-50%, -50%) rotate(90deg);
+// }
+/* END NUM INPUT STYLE  */

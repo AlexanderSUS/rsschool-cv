@@ -1,0 +1,11 @@
+@media only screen and (max-width: 420px) { 
+  video { 
+  max-width: 380px;
+  max-height: 226px;
+
+  margin-bottom: 40px;
+  }
+
+    /* Styles for slider */
+  @import "video_slider_420.scss";
+}

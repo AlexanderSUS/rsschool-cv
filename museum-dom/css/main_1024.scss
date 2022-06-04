@@ -1,0 +1,21 @@
+@media only screen and (max-width: 1024px) {
+  .section { 
+    padding: 60px 20px; 
+  }
+
+  .container { 
+    max-width: 984px;
+   }
+
+  .section-title { 
+    font-size: 50px; 
+    line-height: 75px;
+    margin-bottom: 83px;
+  }
+
+
+  .underline-title::after { 
+      top: 155px;
+      max-width: 984px;
+    }
+}

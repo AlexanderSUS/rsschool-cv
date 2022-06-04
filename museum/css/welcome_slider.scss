@@ -1,0 +1,60 @@
+.slide-control-wrapper {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-evenly;
+
+
+  width: 600px;
+  height: 120px;
+
+  margin-top: 690px;
+
+  font-size: 22px;
+  font-weight: 400;
+
+  background-color: $bg-dark;
+
+  .arrow-control {
+    display: flex;
+    justify-content: space-between;
+
+    width: 80px;
+
+    font-size: 38px;
+
+    svg {
+      fill: #fff;
+      transition: 0.7s;
+
+      &:hover {
+        fill: $font-gold;
+      }
+    }
+  }
+
+  .arrow:hover { cursor: pointer;}
+
+  .square-control {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 180px;
+  }
+  .square {
+    height: 16px;
+    width: 16px;
+    background-color: #fff;
+    transition: 0.7s;
+
+    &:first-of-type {
+      background-color: $font-gold;
+    }
+
+    &:hover { 
+      background-color: #9d8665;
+      cursor: pointer;
+    }
+  }
+}

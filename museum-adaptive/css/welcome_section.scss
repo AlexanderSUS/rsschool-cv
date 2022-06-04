@@ -1,0 +1,66 @@
+.welcome-section {
+  display: flex; 
+  margin: 0 auto;
+  padding: 0;
+
+  .container {
+    
+    height: 810px;
+
+    background-image: linear-gradient(to left, rgba($bg-dark, 0), rgba($bg-dark, 0) ,rgba($bg-dark, 0), rgba($bg-dark, 1)), url('../assets/1.jpg'); 
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 1000px 750px;
+
+    .welcome-text-content {
+
+      display: flex;
+      align-items: flex-start;
+
+      flex-direction: column;
+      align-content: space-between;
+      max-height: 539px;
+    
+      h1 { 
+        margin-bottom: 0;
+        margin-top: 150px;
+      }
+
+      p {
+        margin-top: 25px; 
+        margin-bottom: 75px;
+
+        font-size: 28px;
+        letter-spacing: 2px;
+      }
+
+      a {
+        box-sizing: content-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 360px;
+        height: 75px;
+
+        // margin-bottom: 172px;
+
+        color: #fff;
+        font-weight: 300;
+        letter-spacing: 2px;
+
+        background-color: $dark-red;
+        border-radius: 10px;
+
+        transition: 0.1s;
+
+        &:hover, 
+        &:focus {
+          background-color: $font-gold;
+        }
+      } 
+    }
+  }
+}
+
+@import "welcome_slider";

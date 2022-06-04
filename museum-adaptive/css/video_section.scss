@@ -1,0 +1,45 @@
+.video-section {
+
+  .text-content {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  h2 {
+    max-width: 610px;
+
+    margin-bottom: 75px;
+  }
+
+  p {
+    max-width: 720px;
+
+    margin: 0;
+
+    line-height: 38px;
+    color: #000;
+  }
+}
+
+video { 
+  max-width: 1440px;
+  max-height: 900px;
+  width: 100%;
+
+
+  object-fit: fill;
+}
+
+/*      VIDEO CONTROLL    */
+.video-control {
+  // display: none;
+  height: 85px;
+  margin-bottom: 40px;
+  background-color: #000;
+}
+
+
+  /* Styles for slider */
+
+  @import "video_slider.scss";

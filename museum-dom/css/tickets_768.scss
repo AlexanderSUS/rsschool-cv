@@ -1,0 +1,41 @@
+@media only screen and (max-width: 768px) {
+  .tickets-content-container {
+    max-height: 430px;
+
+    background-image: url(../assets/ticket_img_768.jpg);
+    background-size: 444px 340px;
+  }
+
+  .ticket-input-area { margin-right: 49px; }
+
+    .ticket-amount { 
+      margin-left: 80px;
+
+      h4 { 
+        margin-bottom: 39px;
+        letter-spacing: 0px;
+        font-style: normal;
+        font-weight: 900;
+      }
+
+    .number-input {
+      &:first-of-type { padding-bottom: 20px; }
+
+      &:last-of-type { padding-bottom: 39px;}
+
+      p { line-height: 26px;}
+    }
+  }
+
+    .buy-now { letter-spacing: 2px; }
+
+  .output-sum-text {
+    display: block;
+
+    margin-bottom: 40px;
+
+    font-weight: 900;
+    line-height: 26px;
+    letter-spacing: 1.65px;
+  }
+}

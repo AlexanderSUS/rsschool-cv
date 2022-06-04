@@ -1,0 +1,36 @@
+@media only screen and (max-width: 768px) {
+ 
+  .explore-section { 
+    
+    .container {
+
+        .text-content {
+        max-width: auto;
+      }
+
+      .slider-container {
+        width: 380px;
+        height: 368px;
+
+        img {
+          max-width: 380px;
+          max-height: 368px;
+        }
+        .background-img {
+          background-size: 380px 368px;
+        }
+        .foreground-img {
+          background-size: 380px 368px;
+        }
+        .slider {
+          
+          &::-webkit-slider-thumb {
+            width: 3px;
+            height: 368px;
+          }
+        }
+      }
+    }
+  }
+}
+

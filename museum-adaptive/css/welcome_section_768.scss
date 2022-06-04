@@ -1,0 +1,55 @@
+@media only screen and (max-width: 768px) {
+.welcome-section {
+  // padding: 0 20px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    justify-content: center;
+    height: 861px;
+
+    background-image: url('../assets/1.jpg'); 
+    background-size: 728px 546px;
+    background-position: 0 215px;
+    
+    .welcome-text-content {
+
+      // display: flex;
+      align-items: center;
+
+      // flex-direction: column;
+      // align-content: space-between;
+      max-height: auto;
+
+      .section-title {
+        font-size: 40px;
+        line-height: 60px ;
+      }
+
+      h1 { 
+        margin-top: 0;
+        text-align: center;
+      }
+
+      p {
+        // margin-top: 25px; 
+        margin-bottom: 45px;
+        font-size: 20px;
+      }
+
+      a {
+        display: none;
+        // width: 300px;
+        // height: 60px;
+
+        // margin-bottom: 0;
+
+        // font-size: 20px;
+        }
+      } 
+    }
+  }
+  @import "welcome_slider_768.scss";
+}
